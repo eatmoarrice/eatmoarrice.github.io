@@ -1,79 +1,85 @@
 {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 #myInput {
-	background-image: url('/css/searchicon.png');
-	background-position: 10px 12px;
-	background-repeat: no-repeat;
-	width: 100%;
-	font-size: 16px;
-	padding: 12px 20px 12px 40px;
-	border: 1px solid #ddd;
-	margin-bottom: 12px;
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
 }
+
 input:focus {
-	background-color: rgb(238, 255, 247);
+    background-color: rgb(238, 255, 247);
 }
+
 #FaintMemory, #Alcryst, #Weapon, #JobMemory, #Statue{
-	margin: 12px;
-	padding: 12px;
+  margin: 12px;
+  padding: 12px;
 }
 input[type=number]{
-	padding: 5px 5px;
-	margin: 5px 0;
-	box-sizing: border-box;
-	width: 160px
+  padding: 5px 5px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  width: 160px
 }
+
 .list {
-	list-style-type: none;
-	/* padding: 0;
-	*/
-	/* margin: 0;
-	*/
-	/* float: left;
-	*/
-	list-style: none;
-	text-align: center;
-	/* background-color: #000000;
-	*/
-	/* margin-right: 30px;
-	*/
-	/* width: 150px;
-	*/
-	line-height: 60px;
+  list-style-type: none;
+  /* padding: 0; */
+  /* margin: 0; */
+  /* float: left; */
+  list-style: none;
+  text-align: center;
+  /* background-color: #000000; */
+  /* margin-right: 30px;  */
+  /* width: 150px; */
+  line-height: 60px;
 }
+
 .list li a {
-	border: 1px solid #ddd;
-	margin-top: -1px;
-	background-color: #f6f6f6;
-	padding: 15px;
-	padding-bottom: 5px;
-	text-decoration: none;
-	font-size: 16px;
-	color: black;
-	display: block
-}
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  background-color: #f6f6f6;
+  padding: 15px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+ }
+
 .list li a:hover:not(.header) {
-	background-color: #eee;
+  background-color: #eee;
 }
+
+
 .grid {
-	max-width: auto;
-	margin: 10px;
-	padding-left: 25px;
-	display: grid;
-	grid-gap: 1rem;
-	grid-template-columns: repeat(auto-fit, 160px);
+  max-width: auto;
+  margin: 10px;
+  padding-left: 25px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, 160px);
 }
+
 h2, h4, h6 {
-	margin: 12px;
-	padding: 12px;
+  margin: 12px;
+  padding: 12px;
 }
+
 h1 {
-	text-align: center;
+  text-align: center;
 }
+
 hr.solid {
-	border-top: 3px solid #bbb;
+  border-top: 3px solid #bbb;
 }
+
 .myButton {
 	box-shadow:inset 0px 1px 0px 0px #276873;
 	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
@@ -98,7 +104,9 @@ hr.solid {
 	position:relative;
 	top:1px;
 }
-/*.plusButton {
+
+/*
+.plusButton {
 	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
 	background-color:#f9f9f9;
 	border-radius:42px;
@@ -120,48 +128,52 @@ hr.solid {
 .plusButton:active {
 	position:relative;
 	top:1px;
-}
-*/
+} */
+
 body {
-	margin:0px;
+  margin:0px;
 }
 .colour-block {
-	background:#3399CC;
-	width:100%;
-	padding:7% 20% 10% 20%;
-	color:#fff;
+  background:#3399CC;
+  width:100%;
+  padding:7% 20% 10% 20%;
+  color:#fff;
 }
 .white-block {
-	background:#fff;
-	width:60%;
-	padding:7% 20% 10% 20%;
-	color:#3399CC;
+  background:#fff;
+  width:60%;
+  padding:7% 20% 10% 20%;
+  color:#3399CC;
 }
 h1 {
-	text-align:center;
-	font-size:80px;
-	font-family:'wire one', serif;
-	font-weight:normal;
+  text-align:center;
+  font-size:80px;
+  font-family:'wire one', serif;
+  font-weight:normal;
 }
 #Materials {
-	font-size:20px;
-	font-family:'Raleway', serif;
+  font-size:20px;
+  font-family:'Raleway', serif;
 }
+
+
 /*----------------*/
-/* SCALLOP down */
+/*  SCALLOP down  */
 /*----------------*/
 .scallop-down{
-	height:100px;
-	width:100%;
-	background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#3399CC), color-stop(0.49, #3399CC), color-stop(0.51, #fff), to(white));
-	-webkit-background-size: 49px 100%;
+  height:100px;
+  width:100%;
+  background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#3399CC), color-stop(0.49, #3399CC), color-stop(0.51, #fff), to(white));
+-webkit-background-size: 49px 100%;
 }
+
+
 /*----------------*/
-/* SCALLOP up */
+/*  SCALLOP up    */
 /*----------------*/
 .scallop-up{
-	height:100px;
-	width:100%;
-	background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#3399CC), color-stop(0.49, #3399CC), color-stop(0.51, #fff), to(white));
-	-webkit-background-size: 49px 100%;
+  height:100px;
+  width:100%;
+  background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#3399CC), color-stop(0.49, #3399CC), color-stop(0.51, #fff), to(white));
+-webkit-background-size: 49px 100%;
 }
