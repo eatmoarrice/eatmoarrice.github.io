@@ -1,0 +1,103 @@
+{
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+input:focus {
+    background-color: rgb(238, 255, 247);
+}
+
+
+input[type=number]{
+  padding: 5px 5px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  width: 160px
+}
+
+#myUL, #myUL2 {
+  list-style-type: none;
+  /* padding: 0; */
+  /* margin: 0; */
+  /* float: left; */
+  list-style: none;
+  text-align: center;
+  /* background-color: #000000; */
+  /* margin-right: 30px;  */
+  /* width: 150px; */
+  line-height: 60px;
+}
+
+#myUL li a, #myUL2 li a {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  background-color: #f6f6f6;
+  padding: 15px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+ }
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+.grid {
+  max-width: auto;
+  margin: 10px;
+  padding-left: 10px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, 160px);
+}
+
+h2, h6 {
+  margin: 12px;
+  padding: 12px;
+}
+
+h1 {
+  text-align: center;
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:6px;
+	border:1px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
