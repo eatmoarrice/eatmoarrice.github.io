@@ -1,16 +1,38 @@
 function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
+    var input, filter, ul1, ul2, ul3, li1, li2, li3, a, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
+    ul1 = document.getElementById("myUL");
+    ul2 = document.getElementById("myULMR");
+    ul3 = document.getElementById("myULSR");
+    li1 = ul1.getElementsByTagName("li");
+    li2 = ul2.getElementsByTagName("li");
+    li3 = ul3.getElementsByTagName("li");
+    for (i = 0; i < li1.length; i++) {
+        a = li1[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
+            li1[i].style.display = "";
         } else {
-            li[i].style.display = "none";
+            li1[i].style.display = "none";
+        }
+    }
+    for (i = 0; i < li2.length; i++) {
+        a = li2[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li2[i].style.display = "";
+        } else {
+            li2[i].style.display = "none";
+        }
+    }
+    for (i = 0; i < li3.length; i++) {
+        a = li3[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li3[i].style.display = "";
+        } else {
+            li3[i].style.display = "none";
         }
     }
 }
@@ -31,6 +53,18 @@ const statue = [
 let statuenum = [
   [0,0,0,0],
   [0,0]
+]
+
+let materialNeed = [];
+
+let locationResults = [ ["111",0], ["112",0], ["113",0], ["114",0], ["115",0], ["116",0], ["117",0], ["118",0], ["119",0], ["1110",0], ["121",0], ["122",0], ["123",0], ["124",0], ["125",0], ["126",0], ["127",0], ["128",0], ["129",0], ["1210",0], ["131",0], ["132",0], ["133",0], ["134",0], ["135",0], ["136",0], ["137",0], ["138",0], ["139",0], ["1310",0], ["211",0], ["212",0], ["213",0], ["214",0], ["215",0], ["216",0], ["217",0], ["218",0], ["219",0], ["2110",0], ["221",0], ["222",0], ["223",0], ["224",0], ["225",0], ["226",0], ["227",0], ["228",0], ["229",0], ["2210",0], ["231",0], ["232",0], ["233",0], ["234",0], ["235",0], ["236",0], ["237",0], ["238",0], ["239",0], ["2310",0], ["311",0], ["312",0], ["313",0], ["314",0], ["315",0], ["316",0], ["317",0], ["318",0], ["319",0], ["3110",0], ["321",0], ["322",0], ["323",0], ["324",0], ["325",0], ["326",0], ["327",0], ["328",0], ["329",0], ["3210",0], ["331",0], ["332",0], ["333",0], ["334",0], ["335",0], ["336",0], ["337",0], ["338",0], ["339",0], ["3310",0], ["411",0], ["412",0], ["413",0], ["414",0], ["415",0], ["416",0], ["417",0], ["418",0], ["419",0], ["4110",0], ["421",0], ["422",0], ["423",0], ["424",0], ["425",0], ["426",0], ["427",0], ["428",0], ["429",0], ["4210",0], ["431",0], ["432",0], ["433",0], ["434",0], ["435",0], ["436",0], ["437",0], ["438",0], ["439",0], ["4310",0], ["511",0], ["512",0], ["513",0], ["514",0], ["515",0], ["516",0], ["517",0], ["518",0], ["519",0], ["5110",0] ]
+
+const materialLocation = [
+  //Alcryst
+  ["Dark Alcryst (Green)","118","126"],
+  ["Dark Alcryst (Blue)","134","213","221","229"],
+  ["Dark Alcryst (Purple)","237","315","323","331","339","417","422"],
+  ["Dark Alcryst (Yellow)","433","4310","512","510"]
 ]
 const jobnames = ["Warrior","Knight","Soldier","Ranger","Monk","Lancer","Gunner","Thief","White Mage", "Black Mage","Red Mage","Green Mage", "Samurai","Paladin","Time Mage","Spellblade","Cleric","Ninja","Dragoon","Winged One","Gunbreaker","Sorceress","Lord","White Mage of Lapis","Holy Swordsman (unreleased)","Viking (unreleased)","Apprentice Warrior (unrelease)","Dark Knight (unreleased)","Double Gunner (unreleased)","Assassin (unreleased)","Grandshelt Knight (unreleased)","Light Warrior (unreleased)","Magician (unreleased)"]
 
@@ -56,9 +90,7 @@ let totalJobMemory = [
   ["Dragoon",0,0,0,0],
   ["Winged One",0,0,0,0],
   ["Gunbreaker",0,0,0,0],
-  ["Sorceress",0,0,0,0],
-  ["Lord",0,0,0,0],
-  ["White Mage of Lapis",0,0,0,0]
+  ["Sorceress",0,0,0,0]
 ]
 
 let totalElement = [
@@ -72,51 +104,8 @@ let totalElement = [
   ["Dark",0,0,0,0]
 ]
 let elementalUnit = [
-  ["Thancred","Light"],
-  ["Gilgamesh","Ice"],
-  ["Macherie","Light"],
-  ["Engelbert","Light"],
-  ["Mediena","Ice"],
-  ["Rob","Light"],
-  ["Ayaka","Wind"],
-  ["Oelde","Fire"],
-  ["Aileen","Earth"],
-  ["Xiza","Dark"],
-  ["Sterne","Dark"],
-  ["Frederika","Thunder"],
-  ["Mont","Earth"],
-  ["Helena","Wind"],
-  ["Lilyth","Fire"],
-  ["Ramada","Water"],
-  ["Grace","Light"],
-  ["Khury","Ice"],
-  ["Rairyuu","Dark"],
-  ["Owe","Thunder"],
-  ["Lorenzo","Earth"],
-  ["Schuzelt","Thunder"],
-  ["Y'Shtola","Fire"],
-  ["Margritte","Fire"],
-  ["Meriluke","Thunder"],
-  ["Cadia","Wind"],
-  ["Fina","Light"],
-  ["Vistralle","Light"],
-  ["Shadowlynx","Dark"],
-  ["Vallaide","Ice"],
-  ["Severo","Water"],
-  ["Naiah","Fire"],
-  ["Sosha","Wind"],
-  ["Serjes","Ice"],
-  ["Phoebe","Light"],
-  ["Murmur","Earth"],
-  ["Baelo","Earth"],
-  ["Vadim","Thunder"],
-  ["Yuni","Water"],
-  ["Mia","Wind"],
-  ["Miche","Fire"],
-  ["Learte","Thunder"],
-  ["Zazan","Water"]
+  ["Thancred","Light"], ["Gilgamesh","Ice"], ["Macherie","Light"], ["Engelbert","Light"], ["Mediena","Ice"], ["Rob","Light"], ["Ayaka","Wind"], ["Oelde","Fire"], ["Aileen","Earth"], ["Xiza","Dark"], ["Sterne","Dark"], ["Frederika","Thunder"], ["Mont","Earth"], ["Helena","Wind"], ["Lilyth","Fire"], ["Ramada","Water"], ["Grace","Light"], ["Khury","Ice"], ["Rairyuu","Dark"], ["Owe","Thunder"], ["Lorenzo","Earth"], ["Schuzelt","Thunder"], ["YShtola","Fire"], ["Margritte","Fire"], ["Meriluke","Thunder"], ["Cadia","Wind"], ["Fina","Light"], ["Vistralle","Light"], ["Shadowlynx","Dark"], ["Vallaide","Ice"], ["Severo","Water"], ["Naiah","Fire"], ["Sosha","Wind"], ["Serjes","Ice"], ["Phoebe","Light"], ["Murmur","Earth"], ["Baelo","Earth"], ["Vadim","Thunder"], ["Yuni","Water"], ["Mia","Wind"], ["Miche","Fire"], ["Learte","Thunder"], ["Zazan","Water"]
 ]
-
 
 let char = []
 let oldchar = []
@@ -168,132 +157,130 @@ let jobOrbs = [
 ["","",""]
 ]
 
-// let totalWeaponZero = totalWeapon.slice();
-// let totalJobMemoryZero = totalJobMemory.slice();
-// let totalElementZero = totalElement.slice();
-// let totalMemoryZero = totalMemory.slice();
-// let totalStatuesZero = totalStatues.slice();
+function arrayPush(array,string){ // push locationResults[] to add materials to locations when a match is found
+  array.indexOf(string) === -1 ? array.push(string) : console.log("This item already exists");
+}
 
 function getJobMaterials(jobname, a, b){
   if (jobname == "Warrior"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Sword";
-    jobOrbs[a][b] ="Warrior's Memory";
+    jobOrbs[a][b] ="Warrior";
   }
   if (jobname == "Knight"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Sword";
-    jobOrbs[a][b] ="Knight's Memory";
+    jobOrbs[a][b] ="Knight";
   }
   if (jobname == "Soldier"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Greatsword";
-    jobOrbs[a][b] ="Soldier's Memory";
+    jobOrbs[a][b] ="Soldier";
   }
   if (jobname == "Ranger"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Bow";
-    jobOrbs[a][b] ="Ranger's Memory";
+    jobOrbs[a][b] ="Ranger";
   }
   if (jobname == "Monk"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Fists";
-    jobOrbs[a][b] ="Monk's Memory";
+    jobOrbs[a][b] ="Monk";
   }
   if (jobname == "Lancer"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Spear";
-    jobOrbs[a][b] ="Lancer's Memory";
+    jobOrbs[a][b] ="Lancer";
   }
   if (jobname == "Gunner"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Gun";
-    jobOrbs[a][b] ="Gunner's Memory";
+    jobOrbs[a][b] ="Gunner";
   }
   if (jobname == "Thief"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Dagger";
-    jobOrbs[a][b] ="Thief's Memory";
+    jobOrbs[a][b] ="Thief";
   }
   if (jobname == "White Mage"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Staff";
-    jobOrbs[a][b] ="White Mage's Memory";
+    jobOrbs[a][b] ="White Mage";
   }
   if (jobname == "Black Mage"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Staff";
-    jobOrbs[a][b] ="Black Mage's Memory";
+    jobOrbs[a][b] ="Black Mage";
   }
     if (jobname == "Red Mage"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Sword";
-    jobOrbs[a][b] ="Red Mage's Memory";
+    jobOrbs[a][b] ="Red Mage";
   }
    if (jobname == "Green Mage"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Staff";
-    jobOrbs[a][b] ="Green Mage's Memory";
+    jobOrbs[a][b] ="Green Mage";
   }
    if (jobname == "Samurai"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Katana";
-    jobOrbs[a][b] ="Samurai's Memory";
+    jobOrbs[a][b] ="Samurai";
   }
   if (jobname == "Paladin"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Sword";
-    jobOrbs[a][b] ="Paladin's Memory";
+    jobOrbs[a][b] ="Paladin";
   }
   if (jobname == "Time Mage"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Staff";
-    jobOrbs[a][b] ="Time Mage's Memory";
+    jobOrbs[a][b] ="Time Mage";
   }
   if (jobname == "Spellblade"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Sword";
-    jobOrbs[a][b] ="Spellblade's Memory";
+    jobOrbs[a][b] ="Spellblade";
   }
   if (jobname == "Cleric"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Mace";
-    jobOrbs[a][b] ="Cleric's Memory";
+    jobOrbs[a][b] ="Cleric";
   }
   if (jobname == "Ninja"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Ninja Blade";
-    jobOrbs[a][b] ="Ninja's Memory";
+    jobOrbs[a][b] ="Ninja";
   }
   if (jobname == "Dragoon"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Spear";
-    jobOrbs[a][b] ="Dragoon's Memory";
+    jobOrbs[a][b] ="Dragoon";
   }
   if (jobname == "Winged One"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Sword";
-    jobOrbs[a][b] ="Winged One's Memory";
+    jobOrbs[a][b] ="Winged One";
   }
   if (jobname == "Gunbreaker"){
     statues[a][b] = "Dragon";
     weapons[a][b] = "Sword";
-    jobOrbs[a][b] ="Gunbreaker's Memory";
+    jobOrbs[a][b] ="Gunbreaker";
   }
   if (jobname == "Sorceress"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Staff";
-    jobOrbs[a][b] ="Sorceress's Memory";
+    jobOrbs[a][b] ="Sorceress";
   }
   if (jobname == "Lord"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Sword";
-    jobOrbs[a][b] ="Warrior's Memory";
+    jobOrbs[a][b] ="Warrior";
   }
   if (jobname == "White Mage of Lapis"){
     statues[a][b] = "Angel";
     weapons[a][b] = "Bow";
-    jobOrbs[a][b] ="White Mage's Memory";
+    jobOrbs[a][b] ="White Mage";
   }
 
 
@@ -416,7 +403,7 @@ function getJobs(name, array){
      array[1] = "Knight";
      array[2] = "Ranger";
   }
-  if (name == `Y'Shtola`){
+  if (name == `YShtola`){
      array[0] = "Sorceress";
      array[1] = "White Mage";
      array[2] = "Green Mage";
@@ -626,7 +613,6 @@ function calculateElement(array,a){
   let x = 0;
   let y = 0;
   let element = getElement(char[a]);
-  console.log(element)
   for (i = 0; i <3; i++){
     for ( x = array[i][0]; x < array[i][1]; x++){
       for (y = 0; y<8;y++){
@@ -656,7 +642,7 @@ function calculateJobMemory(array,a){
   for (i = 0; i <3; i++){
     for ( x = array[i][0]; x < array[i][1]; x++){
       for (y = 0; y< totalJobMemory.length;y++){
-        if (unitx4[a][i] == totalJobMemory[y][0]){
+        if (jobOrbs[a][i] == totalJobMemory[y][0]){
           if (x+1 == 3){
             totalJobMemory[y][1]+=1;
           }
@@ -858,9 +844,7 @@ totalJobMemory = [
   ["Dragoon",0,0,0,0],
   ["Winged One",0,0,0,0],
   ["Gunbreaker",0,0,0,0],
-  ["Sorceress",0,0,0,0],
-  ["Lord",0,0,0,0],
-  ["White Mage of Lapis",0,0,0,0]
+  ["Sorceress",0,0,0,0]
 ];
 
 totalElement = [
@@ -894,29 +878,178 @@ function countMat(){
 
 }
 
-function checkIfEmpty(array){
+// function checkIfEmpty(array){                              <---- Doesn't work for some reason
+//   let x = 0;
+//   for (i = 0; i < array.length; i++){
+//     for (x = 0; x < array[0].length; x++){
+//       if (array[i][x] != 0){
+//         return 1;
+//          {break;}
+//       }
+//     }
+//   }
+//   return 0;
+// }
+
+// function present(){
+//   if (checkIfEmpty(totalMemory)==0){
+//     console.log(totalMemory)
+//   }
+// }
+function presentElement(){
+  let text = ""
   let x = 0;
-  for (i = 0; i<array.length;i++){
-    for (x = 1; x <array[0].length; x++){
-      if (array[i][x] != 0){
-        return 1;
-        {break;}
+  for (i = 0; i<8;i++){
+    for (x = 1; x<5; x++){
+      if (totalElement[i][x] != 0){
+        if (x == 1){
+          arrayPush(materialNeed,`${totalElement[i][0]} Alcryst (Green)`);
+        text += `<b>${totalElement[i][0]} Alcryst (Green)</b> x ${totalElement[i][x]} <br>`
+        }
+        if (x == 2){
+          arrayPush(materialNeed,`${totalElement[i][0]} Alcryst (Blue)`);
+        text += `<b>${totalElement[i][0]} Alcryst (Blue)</b> x ${totalElement[i][x]} <br>`
+        }
+        if (x == 3){
+          arrayPush(materialNeed,`${totalElement[i][0]} Alcryst (Purple)`);
+        text += `<b>${totalElement[i][0]} Alcryst (Purple)</b> x ${totalElement[i][x]} <br>`
+        }
+        if (x == 4){
+          arrayPush(materialNeed,`${totalElement[i][0]} Alcryst (Yellow)`);
+        text += `<b>${totalElement[i][0]} Alcryst (Yellow)</b> x ${totalElement[i][x]} <br>`
+        }
+      }
+
+    }
+    document.getElementById("Alcryst").innerHTML = text;
+  }
+}
+
+  function presentJobMemory(){
+  let text = ""
+
+  let x = 0;
+  for (i = 0; i<totalJobMemory.length;i++){
+    for (x = 1; x<5; x++){
+      if (totalJobMemory[i][x] != 0){
+        if (x == 1){
+          arrayPush(materialNeed,`${totalJobMemory[i][0]}'s Memory (Green)`);
+          text += `<b>${totalJobMemory[i][0]}'s Memory (Green)</b> x ${totalJobMemory[i][x]} <br>`
+        }
+        if (x == 2){
+          arrayPush(materialNeed,`${totalJobMemory[i][0]}'s Memory (Blue)`);
+        text += `<b>${totalJobMemory[i][0]}'s Memory (Blue)</b> x ${totalJobMemory[i][x]} <br>`
+        }
+        if (x == 3){
+          arrayPush(materialNeed,`${totalJobMemory[i][0]}'s Memory (Purple)`);
+        text += `<b>${totalJobMemory[i][0]}'s Memory (Purple)</b> x ${totalJobMemory[i][x]} <br>`
+        }
+        if (x == 4){
+          arrayPush(materialNeed,`${totalJobMemory[i][0]}'s Memory (Yellow)`);
+        text += `<b>${totalJobMemory[i][0]}'s Memory (Yellow)</b> x ${totalJobMemory[i][x]} <br>`
+        }
       }
     }
-  }
-  return 0;
-}
-
-function present(){
-  if (checkIfEmpty(totalMemory)==1){
-    console.log("hahaha")
+    document.getElementById("JobMemory").innerHTML = text;
   }
 }
 
+function presentMemory(){
+  let text = ""
+  for (i = 0; i<4;i++){
+      if (totalMemory[i] != 0){
+        if (i == 0){
+          // arrayPush(meterialNeed,"Azure Memory")  no need as they can be farmed everywhere
+        text += `<b>Faint Memory (Azure)</b> x ${totalMemory[i]} <br>`
+        }
+        if (i == 1){
+          // arrayPush(meterialNeed,"Azure Memory")  no need as they can be farmed everywhere
+        text += `<b>Faint Memory (Blue)</b> x ${totalMemory[i]} <br>`
+        }
+        if (i == 2){
+          // arrayPush(meterialNeed,"Azure Memory")  no need as they can be farmed everywhere
+        text += `<b>Faint Memory (Purple)</b> x ${totalMemory[i]} <br>`
+        }
+        if (i == 3){
+          // arrayPush(meterialNeed,"Azure Memory")  no need as they can be farmed everywhere
+        text += `<b>Faint Memory (Yellow)</b> x ${totalMemory[i]} <br>`
+        }
+      }
+
+    }
+    document.getElementById("FaintMemory").innerHTML = text;
+  }
+
+ function presentWeapon(){
+  let text = ""
+  let x = 0;
+  for (i = 0; i<totalWeapon.length;i++){
+    for (x = 1; x<5; x++){
+      if (totalWeapon[i][x] != 0){
+        if (x == 1){
+          arrayPush(materialNeed,`${totalWeapon[i][0]} Jadeite`);
+          text += `<b>${totalWeapon[i][0]} Jadeite</b> x ${totalWeapon[i][x]} <br>`
+        }
+        if (x == 2){
+          arrayPush(materialNeed,`${totalWeapon[i][0]} Azurite`);
+        text += `<b>${totalWeapon[i][0]} Azurite</b> x ${totalWeapon[i][x]} <br>`
+        }
+        if (x == 3){
+          arrayPush(materialNeed,`${totalWeapon[i][0]} Charoite`);
+        text += `<b>${totalWeapon[i][0]} Charoite</b> x ${totalWeapon[i][x]} <br>`
+        }
+        if (x == 4){
+          arrayPush(materialNeed,`${totalJobMemory[i][0]} Citrine`);
+        text += `<b>${totalWeapon[i][0]} Citrine</b> x ${totalWeapon[i][x]} <br>`
+        }
+      }
+    }
+    document.getElementById("Weapon").innerHTML = text;
+  }
+}
+
+function presentStatue(){
+   let text = ""
+  let x = 0;
+  let w_or_a = "";
+  for (i = 0; i<2;i++){
+    if (i == 0){
+      w_or_a = "Praying Angel Statue";
+    }
+    else {
+      w_or_a = "Prowling Wyvern Statue";
+    }
+    for (x = 0; x<4; x++){
+      if (totalStatues[i][x] != 0){
+        if (x == 0){
+          arrayPush(materialNeed,`${w_or_a} (Green)`);
+          text += `<b>${w_or_a} (Green)</b> x ${totalStatues[i][x]} <br>`
+        }
+        if (x == 1){
+          arrayPush(materialNeed,`${w_or_a} (Blue)`);
+        text += `<b>${w_or_a} (Blue)</b> x ${totalStatues[i][x]} <br>`
+        }
+        if (x == 2){
+          arrayPush(materialNeed,`${w_or_a} (Purple)`);
+        text += `<b>${w_or_a} (Purple)</b> x ${totalStatues[i][x]} <br>`
+        }
+        if (x == 3){
+          arrayPush(materialNeed,`${w_or_a} (Yellow)`);
+        text += `<b>${w_or_a} (Yellow)</b> x ${totalStatues[i][x]} <br>`
+        }
+      }
+    }
+    document.getElementById("Statue").innerHTML = text;
+  }
+}
 function calculate(){
   cleanup();
-  countMat()
-  present()
+  countMat();
+  presentMemory();
+  presentElement();
+  presentWeapon();
+  presentJobMemory();
+  presentStatue();
   // outpuTotalStatues()
 
 }
@@ -938,6 +1071,19 @@ let u1Job =[
   [0,0],
   [0,0],
   [0,0]
+]
+
+let u3Job =[
+  [0,0],
+  [0,0],
+  [0,0]
+]
+
+let u2Job =[
+  [0,0],
+  [0,0],
+  [0,0]
+
 ]
 function cleanup(){
   // for unit 1
