@@ -960,7 +960,7 @@ function presentMemory(){
       if (totalMemory[i] != 0){
         if (i == 0){
           // arrayPush(meterialNeed,"Azure Memory")  no need as they can be farmed everywhere
-        text += `<b>Faint Memory (Azure)</b> x ${totalMemory[i]} <br>`
+        text += `<b>Faint Memory (Green)</b> x ${totalMemory[i]} <br>`
         }
         if (i == 1){
           // arrayPush(meterialNeed,"Azure Memory")  no need as they can be farmed everywhere
