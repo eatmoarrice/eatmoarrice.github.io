@@ -738,8 +738,8 @@ function memoryPerLevel(number){
 }
 
 function changeCard(val) {
-    var elmnt = document.getElementById("customize");
-elmnt.scrollIntoView();
+    let elmnt = document.getElementById("customize");
+    elmnt.scrollIntoView();
     oldchar = char.slice();
     if (!char.includes(val)) {
         char.push(val);
@@ -1052,6 +1052,8 @@ function calculate(){
   presentWeapon();
   presentJobMemory();
   presentStatue();
+  let elmnt = document.getElementById("lookhere");
+  elmnt.scrollIntoView();
   // outpuTotalStatues()
 
 }
