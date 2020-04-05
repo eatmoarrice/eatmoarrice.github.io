@@ -738,6 +738,8 @@ function memoryPerLevel(number){
 }
 
 function changeCard(val) {
+    var elmnt = document.getElementById("customize");
+elmnt.scrollIntoView();
     oldchar = char.slice();
     if (!char.includes(val)) {
         char.push(val);
