@@ -1325,7 +1325,7 @@ function bestLocation(){
       return b[1]-a[1]
   });
 
-  for (i = 0; i<10;i++){
+  for (i = 0; i<20;i++){
     if (locationResults[i][1]>1){
     textbody ="";
     for (x=0; x<locationResults.length;x++){
