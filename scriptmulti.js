@@ -317,7 +317,8 @@ let char = []
 let oldchar = []
 let i;
 
-let unitx4 =[
+let unitx5 =[
+  ["","",""],
   ["","",""],
   ["","",""],
   ["","",""],
@@ -348,15 +349,18 @@ let weapons = [
 ["","",""],
 ["","",""],
 ["","",""],
+["","",""],
 ["","",""]
 ]
 let statues = [
 ["","",""],
 ["","",""],
 ["","",""],
+["","",""],
 ["","",""]
 ]
 let jobOrbs = [
+["","",""],
 ["","",""],
 ["","",""],
 ["","",""],
@@ -950,31 +954,41 @@ function gotop(){
 function changeCard(val) {
 
 
-    let id ="";
-    if (char.length == 0){
-      id ="customize1";
-    }
-    if (char.length == 1){
-      id ="myUL3";
-    }
-    if (char.length == 2){
-      id ="myUL4";
-    }
-    if (char.length >2){
-      id ="myUL5";
-    }
-    let elmnt = document.getElementById(id);
-    elmnt.scrollIntoView();
     oldchar = char.slice();
     if (!char.includes(val)) {
         char.push(val);
     }
-    if (char.length > 4) {
+    if (char.length > 5) {
         char.shift();
     }
     if (oldchar != char) {
         showPic()
     }
+
+
+
+let id ="";
+    if (char.length == 0){
+      id ="customize1";
+    }
+    if (char.length == 1){
+      id ="customize1";
+    }
+    if (char.length == 2){
+      id ="myUL2";
+    }
+    if (char.length == 3){
+      id ="myUL3";
+    }
+    if (char.length == 4){
+      id ="myUL4";
+    }
+      if (char.length == 5){
+      id ="myUL5";
+    }
+
+    let elmnt = document.getElementById(id);
+    elmnt.scrollIntoView();
 
 }
 
@@ -984,6 +998,7 @@ function removeCard(val) {
         modChar[0] = char[1];
         modChar[1] = char[2];
         modChar[2] = char[3];
+        modChar[3] = char[4];
         modChar = modChar.filter(item => item);
         char = modChar.slice();
     }
@@ -991,6 +1006,7 @@ function removeCard(val) {
         modChar[0] = char[0];
         modChar[1] = char[2];
         modChar[2] = char[3];
+        modChar[3] = char[4];
         modChar = modChar.filter(item => item);
         char = modChar.slice();
     }
@@ -998,6 +1014,7 @@ function removeCard(val) {
         modChar[0] = char[0];
         modChar[1] = char[1];
         modChar[2] = char[3];
+        modChar[3] = char[4];
         modChar = modChar.filter(item => item);
         char = modChar.slice();
     }
@@ -1005,18 +1022,118 @@ function removeCard(val) {
         modChar[0] = char[0];
         modChar[1] = char[1];
         modChar[2] = char[2];
+        modChar[3] = char[4];
         modChar = modChar.filter(item => item);
         char = modChar.slice();
     }
-     console.log(char);
+    if (val == "unit5") {
+        modChar[0] = char[0];
+        modChar[1] = char[1];
+        modChar[2] = char[2];
+        modChar[3] = char[3];
+        modChar = modChar.filter(item => item);
+        char = modChar.slice();
+    }
+
+    console.log(char);
     showPic()
 }
 
-function showPic() {
+function getText(i){
 
-    for (i = 1; i < 5; i++) {
+let extraOption =`
+<ul class="grid list" id="myUL${i}">
+	<li>
+		<a href="javascript:void(0)" onclick='removeCard("unit${i}")'>
+			<img id="u${i}" src='images/questionmark.png' alt=''/>
+			<div id="customize${i}">Unit ${i}</div>
+		</a>
+			<a href="javascript:void(0)" onclick='gotop()'>
+			<div>Go to top</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u${i}j1" src='images/questionmark.png' alt='' />
+			<div>${unitx5[i-1][0]}</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u${i}job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u${i}j2" src='images/questionmark.png' alt=''/>
+			<div>${unitx5[i-1][1]}</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u${i}job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id ="u${i}j3" src='images/questionmark.png' alt=''/>
+			<div>${unitx5[i-1][2]}</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u${i}job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+</ul>`;
+return extraOption;
+}
+
+function getDisabledText(i){ // i = nth number of unit, e.g.
+let disabledOption = `
+<ul class="grid list">
+	<li>
+		<a>
+			<img src='images/questionmark.png' id ="unknown" alt=''/>
+			<div>Unit ${i}</div>
+		</a>
+
+		<a href="javascript:void(0)" onclick='gotop()'>
+			<div>Go to top</div>
+		</a>
+	</li>
+	<li>
+		<a>
+			<img src='images/questionmark.png' alt='' />
+			<div>Job 1</div>
+		</a>
+		<input type="number" required pattern="\d+"  placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
+		 <input type="number" required pattern="\d+" class="inputbox"  placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
+	</li>
+	<li>
+		<a>
+			<img src='images/questionmark.png' alt=''/>
+			<div>Job 2</div>
+		</a>
+		<input type="number" required pattern="\d+"   placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
+		 <input type="number" required pattern="\d+" class="inputbox"   placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
+	</li>
+	<li>
+		<a>
+			<img src='images/questionmark.png' alt=''/>
+			<div>Job 3</div>
+		</a>
+		<input type="number" required pattern="\d+"  placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
+		 <input type="number" required pattern="\d+" class="inputbox" placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
+	</li>
+</ul>
+`
+return disabledOption;
+}
+
+function showPic() {
+    let inUse ="";
+    let notInUse ="";
+    let x = 0;
+    for (x = 0; x < char.length; x++){
+      getJobs(char[x],unitx5[x]);
+    }
+    document.getElementById("autoadd").innerHTML ="";
+    for (i = 1; i < 6; i++) {
         if (char[i - 1] != undefined) {
             // console.log(char[i - 1])
+            document.getElementById("autoadd").innerHTML += getText(i);
             document.getElementById(`u${i}`).src = `images/${char[i-1]}.png`;
         //     document.getElementById(`u${i}j1startinglevel`).disabled = false;
         //     document.getElementById(`u${i}j1goallevel`).disabled = false;
@@ -1026,7 +1143,9 @@ function showPic() {
         //     document.getElementById(`u${i}j3goallevel`).disabled = false;
         }
         else {
-          document.getElementById(`u${i}`).src = `images/questionmark.png`;
+          notInUse = getDisabledText(i);
+          document.getElementById("disabled").innerHTML = notInUse;
+          break;
           // document.getElementById(`u${i}j1startinglevel`).disabled = true;
           //   document.getElementById(`u${i}j1goallevel`).disabled = true;
           //   document.getElementById(`u${i}j2startinglevel`).disabled = true;
@@ -1035,15 +1154,18 @@ function showPic() {
           //   document.getElementById(`u${i}j3goallevel`).disabled = true;
         }
     }
+    if (char[4] != undefined){
+          document.getElementById("disabled").innerHTML = "";
+    }
 }
 
 function calForEachUnit(){
   for (i = 0; i < char.length; i++){
-   getJobs(char[i],unitx4[i]);  // => assign jobs to object u1 (u1.job1, u1.job2, u1.job3) based on char's name
+   getJobs(char[i],unitx5[i]);  // => assign jobs to array u1 (u1.[0]=job1, u1[1]=job2,...) based on char's name
 
-  getJobMaterials(unitx4[i][0], i, 0);
-  getJobMaterials(unitx4[i][1], i, 1);
-  getJobMaterials(unitx4[i][2], i, 2); // => assign job materials (dragon or angel and type of weapon) to jobMat [jobname,0-3 for units chosen]
+  getJobMaterials(unitx5[i][0], i, 0);
+  getJobMaterials(unitx5[i][1], i, 1);
+  getJobMaterials(unitx5[i][2], i, 2); // => assign job materials (dragon or angel and type of weapon) to jobMat [jobname,0-3 for units chosen]
   // (jobMat[0-3 for units chosen][type of Statue, type of Weapon])
   }
 }
@@ -1140,6 +1262,13 @@ function countMat(){
     calculateWeapon(u4Job,3) //totalWeapon
     calculateStatues(u4Job,3) // totalStatues
     calculateJobMemory(u4Job,3) //totalJobMemory
+  }
+   if (char.length>4){
+    calculateMemory(u5Job); //totalMemory
+    calculateElement(u5Job,4) //totalElement
+    calculateWeapon(u5Job,4) //totalWeapon
+    calculateStatues(u5Job,4) // totalStatues
+    calculateJobMemory(u5Job,4) //totalJobMemory
   }
 
 }
@@ -1498,6 +1627,13 @@ let u4Job =[
   [0,0]
 
 ];
+
+let u5Job =[
+  [0,0],
+  [0,0],
+  [0,0]
+
+];
 function cleanup(){
   // for unit 1
   if (char.length > 0){
@@ -1569,6 +1705,23 @@ function cleanup(){
   document.getElementById('u4job3startinglevel').value=u4Job[2][0];
   document.getElementById('u4job3goallevel').value=u4Job[2][1];
   }
+  if (char.length >4){
+u5Job[0][0] = +document.getElementById(`u5job1startinglevel`).value;
+u5Job[0][1] = +document.getElementById(`u5job1goallevel`).value;
+removeNumbers(u5Job[0]);
+document.getElementById('u5job1startinglevel').value=u5Job[0][0];
+document.getElementById('u5job1goallevel').value=u5Job[0][1];
+u5Job[1][0] = +document.getElementById(`u5job2startinglevel`).value;
+u5Job[1][1] = +document.getElementById(`u5job2goallevel`).value;
+removeNumbers(u5Job[1]);
+document.getElementById('u5job2startinglevel').value=u5Job[1][0];
+document.getElementById('u5job2goallevel').value=u5Job[1][1];
+u5Job[2][0] = +document.getElementById(`u5job3startinglevel`).value;
+u5Job[2][1] = +document.getElementById(`u5job3goallevel`).value;
+removeNumbers(u5Job[2]);
+document.getElementById('u5job3startinglevel').value=u5Job[2][0];
+document.getElementById('u5job3goallevel').value=u5Job[2][1];
+}
 }
 
 function removeNumbers(array){
