@@ -191,6 +191,11 @@ const materialLocation = [
 ["Gunner's Memory (Purple)","232","311","322","3210","412","419"],
 ["Gunner's Memory (Yellow)","432","512"],
 
+["Lancer's Memory (Green)","117","126"],
+["Lancer's Memory (Blue)","137","217","227"],
+["Lancer's Memory (Purple)","236","317","325","337","414","427"],
+["Lancer's Memory (Yellow)","436","516"],
+
 ["Thief's Memory (Green)","119","128"],
 ["Thief's Memory (Blue)","1310","219","229"],
 ["Thief's Memory (Purple)","238","319","327","339","416","429"],
