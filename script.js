@@ -1047,7 +1047,7 @@ let extraOption =`
 			<div>Go to top</div>
 		</a>
     </a>
-	
+
 	</li>
 	<li>
 		<a href="javascript:void(0)">
@@ -1270,24 +1270,6 @@ function countMat(){
 
 }
 
-// function checkIfEmpty(array){                              <---- Doesn't work for some reason
-//   let x = 0;
-//   for (i = 0; i < array.length; i++){
-//     for (x = 0; x < array[0].length; x++){
-//       if (array[i][x] != 0){
-//         return 1;
-//          {break;}
-//       }
-//     }
-//   }
-//   return 0;
-// }
-
-// function present(){
-//   if (checkIfEmpty(totalMemory)==0){
-//     console.log(totalMemory)
-//   }
-// }
 function presentElement(){
   let text = "";
   let drop ="";
