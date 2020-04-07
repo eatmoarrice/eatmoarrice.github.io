@@ -18,7 +18,7 @@
     </div>
     <h2>WOTV Job Material Planner</h2>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..." title="Type in a name">
-    <h6>Choose a unit.</h6>
+    <h6 id="top">Choose a unit.</h6>
     <div>
       <h1>UR</h1>
     <ul class="grid list" id="myUL">
@@ -300,6 +300,11 @@
             <div>Unit 1</div>
           </a>
 
+          <a href="javascript:void(0)" onclick='gotop()'>
+            <div>Go to top</div>
+          </a>
+
+
         </li>
         <li>
           <a href="javascript:void(0)">
@@ -334,7 +339,9 @@
             <img id="u2" src='images/questionmark.png' alt=''/>
             <div id="customize2">Unit 2</div>
           </a>
-
+          <a href="javascript:void(0)" onclick='gotop()'>
+            <div>Go to top</div>
+          </a>
         </li>
         <li>
           <a href="javascript:void(0)">
@@ -368,7 +375,9 @@
             <img id="u3" src='images/questionmark.png' alt=''/>
             <div id="customize3">Unit 3</div>
           </a>
-
+          <a href="javascript:void(0)" onclick='gotop()'>
+            <div>Go to top</div>
+          </a>
         </li>
         <li>
           <a href="javascript:void(0)">
@@ -401,7 +410,9 @@
             <img id="u4" src='images/questionmark.png' alt=''/>
             <div id="customize4">Unit 4</div>
           </a>
-
+            <a href="javascript:void(0)" onclick='gotop()'>
+            <div>Go to top</div>
+          </a>
         </li>
         <li>
           <a href="javascript:void(0)">
@@ -458,6 +469,6 @@
       <div id="Location"></div>
     <div class="scallop-up"></div>
     <div class="colour-block"></div>
-    <script src="script.js"></script>
+    <script src="scriptmulti.js"></script>
   </body>
 </html>
