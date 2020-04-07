@@ -17,7 +17,7 @@ input:focus {
     background-color: rgb(238, 255, 247);
 }
 
-#FaintMemory, #Alcryst, #Weapon, #JobMemory, #Statue{
+#FaintMemory, #Alcryst, #Weapon, #JobMemory, #Statue, #Location{
   margin: 12px;
   padding: 12px;
 }
