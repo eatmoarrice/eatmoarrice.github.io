@@ -1371,6 +1371,7 @@ function bestLocation(){
 }
 
 function calculate(){
+  if (char.length != 0){
   tablebody = "";
   fulltable2 ="";
   clearall();
@@ -1387,7 +1388,10 @@ function calculate(){
   document.getElementById("mattable").innerHTML = tablebody;
   bestLocation();
   document.getElementById("table2").innerHTML = fulltable2;
-
+}
+else {
+    document.getElementById("table2").innerHTML = "Please select a unit."
+}
   // outpuTotalStatues()
 
 }

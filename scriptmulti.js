@@ -1429,8 +1429,10 @@ function bestLocation(){
 }
 
 function calculate(){
+  if (char.length != 0){
   tablebody = "";
   fulltable2 ="";
+  document.getElementById("mattable").innerHTML = "";
   clearall();
   cleanup();
   countMat();
@@ -1439,14 +1441,16 @@ function calculate(){
   presentWeapon();
   presentJobMemory();
   presentStatue();
-    console.log(materialNeed)
   let elmnt = document.getElementById("lookhere");
   elmnt.scrollIntoView();
   lookUpLocation();
   document.getElementById("mattable").innerHTML = tablebody;
   bestLocation();
   document.getElementById("table2").innerHTML = fulltable2;
-
+}
+else {
+    document.getElementById("table2").innerHTML = "Please select a unit."
+}
   // outpuTotalStatues()
 
 }
