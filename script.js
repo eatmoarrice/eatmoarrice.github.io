@@ -939,48 +939,68 @@ function memoryPerLevel(number){
 }
 
 function changeCard(val) {
-    let elmnt = document.getElementById("customize");
+
+    let id ="";
+    if (char.length == 0){
+      id ="customize1";
+    }
+    if (char.length == 1){
+      id ="myUL3";
+    }
+    if (char.length == 2){
+      id ="myUL4";
+    }
+    if (char.length >2){
+      id ="myUL5";
+    }
+    let elmnt = document.getElementById(id);
     elmnt.scrollIntoView();
     oldchar = char.slice();
     if (!char.includes(val)) {
         char.push(val);
     }
-    if (char.length > 1) {
+    if (char.length > 4) {
         char.shift();
     }
     if (oldchar != char) {
         showPic()
     }
+
 }
 
-// function removeCard(val) {
-//     let modChar = []
-//     if (val == "unit1") {
-//         modChar[0] = char[1];
-//         modChar[1] = char[2];
-//         modChar[2] = char[3];
-//         char = modChar.slice();
-//     }
-//     if (val == "unit2") {
-//         modChar[0] = char[0];
-//         modChar[1] = char[2];
-//         modChar[2] = char[3];
-//         char = modChar.slice();
-//     }
-//     if (val == "unit3") {
-//         modChar[0] = char[0];
-//         modChar[1] = char[1];
-//         modChar[2] = char[3];
-//         char = modChar.slice();
-//     }
-//     if (val == "unit1") {
-//         modChar[0] = char[0];
-//         modChar[1] = char[1];
-//         modChar[2] = char[2];
-//         char = modChar.slice();
-//     }
-//     showPic()
-// }
+function removeCard(val) {
+    let modChar = []
+    if (val == "unit1") {
+        modChar[0] = char[1];
+        modChar[1] = char[2];
+        modChar[2] = char[3];
+        modChar = modChar.filter(item => item);
+        char = modChar.slice();
+    }
+    if (val == "unit2") {
+        modChar[0] = char[0];
+        modChar[1] = char[2];
+        modChar[2] = char[3];
+        modChar = modChar.filter(item => item);
+        char = modChar.slice();
+    }
+    if (val == "unit3") {
+        modChar[0] = char[0];
+        modChar[1] = char[1];
+        modChar[2] = char[3];
+        modChar = modChar.filter(item => item);
+        char = modChar.slice();
+    }
+    if (val == "unit4") {
+        modChar[0] = char[0];
+        modChar[1] = char[1];
+        modChar[2] = char[2];
+        modChar = modChar.filter(item => item);
+        char = modChar.slice();
+    }
+     console.log(char);
+    showPic()
+}
 
 function showPic() {
 
@@ -988,13 +1008,22 @@ function showPic() {
         if (char[i - 1] != undefined) {
             // console.log(char[i - 1])
             document.getElementById(`u${i}`).src = `images/${char[i-1]}.png`;
-            // document.getElementById(`u${i}startinglevel`).disabled = false;
-            // document.getElementById(`u${i}goallevel`).disabled = false;
+        //     document.getElementById(`u${i}j1startinglevel`).disabled = false;
+        //     document.getElementById(`u${i}j1goallevel`).disabled = false;
+        //     document.getElementById(`u${i}j2startinglevel`).disabled = false;
+        //     document.getElementById(`u${i}j2goallevel`).disabled = false;
+        //     document.getElementById(`u${i}j3startinglevel`).disabled = false;
+        //     document.getElementById(`u${i}j3goallevel`).disabled = false;
         }
-        // else {
-        //   document.getElementById(`u${i}startinglevel`).disabled = true;
-        //   document.getElementById(`u${i}goallevel`).disabled = true;
-        // }
+        else {
+          document.getElementById(`u${i}`).src = `images/questionmark.png`;
+          // document.getElementById(`u${i}j1startinglevel`).disabled = true;
+          //   document.getElementById(`u${i}j1goallevel`).disabled = true;
+          //   document.getElementById(`u${i}j2startinglevel`).disabled = true;
+          //   document.getElementById(`u${i}j2goallevel`).disabled = true;
+          //   document.getElementById(`u${i}j3startinglevel`).disabled = true;
+          //   document.getElementById(`u${i}j3goallevel`).disabled = true;
+        }
     }
 }
 
@@ -1075,11 +1104,33 @@ totalStatues = [
 function countMat(){
   clearall();
   calForEachUnit();
+
   calculateMemory(u1Job); //totalMemory
   calculateElement(u1Job,0) //totalElement
-    calculateWeapon(u1Job,0) //totalWeapon
+  calculateWeapon(u1Job,0) //totalWeapon
   calculateStatues(u1Job,0) // totalStatues
   calculateJobMemory(u1Job,0) //totalJobMemory
+  if (char.length>1){
+    calculateMemory(u2Job); //totalMemory
+    calculateElement(u2Job,1) //totalElement
+    calculateWeapon(u2Job,1) //totalWeapon
+    calculateStatues(u2Job,1) // totalStatues
+    calculateJobMemory(u2Job,1) //totalJobMemory
+  }
+  if (char.length>2){
+    calculateMemory(u3Job); //totalMemory
+    calculateElement(u3Job,2) //totalElement
+    calculateWeapon(u3Job,2) //totalWeapon
+    calculateStatues(u3Job,2) // totalStatues
+    calculateJobMemory(u3Job,2) //totalJobMemory
+  }
+  if (char.length>3){
+    calculateMemory(u4Job); //totalMemory
+    calculateElement(u4Job,3) //totalElement
+    calculateWeapon(u4Job,3) //totalWeapon
+    calculateStatues(u4Job,3) // totalStatues
+    calculateJobMemory(u4Job,3) //totalJobMemory
+  }
 
 }
 
@@ -1383,6 +1434,7 @@ function calculate(){
   presentWeapon();
   presentJobMemory();
   presentStatue();
+    console.log(materialNeed)
   let elmnt = document.getElementById("lookhere");
   elmnt.scrollIntoView();
   lookUpLocation();
@@ -1411,22 +1463,30 @@ let u1Job =[
   [0,0],
   [0,0],
   [0,0]
-]
+];
 
 let u3Job =[
   [0,0],
   [0,0],
   [0,0]
-]
+];
 
 let u2Job =[
   [0,0],
   [0,0],
   [0,0]
 
-]
+];
+
+let u4Job =[
+  [0,0],
+  [0,0],
+  [0,0]
+
+];
 function cleanup(){
   // for unit 1
+  if (char.length > 0){
   u1Job[0][0] = +document.getElementById(`u1job1startinglevel`).value;
   u1Job[0][1] = +document.getElementById(`u1job1goallevel`).value;
   removeNumbers(u1Job[0]);
@@ -1440,8 +1500,61 @@ function cleanup(){
   u1Job[2][0] = +document.getElementById(`u1job3startinglevel`).value;
   u1Job[2][1] = +document.getElementById(`u1job3goallevel`).value;
   removeNumbers(u1Job[2]);
-  document.getElementById('u1job3startinglevel').value=u1Job[2][0];
-  document.getElementById('u1job3goallevel').value=u1Job[2][1];
+
+  document.getElementById('u2job3startinglevel').value=u1Job[2][0];
+  document.getElementById('u2job3goallevel').value=u1Job[2][1];
+  }
+  if (char.length > 1){
+  u2Job[0][0] = +document.getElementById(`u2job1startinglevel`).value;
+  u2Job[0][1] = +document.getElementById(`u2job1goallevel`).value;
+  removeNumbers(u2Job[0]);
+  document.getElementById('u2job1startinglevel').value=u2Job[0][0];
+  document.getElementById('u2job1goallevel').value=u2Job[0][1];
+  u2Job[1][0] = +document.getElementById(`u2job2startinglevel`).value;
+  u2Job[1][1] = +document.getElementById(`u2job2goallevel`).value;
+  removeNumbers(u2Job[1]);
+  document.getElementById('u2job2startinglevel').value=u2Job[1][0];
+  document.getElementById('u2job2goallevel').value=u2Job[1][1];
+  u2Job[2][0] = +document.getElementById(`u2job3startinglevel`).value;
+  u2Job[2][1] = +document.getElementById(`u2job3goallevel`).value;
+  removeNumbers(u2Job[2]);
+  document.getElementById('u2job3startinglevel').value=u2Job[2][0];
+  document.getElementById('u2job3goallevel').value=u2Job[2][1];
+  }
+  if (char.length >2){
+  u3Job[0][0] = +document.getElementById(`u3job1startinglevel`).value;
+  u3Job[0][1] = +document.getElementById(`u3job1goallevel`).value;
+  removeNumbers(u3Job[0]);
+  document.getElementById('u3job1startinglevel').value=u3Job[0][0];
+  document.getElementById('u3job1goallevel').value=u3Job[0][1];
+  u3Job[1][0] = +document.getElementById(`u3job2startinglevel`).value;
+  u3Job[1][1] = +document.getElementById(`u3job2goallevel`).value;
+  removeNumbers(u3Job[1]);
+  document.getElementById('u3job2startinglevel').value=u3Job[1][0];
+  document.getElementById('u3job2goallevel').value=u3Job[1][1];
+  u3Job[2][0] = +document.getElementById(`u3job3startinglevel`).value;
+  u3Job[2][1] = +document.getElementById(`u3job3goallevel`).value;
+  removeNumbers(u3Job[2]);
+  document.getElementById('u3job3startinglevel').value=u3Job[2][0];
+  document.getElementById('u3job3goallevel').value=u3Job[2][1];
+  }
+  if (char.length >3){
+  u4Job[0][0] = +document.getElementById(`u4job1startinglevel`).value;
+  u4Job[0][1] = +document.getElementById(`u4job1goallevel`).value;
+  removeNumbers(u4Job[0]);
+  document.getElementById('u4job1startinglevel').value=u4Job[0][0];
+  document.getElementById('u4job1goallevel').value=u4Job[0][1];
+  u4Job[1][0] = +document.getElementById(`u4job2startinglevel`).value;
+  u4Job[1][1] = +document.getElementById(`u4job2goallevel`).value;
+  removeNumbers(u4Job[1]);
+  document.getElementById('u4job2startinglevel').value=u4Job[1][0];
+  document.getElementById('u4job2goallevel').value=u4Job[1][1];
+  u4Job[2][0] = +document.getElementById(`u4job3startinglevel`).value;
+  u4Job[2][1] = +document.getElementById(`u4job3goallevel`).value;
+  removeNumbers(u4Job[2]);
+  document.getElementById('u4job3startinglevel').value=u4Job[2][0];
+  document.getElementById('u4job3goallevel').value=u4Job[2][1];
+  }
 }
 
 function removeNumbers(array){

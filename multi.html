@@ -11,8 +11,8 @@
     <div class="navigationbar">
     	<nav>
       <ul>
-       <li><a class="active" href="index.html">Home</a></li>
-       <li><a href="multi.html">Multi</a></li>
+       <li><a href="index.html">Home</a></li>
+       <li><a class="active" href="multi.html">Multi</a></li>
       </ul>
     	</nav>
     </div>
@@ -117,7 +117,7 @@
           </a>
         </li>
         <li>
-          <a href="javascript:void(0)" onclick='changeCard("Helena Leonis")'>
+          <a href="javascript:void(0)" onclick='changeCard("Helena")'>
             <img src='images/Helena.png' alt='' />
             <div>Helena</div>
           </a>
@@ -291,11 +291,11 @@
       </div>
       <div>
         <hr class="solid" width ="75%">
-        <h6 id="customize">Choose starting and goal job levels:</h6>
+        <h6 id="customize1">Choose starting and goal job levels:</h6>
       <div>
       <ul class="grid list" id="myUL2">
         <li>
-          <a href="javascript:void(0)">
+          <a href="javascript:void(0)" onclick='removeCard("unit1")'>
             <img id="u1" src='images/questionmark.png' alt=''/>
             <div>Unit 1</div>
           </a>
@@ -303,7 +303,7 @@
         </li>
         <li>
           <a href="javascript:void(0)">
-            <img id="u2" src='images/questionmark.png' alt='' />
+            <img id="u1j1" src='images/questionmark.png' alt='' />
             <div>Job 1</div>
           </a>
           <input type="number" required pattern="\d+" id="u1job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
@@ -311,7 +311,7 @@
         </li>
         <li>
           <a href="javascript:void(0)">
-            <img id="u3" src='images/questionmark.png' alt=''/>
+            <img id="u1j2" src='images/questionmark.png' alt=''/>
             <div>Job 2</div>
           </a>
           <input type="number" required pattern="\d+" id="u1job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
@@ -319,7 +319,7 @@
         </li>
         <li>
           <a href="javascript:void(0)">
-            <img id ="u4" src='images/questionmark.png' alt=''/>
+            <img id ="u1j3" src='images/questionmark.png' alt=''/>
             <div>Job 3</div>
           </a>
           <input type="number" required pattern="\d+" id="u1job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
@@ -328,73 +328,106 @@
 
       </ul>
 
-      <!-- <ul class="grid list " id="myUL3">
+      <ul class="grid list " id="myUL3">
         <li>
-          <a href="javascript:void(0)">
-            <img id="u1" src='images/questionmark.png' alt=''/>
-            <div>Unit 2</div>
+          <a href="javascript:void(0)" onclick='removeCard("unit2")'>
+            <img id="u2" src='images/questionmark.png' alt=''/>
+            <div id="customize2">Unit 2</div>
           </a>
 
         </li>
         <li>
           <a href="javascript:void(0)">
-            <img id="u2" src='images/questionmark.png' alt='' />
+            <img id="u2j1" src='images/questionmark.png' alt='' />
             <div>Job 1</div>
           </a>
-          <input type="number" required pattern="\d+" id="u1job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-           <input type="number" required pattern="\d+" class="inputbox" id="u1job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+          <input type="number" required pattern="\d+" id="u2job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+           <input type="number" required pattern="\d+" class="inputbox" id="u2job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
         </li>
         <li>
           <a href="javascript:void(0)">
-            <img id="u3" src='images/questionmark.png' alt=''/>
+            <img id="u2j2" src='images/questionmark.png' alt=''/>
             <div>Job 2</div>
           </a>
-          <input type="number" required pattern="\d+" id="u1job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-           <input type="number" required pattern="\d+" class="inputbox" id="u1job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+          <input type="number" required pattern="\d+" id="u2job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+           <input type="number" required pattern="\d+" class="inputbox" id="u2job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
         </li>
         <li>
           <a href="javascript:void(0)">
-            <img id ="u4" src='images/questionmark.png' alt=''/>
+            <img id ="u2j3" src='images/questionmark.png' alt=''/>
             <div>Job 3</div>
           </a>
-          <input type="number" required pattern="\d+" id="u1job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-           <input type="number" required pattern="\d+" class="inputbox" id="u1job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+          <input type="number" required pattern="\d+" id="u2job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+           <input type="number" required pattern="\d+" class="inputbox" id="u2job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
         </li>
       </ul>
 
       <ul class="grid list" id="myUL4">
         <li>
-          <a href="javascript:void(0)">
-            <img id="u1" src='images/questionmark.png' alt=''/>
-            <div>Unit 3</div>
+          <a href="javascript:void(0)" onclick='removeCard("unit3")'>
+            <img id="u3" src='images/questionmark.png' alt=''/>
+            <div id="customize3">Unit 3</div>
           </a>
 
         </li>
         <li>
           <a href="javascript:void(0)">
-            <img id="u2" src='images/questionmark.png' alt='' />
+            <img id="u3j1" src='images/questionmark.png' alt='' />
             <div>Job 1</div>
           </a>
-          <input type="number" required pattern="\d+" id="u1job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-           <input type="number" required pattern="\d+" class="inputbox" id="u1job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+          <input type="number" required pattern="\d+" id="u3job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+           <input type="number" required pattern="\d+" class="inputbox" id="u3job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
         </li>
         <li>
           <a href="javascript:void(0)">
-            <img id="u3" src='images/questionmark.png' alt=''/>
+            <img id="u3j2" src='images/questionmark.png' alt=''/>
             <div>Job 2</div>
           </a>
-          <input type="number" required pattern="\d+" id="u1job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-           <input type="number" required pattern="\d+" class="inputbox" id="u1job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+          <input type="number" required pattern="\d+" id="u3job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+           <input type="number" required pattern="\d+" class="inputbox" id="u3job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
         </li>
         <li>
           <a href="javascript:void(0)">
-            <img id ="u4" src='images/questionmark.png' alt=''/>
+            <img id ="u3j3" src='images/questionmark.png' alt=''/>
             <div>Job 3</div>
           </a>
-          <input type="number" required pattern="\d+" id="u1job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-           <input type="number" required pattern="\d+" class="inputbox" id="u1job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+          <input type="number" required pattern="\d+" id="u3job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+           <input type="number" required pattern="\d+" class="inputbox" id="u3job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
         </li>
-      </ul> -->
+      </ul>
+      <ul class="grid list" id="myUL5">
+        <li>
+          <a href="javascript:void(0)" onclick='removeCard("unit4")'>
+            <img id="u4" src='images/questionmark.png' alt=''/>
+            <div id="customize4">Unit 4</div>
+          </a>
+
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img id="u4j1" src='images/questionmark.png' alt='' />
+            <div>Job 1</div>
+          </a>
+          <input type="number" required pattern="\d+" id="u4job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+           <input type="number" required pattern="\d+" class="inputbox" id="u4job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img id="u4j2" src='images/questionmark.png' alt=''/>
+            <div>Job 2</div>
+          </a>
+          <input type="number" required pattern="\d+" id="u4job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+           <input type="number" required pattern="\d+" class="inputbox" id="u4job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img id ="u4j3" src='images/questionmark.png' alt=''/>
+            <div>Job 3</div>
+          </a>
+          <input type="number" required pattern="\d+" id="u4job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+           <input type="number" required pattern="\d+" class="inputbox" id="u4job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+        </li>
+      </ul>
       </div>
       <hr class="solid" width ="75%">
       <div id = "lookhere" style="text-align: center;">
