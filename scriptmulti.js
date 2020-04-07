@@ -518,11 +518,6 @@ function getJobs(name, array){
      array[1] = "Knight";
      array[2] = "Monk";
   }
-  if (name == "Engelbert"){
-     array[0] = "Lord";
-     array[1] = "Paladin";
-     array[2] = "Knight";
-  }
   if (name == "Mediena"){
      array[0] = "Black Mage";
      array[1] = "Green Mage";
