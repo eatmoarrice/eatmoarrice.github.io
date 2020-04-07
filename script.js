@@ -1352,7 +1352,7 @@ function bestLocation(){
     }
     else{
       fulltable2 =`
-      <table class="table">
+      <table class="table tableFixHead">
       <thead class="thead-dark">
         <tr>
           <th scope="col">Location</th>
