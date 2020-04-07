@@ -1432,7 +1432,6 @@ function calculate(){
   if (char.length != 0){
   tablebody = "";
   fulltable2 ="";
-  document.getElementById("mattable").innerHTML = "";
   clearall();
   cleanup();
   countMat();
@@ -1449,6 +1448,7 @@ function calculate(){
   document.getElementById("table2").innerHTML = fulltable2;
 }
 else {
+    document.getElementById("mattable").innerHTML = "";
     document.getElementById("table2").innerHTML = "Please select a unit."
 }
   // outpuTotalStatues()
