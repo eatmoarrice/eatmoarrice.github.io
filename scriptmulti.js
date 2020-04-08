@@ -1643,8 +1643,8 @@ function cleanup(){
   u1Job[2][1] = +document.getElementById(`u1job3goallevel`).value;
   removeNumbers(u1Job[2]);
 
-  document.getElementById('u2job3startinglevel').value=u1Job[2][0];
-  document.getElementById('u2job3goallevel').value=u1Job[2][1];
+  document.getElementById('u1job3startinglevel').value=u1Job[2][0];
+  document.getElementById('u1job3goallevel').value=u1Job[2][1];
   }
   if (char.length > 1){
   u2Job[0][0] = +document.getElementById(`u2job1startinglevel`).value;
