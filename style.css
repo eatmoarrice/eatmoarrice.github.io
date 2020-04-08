@@ -72,6 +72,11 @@ h2, h4, h6 {
   padding: 12px;
 }
 
+p {
+  margin-left: 24px;
+  font-size: 14px;
+}
+
 h1 {
   text-align: center;
 }
