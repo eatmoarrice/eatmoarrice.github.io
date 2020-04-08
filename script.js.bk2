@@ -1780,7 +1780,7 @@ function presentElement() {
 
         }
         if (x == 4) {
-          drop = `${totalElement[i][0]} Alcryst (Yellow)`;
+          drop = `${totalElement[i][0]} Alcryst (Purple)`;
         }
         arrayPush(materialNeed, drop);
         farm = findLocation(drop);
