@@ -41,12 +41,12 @@ function myFunction() {
 let joblist;
 const weaponstring = [
   ["Jadeite", "Azurite", "Charoite", "Citrine"],
-  ["Sword", "Greatsword", "Fists", "Spear", "Ninja Blade", "Bow", "Gun", "Staff", "Mace", "Dagger", "Katana"]
+  ["Axe", "Sword", "Greatsword", "Fists", "Spear", "Ninja Blade", "Bow", "Gun", "Staff", "Mace", "Dagger", "Katana"]
 ]
-let weaponnum = [
-  [0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-]
+// let weaponnum = [
+//   [0, 0, 0, 0],
+//   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+// ]
 let faintmemory = [0, 0, 0, 0]
 const statue = [
   ["Praying Angel Statue", "Prowling Wyvern Statue"],
@@ -235,6 +235,11 @@ const materialLocation = [
   ["Light Alcryst (Yellow)", "432", "511", "519"],
 
   // Weapon
+  ["Axe Jadeite", "114", "118", "125", "128" ],
+  ["Axe Azurite", "138", "1310", "213", "210", "227"],
+  ["Axe Charoite",  "234", "2310", "313", "3110", "327", "333", "3310", "415", "419", "427"],
+  ["Axe Citrine", "434", "439", "514"],
+
   ["Sword Jadeite", "111", "115", "122", "126"],
   ["Sword Azurite", "131", "135", "212", "217", "223", "228"],
   ["Sword Charoite", "231", "239", "312", "3110", "323", "331", "334", "412", "415", "423", "426"],
@@ -291,6 +296,10 @@ const materialLocation = [
   ["Ninja Blade Citrine", "433", "437", "514", "518"],
 
   // job
+  ["Viking's Memory (Green)", "116", "125"],
+  ["Viking's Memory (Blue)", "135", "215", "225"],
+  ["Viking's Memory (Purple)",  "235", "315", "325", "335", "415", "425"],
+  ["Viking's Memory (Yellow)", "435",  "515"],
 
   ["Knight's Memory (Green)", "112", "121"],
   ["Knight's Memory (Blue)", "132", "212", "221"],
@@ -393,7 +402,7 @@ const materialLocation = [
   ["Winged One's Memory (Yellow)", "4310", "5110"],
 
   ["Praying Angel Statue (Green)", "111", "113", "115", "117", "119", "121", "123", "125", "127", "129"],
-  ["Praying Angel Statue (Blue)", "131", "133", "135", "137", "139", "211", "213", "215", "217", "219", "221", "223", "225", "227", "229"],
+  ["Praying Angel Statue (Blue)", "131", "133", "135", "137", "211", "213", "215", "217", "219", "221", "223", "225", "227", "229"],
   ["Praying Angel Statue (Purple)", "231", "233", "235", "237", "239", "311", "313", "315", "317", "319", "321", "323", "325", "327", "329", "331", "333", "335", "337", "339", "411", "413", "415", "417", "419", "421", "423", "425", "427", "429"],
   ["Praying Angel Statue (Yellow)", "431", "433", "435", "437", "439", "511", "513", "515", "517", "519"],
 
@@ -403,9 +412,10 @@ const materialLocation = [
   ["Prowling Wyvern Statue (Yellow)", "432", "434", "436", "438", "4310", "512", "514", "516", "518", "5110"]
 
 ]
-const jobnames = ["Warrior", "Knight", "Soldier", "Ranger", "Monk", "Lancer", "Gunner", "Thief", "White Mage", "Black Mage", "Red Mage", "Green Mage", "Samurai", "Paladin", "Time Mage", "Spellblade", "Cleric", "Ninja", "Dragoon", "Winged One", "Gunbreaker", "Sorceress", "Lord", "White Mage of Lapis", "Holy Swordsman (unreleased)", "Viking (unreleased)", "Apprentice Warrior (unrelease)", "Dark Knight (unreleased)", "Double Gunner (unreleased)", "Assassin (unreleased)", "Grandshelt Knight (unreleased)", "Light Warrior (unreleased)", "Magician (unreleased)"]
+const jobnames = ["Warrior", "Knight", "Soldier", "Ranger", "Monk", "Lancer", "Gunner", "Thief", "White Mage", "Black Mage", "Red Mage", "Green Mage", "Samurai", "Paladin", "Time Mage", "Spellblade", "Cleric", "Ninja", "Dragoon", "Winged One", "Gunbreaker", "Sorceress", "Lord", "White Mage of Lapis", "Holy Swordsman (unreleased)", "Viking", "Apprentice Warrior (unrelease)", "Dark Knight (unreleased)", "Double Gunner (unreleased)", "Assassin (unreleased)", "Grandshelt Knight (unreleased)", "Light Warrior (unreleased)", "Magician (unreleased)"]
 
 let totalJobMemory = [
+  ["Viking", 0, 0, 0, 0],
   ["Warrior", 0, 0, 0, 0],
   ["Knight", 0, 0, 0, 0],
   ["Soldier", 0, 0, 0, 0],
@@ -441,6 +451,9 @@ let totalElement = [
   ["Dark", 0, 0, 0, 0]
 ]
 let elementalUnit = [
+  ["Etre","Earth"],
+  ["Yerma","Wind"],
+  ["Nasha","Ice"],
   ["Thancred", "Light"],
   ["Gilgamesh", "Ice"],
   ["Macherie", "Light"],
@@ -501,6 +514,7 @@ let unitx5 = [
 let totalMemory = [0, 0, 0, 0]
 
 let totalWeapon = [
+  ["Axe", 0, 0, 0, 0],
   ["Sword", 0, 0, 0, 0],
   ["Greatsword", 0, 0, 0, 0],
   ["Bow", 0, 0, 0, 0],
@@ -545,6 +559,11 @@ function arrayPush(array, string) { // push locationResults[] to add materials t
 }
 
 function getJobMaterials(jobname, a, b) {
+  if (jobname == "Viking") {
+    statues[a][b] = "Wyvern";
+    weapons[a][b] = "Axe";
+    jobOrbs[a][b] = "Viking";
+  }
   if (jobname == "Warrior") {
     statues[a][b] = "Angel";
     weapons[a][b] = "Sword";
@@ -671,6 +690,21 @@ function getJobMaterials(jobname, a, b) {
 }
 
 function getJobs(name, array) {
+  if (name == "Etre") {
+    array[0] = "Monk";
+    array[1] = "Cleric";
+    array[2] = "Knight";
+  }
+  if (name == "Yerma") {
+    array[0] = "Viking";
+    array[1] = "Knight";
+    array[2] = "Thief";
+  }
+  if (name == "Nasha") {
+    array[0] = "Paladin";
+    array[1] = "White Mage";
+    array[2] = "Dragoon";
+  }
   if (name == "Thancred") {
     array[0] = "Gunbreaker";
     array[1] = "Dragoon";
@@ -1476,6 +1510,7 @@ function clearall() {
     ["5110", ""]
   ];
   totalWeapon = [
+    ["Axe", 0, 0, 0, 0],
     ["Sword", 0, 0, 0, 0],
     ["Greatsword", 0, 0, 0, 0],
     ["Bow", 0, 0, 0, 0],
@@ -1623,6 +1658,7 @@ function clearall() {
   ]
 
   totalJobMemory = [
+    ["Viking", 0, 0, 0, 0],
     ["Warrior", 0, 0, 0, 0],
     ["Knight", 0, 0, 0, 0],
     ["Soldier", 0, 0, 0, 0],
