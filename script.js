@@ -197,7 +197,7 @@ const materialLocation = [
   ["Dark Alcryst (Green)", "118", "126"],
   ["Dark Alcryst (Blue)", "134", "213", "221", "229"],
   ["Dark Alcryst (Purple)", "237", "315", "323", "331", "339", "417", "422"],
-  ["Dark Alcryst (Yellow)", "433", "4310", "512", "510"],
+  ["Dark Alcryst (Yellow)", "433", "4310", "512", "5110"],
 
   ["Wind Alcryst (Green)", "113", "121", "129"],
   ["Wind Alcryst (Blue)", "137", "216", "224"],
@@ -207,7 +207,7 @@ const materialLocation = [
   ["Ice Alcryst (Green)", "112", "1110", "128"],
   ["Ice Alcryst (Blue)", "136", "215", "223"],
   ["Ice Alcryst (Purple)", "231", "239", "317", "325", "333", "3310", "419", "427"],
-  ["Ice Alcryst (Yellow)", "433", "4310", "512", "510"],
+  ["Ice Alcryst (Yellow)", "436", "514"],
 
   ["Fire Alcryst (Green)", "114", "122", "1210"],
   ["Fire Alcryst (Blue)", "138", "217", "225"],
