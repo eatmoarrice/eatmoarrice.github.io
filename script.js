@@ -303,6 +303,7 @@ const materialLocation = [
   ["Ninja Blade Citrine", "433", "437", "514", "518"],
 
   // job
+
   ["Viking's Memory (Green)", "116", "125"],
   ["Viking's Memory (Blue)", "135", "215", "225"],
   ["Viking's Memory (Purple)",  "235", "315", "325", "335", "415", "425"],
@@ -422,6 +423,9 @@ const materialLocation = [
 const jobnames = ["Warrior", "Knight", "Soldier", "Ranger", "Monk", "Lancer", "Gunner", "Thief", "White Mage", "Black Mage", "Red Mage", "Green Mage", "Samurai", "Paladin", "Time Mage", "Spellblade", "Cleric", "Ninja", "Dragoon", "Winged One", "Gunbreaker", "Sorceress", "Lord", "White Mage of Lapis", "Holy Swordsman (unreleased)", "Viking", "Apprentice Warrior (unrelease)", "Dark Knight (unreleased)", "Double Gunner (unreleased)", "Assassin (unreleased)", "Grandshelt Knight (unreleased)", "Light Warrior (unreleased)", "Magician (unreleased)"]
 
 let totalJobMemory = [
+  ["Squire", 0, 0, 0, 0],
+  ["Dark Knight", 0, 0, 0, 0],
+  ["Sword Saint", 0, 0, 0, 0],
   ["Viking", 0, 0, 0, 0],
   ["Warrior", 0, 0, 0, 0],
   ["Knight", 0, 0, 0, 0],
@@ -458,6 +462,9 @@ let totalElement = [
   ["Dark", 0, 0, 0, 0]
 ]
 let elementalUnit = [
+  ["Ramza","Light"],
+  ["Gaffgarion","Dark"],
+  ["Orlandeau","Lightning"],
   ["Etre","Earth"],
   ["Yerma","Wind"],
   ["Nasha","Ice"],
@@ -567,6 +574,21 @@ function arrayPush(array, string) { // push locationResults[] to add materials t
 }
 
 function getJobMaterials(jobname, a, b) {
+  if (jobname == "Squire") {
+    statues[a][b] = "Angel";
+    weapons[a][b] = "Sword";
+    jobOrbs[a][b] = "Squire";
+  }
+  if (jobname == "Dark Knight") {
+    statues[a][b] = "Wyvern";
+    weapons[a][b] = "Sword";
+    jobOrbs[a][b] = "Dark Knight";
+  }
+  if (jobname == "Sword Saint") {
+    statues[a][b] = "Angel";
+    weapons[a][b] = "Sword";
+    jobOrbs[a][b] = "Sword Saint";
+  }
   if (jobname == "Viking") {
     statues[a][b] = "Wyvern";
     weapons[a][b] = "Axe";
@@ -698,6 +720,21 @@ function getJobMaterials(jobname, a, b) {
 }
 
 function getJobs(name, array) {
+  if (name == "Ramza") {
+    array[0] = "Squire";
+    array[1] = "Spellblade";
+    array[2] = "Ninja";
+  }
+  if (name == "Gaffgarion") {
+    array[0] = "Dark Knight";
+    array[1] = "Warrior";
+    array[2] = "Monk";
+  }
+  if (name == "Orlandeau") {
+    array[0] = "Sword Saint";
+    array[1] = "Samurai";
+    array[2] = "Knight";
+  }
   if (name == "Etre") {
     array[0] = "Monk";
     array[1] = "Cleric";
@@ -1693,6 +1730,9 @@ function clearall() {
   ]
 
   totalJobMemory = [
+    ["Squire", 0, 0, 0, 0],
+    ["Dark Knight", 0, 0, 0, 0],
+    ["Sword Saint", 0, 0, 0, 0],
     ["Viking", 0, 0, 0, 0],
     ["Warrior", 0, 0, 0, 0],
     ["Knight", 0, 0, 0, 0],
@@ -1857,7 +1897,7 @@ function presentByGrade(){
       }
       text += `       <tr ${styleHTML}>
                         <td>${drop}</td>
-                        <td>${totalMemory[i]}</td>
+                        <td>${totalMemory[x-1]}</td>
                         <td></td>
                       </tr>`
     }
