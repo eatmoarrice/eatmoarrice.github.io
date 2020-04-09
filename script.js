@@ -1761,75 +1761,9 @@ function countMat() {
 //     console.log(totalMemory)
 //   }
 // }
-function presentElement() {
-  let text = "";
-  let drop = "";
-  let farm = "";
-  let x = 0;
-  for (i = 0; i < 8; i++) {
-    for (x = 1; x < 5; x++) {
-      if (totalElement[i][x] != 0) {
-        if (x == 1) {
-          drop = `${totalElement[i][0]} Alcryst (Green)`;
-        }
-        if (x == 2) {
-          drop = `${totalElement[i][0]} Alcryst (Blue)`;
-        }
-        if (x == 3) {
-          drop = `${totalElement[i][0]} Alcryst (Purple)`;
 
-        }
-        if (x == 4) {
-          drop = `${totalElement[i][0]} Alcryst (Yellow)`;
-        }
-        arrayPush(materialNeed, drop);
-        farm = findLocation(drop);
-        text += `       <tr style="background-color:#EAF2F8">
-                        <td>${drop}</td>
-                        <td>${totalElement[i][x]}</td>
-                        <td class="text-left">${farm}</td>
-                      </tr>`
-      }
 
-    }
 
-  }
-  tablebody += text;
-}
-
-function presentJobMemory() {
-  let text = "";
-  let drop = "";
-  let farm = "";
-
-  let x = 0;
-  for (i = 0; i < totalJobMemory.length; i++) {
-    for (x = 1; x < 5; x++) {
-      if (totalJobMemory[i][x] != 0) {
-        if (x == 1) {
-          drop = `${totalJobMemory[i][0]}'s Memory (Green)`;
-        }
-        if (x == 2) {
-          drop = `${totalJobMemory[i][0]}'s Memory (Blue)`;
-        }
-        if (x == 3) {
-          drop = `${totalJobMemory[i][0]}'s Memory (Purple)`;
-        }
-        if (x == 4) {
-          drop = `${totalJobMemory[i][0]}'s Memory (Yellow)`;
-        }
-        arrayPush(materialNeed, drop);
-        farm = findLocation(drop);
-        text += `       <tr style="background-color:#EAF2F8">
-                        <td>${drop}</td>
-                        <td>${totalJobMemory[i][x]}</td>
-                        <td class="text-left">${farm}</td>`
-
-      }
-    }
-  }
-  tablebody += text;
-}
 
 function findLocation(drop) {
   let x = 0;
@@ -1847,47 +1781,80 @@ function findLocation(drop) {
       }
     }
   }
-
-
   return farmlocation;
 }
 
-function presentMemory() {
-  let text = "";
-  let drop = "";
+function presentByGrade(){
+  let text ="";
+  let farm ="";
+  let drop ="";
+  // let fm ="";
+  // let wp ="";
+  // let jm ="";
+  // let al ="";
+  // let st ="";
+  let x = 0;
+  let changeHappened = false;
+  let bgcolor = 1;
+  let styleHTML = "";
+  for (x = 1; x < 5; x++) {
+    if (changeHappened = true){
+      if (bgcolor == 0){bgcolor=1;}
+      else if (bgcolor == 1){bgcolor=0;}
+      if (bgcolor == 0){styleHTML = "";}
+      if (bgcolor == 1){styleHTML = `style="background-color:#EAF2F8"`;}
+      changeHappened = false;
+    }
 
-  for (i = 0; i < 4; i++) {
-    if (totalMemory[i] != 0) {
-      if (i == 0) {
+    if (totalMemory[x-1] != 0) {                             // faint memory
+      changeHappened = true;
+      if (x-1 == 0) {
         drop = "Faint Memory (Green)";
       }
-      if (i == 1) {
+      if (x-1 == 1) {
         drop = "Faint Memory (Blue)";
       }
-      if (i == 2) {
+      if (x-1 == 2) {
         drop = "Faint Memory (Purple)";
       }
-      if (i == 3) {
+      if (x-1 == 3) {
         drop = "Faint Memory (Yellow)";
       }
-      text += `       <tr>
+      text += `       <tr ${styleHTML}>
                         <td>${drop}</td>
                         <td>${totalMemory[i]}</td>
                         <td></td>
                       </tr>`
     }
+    for (i = 0; i < 8; i++) {                               //alcryst
+        if (totalElement[i][x] != 0) {
+          changeHappened = true;
+          if (x == 1) {
+            drop = `${totalElement[i][0]} Alcryst (Green)`;
+          }
+          if (x == 2) {
+            drop = `${totalElement[i][0]} Alcryst (Blue)`;
+          }
+          if (x == 3) {
+            drop = `${totalElement[i][0]} Alcryst (Purple)`;
 
-  }
-  tablebody += text;
-}
+          }
+          if (x == 4) {
+            drop = `${totalElement[i][0]} Alcryst (Yellow)`;
+          }
+          arrayPush(materialNeed, drop);
+          farm = findLocation(drop);
+          text += `       <tr ${styleHTML}>
+                          <td>${drop}</td>
+                          <td>${totalElement[i][x]}</td>
+                          <td class="text-left">${farm}</td>
+                        </tr>`
+        }
 
-function presentWeapon() {
-  let text = "";
-  let farm = "";
-  let x = 0;
-  for (i = 0; i < totalWeapon.length; i++) {
-    for (x = 1; x < 5; x++) {
+      }
+    for (i = 0; i < totalWeapon.length; i++) {              //weapon
       if (totalWeapon[i][x] != 0) {
+        changeHappened = true;
         if (x == 1) {
           drop = `${totalWeapon[i][0]} Jadeite`;
         }
@@ -1902,55 +1869,236 @@ function presentWeapon() {
         }
         arrayPush(materialNeed, drop);
         farm = findLocation(drop);
-        text += `       <tr>
+        text += `       <tr ${styleHTML}>
                         <td>${drop}</td>
                         <td>${totalWeapon[i][x]}</td>
                         <td class="text-left">${farm}</td>
                       </tr>`
       }
     }
-  }
+    for (i = 0; i < totalJobMemory.length; i++) {           //job memory
+        if (totalJobMemory[i][x] != 0) {
+          if (x == 1) {
+            drop = `${totalJobMemory[i][0]}'s Memory (Green)`;
+          }
+          if (x == 2) {
+            drop = `${totalJobMemory[i][0]}'s Memory (Blue)`;
+          }
+          if (x == 3) {
+            drop = `${totalJobMemory[i][0]}'s Memory (Purple)`;
+          }
+          if (x == 4) {
+            drop = `${totalJobMemory[i][0]}'s Memory (Yellow)`;
+          }
+          arrayPush(materialNeed, drop);
+          farm = findLocation(drop);
+          text += `       <tr ${styleHTML}>
+                          <td>${drop}</td>
+                          <td>${totalJobMemory[i][x]}</td>
+                          <td class="text-left">${farm}</td>`
+                        }
+                      }
+    for (i = 0; i < 2; i++) {
+      if (i == 0) {
+        w_or_a = "Praying Angel Statue";
+      } else {
+        w_or_a = "Prowling Wyvern Statue";
+      }
+        if (totalStatues[i][x-1] != 0) {
+          changeHappened = true;
+          if (x-1 == 0) {
+            drop = `${w_or_a} (Green)`;
+          }
+          if (x-1 == 1) {
+            drop = `${w_or_a} (Blue)`;
+          }
+          if (x-1 == 2) {
+            drop = `${w_or_a} (Purple)`;
+          }
+          if (x-1 == 3) {
+            drop = `${w_or_a} (Yellow)`;
+          }
+          arrayPush(materialNeed, drop);
+          farm = findLocation(drop);
+          text += `       <tr ${styleHTML}>
+                          <td>${drop}</td>
+                          <td>${totalStatues[i][x-1]}</td>
+                          <td class="text-left">${farm}</td>
+                        </tr>`
+        }
+      }
+}
   tablebody += text;
 }
 
-function presentStatue() {
-  let text = ""
-  let x = 0;
-  let drop = "";
-  let farm = "";
-  let w_or_a = "";
-  for (i = 0; i < 2; i++) {
-    if (i == 0) {
-      w_or_a = "Praying Angel Statue";
-    } else {
-      w_or_a = "Prowling Wyvern Statue";
-    }
-    for (x = 0; x < 4; x++) {
-      if (totalStatues[i][x] != 0) {
-        if (x == 0) {
-          drop = `${w_or_a} (Green)`;
-        }
-        if (x == 1) {
-          drop = `${w_or_a} (Blue)`;
-        }
-        if (x == 2) {
-          drop = `${w_or_a} (Purple)`;
-        }
-        if (x == 3) {
-          drop = `${w_or_a} (Yellow)`;
-        }
-        arrayPush(materialNeed, drop);
-        farm = findLocation(drop);
-        text += `       <tr>
-                        <td>${drop}</td>
-                        <td>${totalStatues[i][x]}</td>
-                        <td class="text-left">${farm}</td>
-                      </tr>`
-      }
-    }
-  }
-  tablebody += text;
-}
+// function presentElement() {
+//   let text = "";
+//   let drop = "";
+//   let farm = "";
+//   let x = 0;
+//   for (i = 0; i < 8; i++) {
+//     for (x = 1; x < 5; x++) {
+//       if (totalElement[i][x] != 0) {
+//         if (x == 1) {
+//           drop = `${totalElement[i][0]} Alcryst (Green)`;
+//         }
+//         if (x == 2) {
+//           drop = `${totalElement[i][0]} Alcryst (Blue)`;
+//         }
+//         if (x == 3) {
+//           drop = `${totalElement[i][0]} Alcryst (Purple)`;
+//
+//         }
+//         if (x == 4) {
+//           drop = `${totalElement[i][0]} Alcryst (Yellow)`;
+//         }
+//         arrayPush(materialNeed, drop);
+//         farm = findLocation(drop);
+//         text += `       <tr style="background-color:#EAF2F8">
+//                         <td>${drop}</td>
+//                         <td>${totalElement[i][x]}</td>
+//                         <td class="text-left">${farm}</td>
+//                       </tr>`
+//       }
+//
+//     }
+//
+//   }
+//   tablebody += text;
+// }
+// function presentJobMemory() {
+//   let text = "";
+//   let drop = "";
+//   let farm = "";
+//
+//   let x = 0;
+//   for (i = 0; i < totalJobMemory.length; i++) {
+//     for (x = 1; x < 5; x++) {
+//       if (totalJobMemory[i][x] != 0) {
+//         if (x == 1) {
+//           drop = `${totalJobMemory[i][0]}'s Memory (Green)`;
+//         }
+//         if (x == 2) {
+//           drop = `${totalJobMemory[i][0]}'s Memory (Blue)`;
+//         }
+//         if (x == 3) {
+//           drop = `${totalJobMemory[i][0]}'s Memory (Purple)`;
+//         }
+//         if (x == 4) {
+//           drop = `${totalJobMemory[i][0]}'s Memory (Yellow)`;
+//         }
+//         arrayPush(materialNeed, drop);
+//         farm = findLocation(drop);
+//         text += `       <tr style="background-color:#EAF2F8">
+//                         <td>${drop}</td>
+//                         <td>${totalJobMemory[i][x]}</td>
+//                         <td class="text-left">${farm}</td>`
+//
+//       }
+//     }
+//   }
+//   tablebody += text;
+// }
+
+// function presentMemory() {
+//   let text = "";
+//   let drop = "";
+//
+//   for (i = 0; i < 4; i++) {
+//     if (totalMemory[i] != 0) {
+//       if (i == 0) {
+//         drop = "Faint Memory (Green)";
+//       }
+//       if (i == 1) {
+//         drop = "Faint Memory (Blue)";
+//       }
+//       if (i == 2) {
+//         drop = "Faint Memory (Purple)";
+//       }
+//       if (i == 3) {
+//         drop = "Faint Memory (Yellow)";
+//       }
+//       text += `       <tr>
+//                         <td>${drop}</td>
+//                         <td>${totalMemory[i]}</td>
+//                         <td></td>
+//                       </tr>`
+//     }
+//
+//   }
+//   tablebody += text;
+// }
+
+// function presentWeapon() {
+//   let text = "";
+//   let farm = "";
+//   let x = 0;
+//   for (i = 0; i < totalWeapon.length; i++) {
+//     for (x = 1; x < 5; x++) {
+//       if (totalWeapon[i][x] != 0) {
+//         if (x == 1) {
+//           drop = `${totalWeapon[i][0]} Jadeite`;
+//         }
+//         if (x == 2) {
+//           drop = `${totalWeapon[i][0]} Azurite`;
+//         }
+//         if (x == 3) {
+//           drop = `${totalWeapon[i][0]} Charoite`;
+//         }
+//         if (x == 4) {
+//           drop = `${totalWeapon[i][0]} Citrine`;
+//         }
+//         arrayPush(materialNeed, drop);
+//         farm = findLocation(drop);
+//         text += `       <tr>
+//                         <td>${drop}</td>
+//                         <td>${totalWeapon[i][x]}</td>
+//                         <td class="text-left">${farm}</td>
+//                       </tr>`
+//       }
+//     }
+//   }
+//   tablebody += text;
+// }
+
+// function presentStatue() {
+//   let text = ""
+//   let x = 0;
+//   let drop = "";
+//   let farm = "";
+//   let w_or_a = "";
+//   for (i = 0; i < 2; i++) {
+//     if (i == 0) {
+//       w_or_a = "Praying Angel Statue";
+//     } else {
+//       w_or_a = "Prowling Wyvern Statue";
+//     }
+//     for (x = 0; x < 4; x++) {
+//       if (totalStatues[i][x] != 0) {
+//         if (x == 0) {
+//           drop = `${w_or_a} (Green)`;
+//         }
+//         if (x == 1) {
+//           drop = `${w_or_a} (Blue)`;
+//         }
+//         if (x == 2) {
+//           drop = `${w_or_a} (Purple)`;
+//         }
+//         if (x == 3) {
+//           drop = `${w_or_a} (Yellow)`;
+//         }
+//         arrayPush(materialNeed, drop);
+//         farm = findLocation(drop);
+//         text += `       <tr>
+//                         <td>${drop}</td>
+//                         <td>${totalStatues[i][x]}</td>
+//                         <td class="text-left">${farm}</td>
+//                       </tr>`
+//       }
+//     }
+//   }
+//   tablebody += text;
+// }
 
 let whatEachHas = [
   ["111", ""],
@@ -2168,11 +2316,12 @@ function calculate() {
     clearall();
     cleanup();
     countMat();
-    presentMemory();
-    presentElement();
-    presentWeapon();
-    presentJobMemory();
-    presentStatue();
+    presentByGrade();
+    // presentMemory();
+    // presentElement();
+    // presentWeapon();
+    // presentJobMemory();
+    // presentStatue();
     let elmnt = document.getElementById("lookhere");
     elmnt.scrollIntoView();
     lookUpLocation();
