@@ -309,6 +309,21 @@ const materialLocation = [
   ["Viking's Memory (Purple)",  "235", "315", "325", "335", "415", "425"],
   ["Viking's Memory (Yellow)", "435",  "515"],
 
+  ["Squire's Memory (Green)", "Event + Event Shop"],
+  ["Squire's Memory (Blue)", "Event + Event Shop"],
+  ["Squire's Memory (Purple)", "Event + Event Shop"],
+  ["Squire's Memory (Yellow)", "Event + Event Shop"],
+
+  ["Sword Saint's Memory (Green)", "Event + Event Shop"],
+  ["Sword Saint's Memory (Blue)", "Event + Event Shop"],
+  ["Sword Saint's Memory (Purple)", "Event + Event Shop"],
+  ["Sword Saint's Memory (Yellow)", "Event + Event Shop"],
+
+  ["Dark Knight's Memory (Green)", "Event + Event Shop"],
+  ["Dark Knight's Memory (Blue)", "Event + Event Shop"],
+  ["Dark Knight's Memory (Purple)", "Event + Event Shop"],
+  ["Dark Knight's Memory (Yellow)", "Event + Event Shop"],
+
   ["Knight's Memory (Green)", "112", "121"],
   ["Knight's Memory (Blue)", "132", "212", "221"],
   ["Knight's Memory (Purple)", "231", "312", "3110", "332", "339", "422", "428"],
