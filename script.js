@@ -466,7 +466,7 @@ let elementalUnit = [
   ["Macherie", "Light"],
   ["Engelbert", "Light"],
   ["Mediena", "Ice"],
-  ["Rob", "Light"],
+  ["Robb", "Light"],
   ["Ayaka", "Wind"],
   ["Oelde", "Fire"],
   ["Aileen", "Earth"],
@@ -495,6 +495,7 @@ let elementalUnit = [
   ["Naiah", "Fire"],
   ["Sosha", "Wind"],
   ["Serjes", "Ice"],
+  ["Leela", "Dark"],
   ["Phoebe", "Light"],
   ["Murmur", "Earth"],
   ["Baelo", "Earth"],
@@ -737,7 +738,7 @@ function getJobs(name, array) {
     array[1] = "Green Mage";
     array[2] = "Ninja";
   }
-  if (name == "Rob") {
+  if (name == "Robb") {
     array[0] = "Samurai";
     array[1] = "Soldier";
     array[2] = "Lancer";
@@ -881,6 +882,11 @@ function getJobs(name, array) {
     array[0] = "Lancer";
     array[1] = "Paladin";
     array[2] = "Cleric";
+  }
+  if (name == "Leela") {
+    array[0] = "Spellblade";
+    array[1] = "Knight";
+    array[2] = "White Mage";
   }
   if (name == "Phoebe") {
     array[0] = "Time Mage";
@@ -1358,6 +1364,9 @@ function showPic() {
       // console.log(char[i - 1])
       // document.getElementById("autoadd").innerHTML += getText(i);
       document.getElementById(`u${i}`).src = `images/${char[i-1]}.png`;
+      document.getElementById(`u${i}j1text`).innerHTML = unitx5[i-1][0];
+      document.getElementById(`u${i}j2text`).innerHTML = unitx5[i-1][1];
+      document.getElementById(`u${i}j3text`).innerHTML = unitx5[i-1][2];
       //     document.getElementById(`u${i}j1startinglevel`).disabled = false;
       //     document.getElementById(`u${i}j1goallevel`).disabled = false;
       //     document.getElementById(`u${i}j2startinglevel`).disabled = false;
