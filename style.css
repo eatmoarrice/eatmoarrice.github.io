@@ -191,3 +191,8 @@ th     { background:#eee; }
 .navigationbar .active {
   background-color: #3399CC;
 }
+
+#mattable {
+  table-layout: fixed;
+  width: 100%;  
+}
