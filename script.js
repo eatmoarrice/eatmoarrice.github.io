@@ -1,6 +1,13 @@
 let tablebody = ""
 
-function myFunction() {
+//hide units
+hideUnit(1);
+hideUnit(2);
+hideUnit(3);
+hideUnit(4);
+hideUnit(5);
+
+function searchInput() {
   var input, filter, ul1, ul2, ul3, li1, li2, li3, a, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
@@ -1193,7 +1200,7 @@ function changeCard(val) {
   if (char.length == 5) {
     id = "myUL5";
   }
-
+  console.log(char);
   let elmnt = document.getElementById(id);
   elmnt.scrollIntoView();
 
@@ -1246,100 +1253,110 @@ function removeCard(val) {
   showPic()
 }
 
-function getText(i) {
-
-  let extraOption = `
-<ul class="grid list" id="myUL${i}">
-	<li>
-		<a href="javascript:void(0)" onclick='removeCard("unit${i}")'>
-			<img id="u${i}" src='images/questionmark.png' alt=''/>
-			<div id="customize${i}">Unit ${i}</div>
-		</a>
-			<a href="javascript:void(0)" onclick='gotop()'>
-			<div>Go to top</div>
-		</a>
-	</li>
-	<li>
-		<a href="javascript:void(0)">
-			<img id="u${i}j1" src='images/questionmark.png' alt='' />
-			<div>${unitx5[i-1][0]}</div>
-		</a>
-		<input type="number" required pattern="\d+" id="u${i}job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
-	</li>
-	<li>
-		<a href="javascript:void(0)">
-			<img id="u${i}j2" src='images/questionmark.png' alt=''/>
-			<div>${unitx5[i-1][1]}</div>
-		</a>
-		<input type="number" required pattern="\d+" id="u${i}job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
-	</li>
-	<li>
-		<a href="javascript:void(0)">
-			<img id ="u${i}j3" src='images/questionmark.png' alt=''/>
-			<div>${unitx5[i-1][2]}</div>
-		</a>
-		<input type="number" required pattern="\d+" id="u${i}job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
-	</li>
-</ul>`;
-  return extraOption;
+// function getText(i) {
+//
+//   let extraOption = `
+// <ul class="grid list" id="myUL${i}">
+// 	<li>
+// 		<a href="javascript:void(0)" onclick='removeCard("unit${i}")'>
+// 			<img id="u${i}" src='images/questionmark.png' alt=''/>
+// 			<div id="customize${i}">Unit ${i}</div>
+// 		</a>
+// 			<a href="javascript:void(0)" onclick='gotop()'>
+// 			<div>Go to top</div>
+// 		</a>
+// 	</li>
+// 	<li>
+// 		<a href="javascript:void(0)">
+// 			<img id="u${i}j1" src='images/questionmark.png' alt='' />
+// 			<div>${unitx5[i-1][0]}</div>
+// 		</a>
+// 		<input type="number" required pattern="\d+" id="u${i}job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+// 		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+// 	</li>
+// 	<li>
+// 		<a href="javascript:void(0)">
+// 			<img id="u${i}j2" src='images/questionmark.png' alt=''/>
+// 			<div>${unitx5[i-1][1]}</div>
+// 		</a>
+// 		<input type="number" required pattern="\d+" id="u${i}job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+// 		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+// 	</li>
+// 	<li>
+// 		<a href="javascript:void(0)">
+// 			<img id ="u${i}j3" src='images/questionmark.png' alt=''/>
+// 			<div>${unitx5[i-1][2]}</div>
+// 		</a>
+// 		<input type="number" required pattern="\d+" id="u${i}job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+// 		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+// 	</li>
+// </ul>`;
+//   return extraOption;
+// }
+//
+// function getDisabledText(i) { // i = nth number of unit, e.g.
+//   let disabledOption = `
+// <ul class="grid list">
+// 	<li>
+// 		<a>
+// 			<img src='images/questionmark.png' id ="unknown" alt=''/>
+// 			<div>Unit ${i}</div>
+// 		</a>
+// 		<a href="javascript:void(0)" onclick='gotop()'>
+// 			<div>Go to top</div>
+// 		</a>
+// 	</li>
+// 	<li>
+// 		<a>
+// 			<img src='images/questionmark.png' alt='' />
+// 			<div>Job 1</div>
+// 		</a>
+// 		<input type="number" required pattern="\d+"  placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
+// 		 <input type="number" required pattern="\d+" class="inputbox"  placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
+// 	</li>
+// 	<li>
+// 		<a>
+// 			<img src='images/questionmark.png' alt=''/>
+// 			<div>Job 2</div>
+// 		</a>
+// 		<input type="number" required pattern="\d+"   placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
+// 		 <input type="number" required pattern="\d+" class="inputbox"   placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
+// 	</li>
+// 	<li>
+// 		<a>
+// 			<img src='images/questionmark.png' alt=''/>
+// 			<div>Job 3</div>
+// 		</a>
+// 		<input type="number" required pattern="\d+"  placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
+// 		 <input type="number" required pattern="\d+" class="inputbox" placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
+// 	</li>
+// </ul>
+// `
+//   return disabledOption;
+// }
+function hideUnit(i) {
+  let x = document.getElementById(`unit0${i}`);
+    x.style.display = "none";
 }
 
-function getDisabledText(i) { // i = nth number of unit, e.g.
-  let disabledOption = `
-<ul class="grid list">
-	<li>
-		<a>
-			<img src='images/questionmark.png' id ="unknown" alt=''/>
-			<div>Unit ${i}</div>
-		</a>
-		<a href="javascript:void(0)" onclick='gotop()'>
-			<div>Go to top</div>
-		</a>
-	</li>
-	<li>
-		<a>
-			<img src='images/questionmark.png' alt='' />
-			<div>Job 1</div>
-		</a>
-		<input type="number" required pattern="\d+"  placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
-		 <input type="number" required pattern="\d+" class="inputbox"  placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
-	</li>
-	<li>
-		<a>
-			<img src='images/questionmark.png' alt=''/>
-			<div>Job 2</div>
-		</a>
-		<input type="number" required pattern="\d+"   placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
-		 <input type="number" required pattern="\d+" class="inputbox"   placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
-	</li>
-	<li>
-		<a>
-			<img src='images/questionmark.png' alt=''/>
-			<div>Job 3</div>
-		</a>
-		<input type="number" required pattern="\d+"  placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
-		 <input type="number" required pattern="\d+" class="inputbox" placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
-	</li>
-</ul>
-`
-  return disabledOption;
+function showUnit(i) {
+  let x = document.getElementById(`unit0${i}`);
+    x.style.display = "block";
 }
+
 
 function showPic() {
-  let inUse = "";
-  let notInUse = "";
+  // let inUse = "";
+  // let notInUse = "";
   let x = 0;
   for (x = 0; x < char.length; x++) {
     getJobs(char[x], unitx5[x]);
   }
-  document.getElementById("autoadd").innerHTML = "";
+  // document.getElementById("autoadd").innerHTML = "";
   for (i = 1; i < 6; i++) {
     if (char[i - 1] != undefined) {
       // console.log(char[i - 1])
-      document.getElementById("autoadd").innerHTML += getText(i);
+      // document.getElementById("autoadd").innerHTML += getText(i);
       document.getElementById(`u${i}`).src = `images/${char[i-1]}.png`;
       //     document.getElementById(`u${i}j1startinglevel`).disabled = false;
       //     document.getElementById(`u${i}j1goallevel`).disabled = false;
@@ -1348,8 +1365,8 @@ function showPic() {
       //     document.getElementById(`u${i}j3startinglevel`).disabled = false;
       //     document.getElementById(`u${i}j3goallevel`).disabled = false;
     } else {
-      notInUse = getDisabledText(i);
-      document.getElementById("disabled").innerHTML = notInUse;
+      // notInUse = getDisabledText(i);
+      // document.getElementById("disabled").innerHTML = notInUse;
       break;
       // document.getElementById(`u${i}j1startinglevel`).disabled = true;
       //   document.getElementById(`u${i}j1goallevel`).disabled = true;
@@ -1359,8 +1376,17 @@ function showPic() {
       //   document.getElementById(`u${i}j3goallevel`).disabled = true;
     }
   }
+  for (i = 5; i>0;i--){
+    if (char[i-1] == undefined){
+      hideUnit(i);
+    }
+    else{
+      showUnit(i);
+    }
+  }
   if (char[4] != undefined) {
-    document.getElementById("disabled").innerHTML = "";
+    hideUnit(6);
+    // document.getElementById("disabled").innerHTML = "";
   }
 }
 
