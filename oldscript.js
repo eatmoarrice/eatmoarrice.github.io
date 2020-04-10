@@ -1876,23 +1876,9 @@ function findLocation(drop) {
 }
 
 function strikeThrough(id){
-  let string = document.getElementById(id).textContent;
-  let stringHTML = document.getElementById(id).innerHTML;
-  if (stringHTML == string){
-    stringHTML = `<del>${string}</del>`;
-    document.getElementById(id).innerHTML = stringHTML;
-    materialNeed.splice(materialNeed.indexOf(string), 1);
-    lookUpLocation();
-    bestLocation();
-    document.getElementById("table2").innerHTML = fulltable2;
-    }
-  else {
-    arrayPush(materialNeed,string)
-    document.getElementById(id).innerHTML = string;
-    lookUpLocation();
-    bestLocation();
-    document.getElementById("table2").innerHTML = fulltable2;}
-
+  let string = getElementById(id).value;
+  string = `<del>${string}</del>`
+  getElementById(id).innerHTML = string;
 }
 
 function presentByGrade(){
@@ -1922,22 +1908,22 @@ function presentByGrade(){
       changeHappened = true;
       if (x-1 == 0) {
         drop = "Faint Memory (Green)";
-        id = drop.replace(/\W/g, ""); //strikeThrough won't do anything for this since Faint Memory isn't counted in the first place, the id is just for show
+        id = "FaintMemoryGreen";
       }
       if (x-1 == 1) {
         drop = "Faint Memory (Blue)";
-        id = drop.replace(/\W/g, "");
+        id = "FaintMemoryBlue";
       }
       if (x-1 == 2) {
         drop = "Faint Memory (Purple)";
-        id = drop.replace(/\W/g, "");
+        id = "FaintMemoryPurple";
       }
       if (x-1 == 3) {
         drop = "Faint Memory (Yellow)";
-        id = drop.replace(/\W/g, "");
+        id = "FaintMemoryYellow";
       }
       text += `       <tr ${styleHTML}>
-                        <td id="${id}" onclick='strikeThrough("${id}")'>${drop}</td>
+                        <td href="javascript:void(0)" id="${id}" onclick ='strikeThrough("${id}")'>${drop}</td>
                         <td>${totalMemory[x-1]}</td>
                         <td></td>
                       </tr>`
@@ -1947,24 +1933,21 @@ function presentByGrade(){
           changeHappened = true;
           if (x == 1) {
             drop = `${totalElement[i][0]} Alcryst (Green)`;
-            id = drop.replace(/\W/g, "");
           }
           if (x == 2) {
             drop = `${totalElement[i][0]} Alcryst (Blue)`;
-            id = drop.replace(/\W/g, "");
           }
           if (x == 3) {
             drop = `${totalElement[i][0]} Alcryst (Purple)`;
-            id = drop.replace(/\W/g, "");
+
           }
           if (x == 4) {
             drop = `${totalElement[i][0]} Alcryst (Yellow)`;
-            id = drop.replace(/\W/g, "");
           }
           arrayPush(materialNeed, drop);
           farm = findLocation(drop);
           text += `       <tr ${styleHTML}>
-                          <td id="${id}" onclick='strikeThrough("${id}")'>${drop}</td>
+                          <td>${drop}</td>
                           <td>${totalElement[i][x]}</td>
                           <td class="text-left">${farm}</td>
                         </tr>`
@@ -1976,24 +1959,20 @@ function presentByGrade(){
         changeHappened = true;
         if (x == 1) {
           drop = `${totalWeapon[i][0]} Jadeite`;
-          id = drop.replace(/\W/g, "");
         }
         if (x == 2) {
           drop = `${totalWeapon[i][0]} Azurite`;
-          id = drop.replace(/\W/g, "");
         }
         if (x == 3) {
           drop = `${totalWeapon[i][0]} Charoite`;
-          id = drop.replace(/\W/g, "");
         }
         if (x == 4) {
           drop = `${totalWeapon[i][0]} Citrine`;
-          id = drop.replace(/\W/g, "");
         }
         arrayPush(materialNeed, drop);
         farm = findLocation(drop);
         text += `       <tr ${styleHTML}>
-                        <td id="${id}" onclick='strikeThrough("${id}")'>${drop}</td>
+                        <td>${drop}</td>
                         <td>${totalWeapon[i][x]}</td>
                         <td class="text-left">${farm}</td>
                       </tr>`
@@ -2003,24 +1982,20 @@ function presentByGrade(){
         if (totalJobMemory[i][x] != 0) {
           if (x == 1) {
             drop = `${totalJobMemory[i][0]}'s Memory (Green)`;
-            id = drop.replace(/\W/g, "");
           }
           if (x == 2) {
             drop = `${totalJobMemory[i][0]}'s Memory (Blue)`;
-            id = drop.replace(/\W/g, "");
           }
           if (x == 3) {
             drop = `${totalJobMemory[i][0]}'s Memory (Purple)`;
-            id = drop.replace(/\W/g, "");
           }
           if (x == 4) {
             drop = `${totalJobMemory[i][0]}'s Memory (Yellow)`;
-            id = drop.replace(/\W/g, "");
           }
           arrayPush(materialNeed, drop);
           farm = findLocation(drop);
           text += `       <tr ${styleHTML}>
-                          <td id="${id}" onclick='strikeThrough("${id}")'>${drop}</td>
+                          <td>${drop}</td>
                           <td>${totalJobMemory[i][x]}</td>
                           <td class="text-left">${farm}</td>`
                         }
@@ -2035,24 +2010,20 @@ function presentByGrade(){
           changeHappened = true;
           if (x-1 == 0) {
             drop = `${w_or_a} (Green)`;
-            id = drop.replace(/\W/g, "");
           }
           if (x-1 == 1) {
             drop = `${w_or_a} (Blue)`;
-            id = drop.replace(/\W/g, "");
           }
           if (x-1 == 2) {
             drop = `${w_or_a} (Purple)`;
-            id = drop.replace(/\W/g, "");
           }
           if (x-1 == 3) {
             drop = `${w_or_a} (Yellow)`;
-            id = drop.replace(/\W/g, "");
           }
           arrayPush(materialNeed, drop);
           farm = findLocation(drop);
           text += `       <tr ${styleHTML}>
-                          <td id="${id}" onclick='strikeThrough("${id}")'>${drop}</td>
+                          <td>${drop}</td>
                           <td>${totalStatues[i][x-1]}</td>
                           <td class="text-left">${farm}</td>
                         </tr>`
@@ -2368,8 +2339,6 @@ function lookUpLocation() {
   let x = 0;
   let y = 0;
   let z = 0;
-  whatEachHas = [ ["111", ""], ["112", ""], ["113", ""], ["114", ""], ["115", ""], ["116", ""], ["117", ""], ["118", ""], ["119", ""], ["1110", ""], ["121", ""], ["122", ""], ["123", ""], ["124", ""], ["125", ""], ["126", ""], ["127", ""], ["128", ""], ["129", ""], ["1210", ""], ["131", ""], ["132", ""], ["133", ""], ["134", ""], ["135", ""], ["136", ""], ["137", ""], ["138", ""], ["139", ""], ["1310", ""], ["211", ""], ["212", ""], ["213", ""], ["214", ""], ["215", ""], ["216", ""], ["217", ""], ["218", ""], ["219", ""], ["2110", ""], ["221", ""], ["222", ""], ["223", ""], ["224", ""], ["225", ""], ["226", ""], ["227", ""], ["228", ""], ["229", ""], ["2210", ""], ["231", ""], ["232", ""], ["233", ""], ["234", ""], ["235", ""], ["236", ""], ["237", ""], ["238", ""], ["239", ""], ["2310", ""], ["311", ""], ["312", ""], ["313", ""], ["314", ""], ["315", ""], ["316", ""], ["317", ""], ["318", ""], ["319", ""], ["3110", ""], ["321", ""], ["322", ""], ["323", ""], ["324", ""], ["325", ""], ["326", ""], ["327", ""], ["328", ""], ["329", ""], ["3210", ""], ["331", ""], ["332", ""], ["333", ""], ["334", ""], ["335", ""], ["336", ""], ["337", ""], ["338", ""], ["339", ""], ["3310", ""], ["411", ""], ["412", ""], ["413", ""], ["414", ""], ["415", ""], ["416", ""], ["417", ""], ["418", ""], ["419", ""], ["4110", ""], ["421", ""], ["422", ""], ["423", ""], ["424", ""], ["425", ""], ["426", ""], ["427", ""], ["428", ""], ["429", ""], ["4210", ""], ["431", ""], ["432", ""], ["433", ""], ["434", ""], ["435", ""], ["436", ""], ["437", ""], ["438", ""], ["439", ""], ["4310", ""], ["511", ""], ["512", ""], ["513", ""], ["514", ""], ["515", ""], ["516", ""], ["517", ""], ["518", ""], ["519", ""], ["5110", ""] ];5
-  locationResults = [ ["111", 0], ["112", 0], ["113", 0], ["114", 0], ["115", 0], ["116", 0], ["117", 0], ["118", 0], ["119", 0], ["1110", 0], ["121", 0], ["122", 0], ["123", 0], ["124", 0], ["125", 0], ["126", 0], ["127", 0], ["128", 0], ["129", 0], ["1210", 0], ["131", 0], ["132", 0], ["133", 0], ["134", 0], ["135", 0], ["136", 0], ["137", 0], ["138", 0], ["139", 0], ["1310", 0], ["211", 0], ["212", 0], ["213", 0], ["214", 0], ["215", 0], ["216", 0], ["217", 0], ["218", 0], ["219", 0], ["2110", 0], ["221", 0], ["222", 0], ["223", 0], ["224", 0], ["225", 0], ["226", 0], ["227", 0], ["228", 0], ["229", 0], ["2210", 0], ["231", 0], ["232", 0], ["233", 0], ["234", 0], ["235", 0], ["236", 0], ["237", 0], ["238", 0], ["239", 0], ["2310", 0], ["311", 0], ["312", 0], ["313", 0], ["314", 0], ["315", 0], ["316", 0], ["317", 0], ["318", 0], ["319", 0], ["3110", 0], ["321", 0], ["322", 0], ["323", 0], ["324", 0], ["325", 0], ["326", 0], ["327", 0], ["328", 0], ["329", 0], ["3210", 0], ["331", 0], ["332", 0], ["333", 0], ["334", 0], ["335", 0], ["336", 0], ["337", 0], ["338", 0], ["339", 0], ["3310", 0], ["411", 0], ["412", 0], ["413", 0], ["414", 0], ["415", 0], ["416", 0], ["417", 0], ["418", 0], ["419", 0], ["4110", 0], ["421", 0], ["422", 0], ["423", 0], ["424", 0], ["425", 0], ["426", 0], ["427", 0], ["428", 0], ["429", 0], ["4210", 0], ["431", 0], ["432", 0], ["433", 0], ["434", 0], ["435", 0], ["436", 0], ["437", 0], ["438", 0], ["439", 0], ["4310", 0], ["511", 0], ["512", 0], ["513", 0], ["514", 0], ["515", 0], ["516", 0], ["517", 0], ["518", 0], ["519", 0], ["5110", 0] ]; //clear it before use
   for (i = 0; i < materialNeed.length; i++) { //materialNeed is a 1D array of unique materials needed
     for (x = 0; x < materialLocation.length; x++) { // check each material for its locations
       if (materialNeed[i] == materialLocation[x][0]) { // if the names of the materials match
@@ -2431,9 +2400,6 @@ function bestLocation() {
         </tr>
       </thead>
       <tbody>
-        <col width="15%">
-          <col width="15%">
-          <col width="70%">
        ${text}
       </tbody>
       </table>`

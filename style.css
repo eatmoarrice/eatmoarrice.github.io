@@ -2,8 +2,12 @@
   box-sizing: border-box;
 }
 
+.table > thead > tr > th {
+     vertical-align: middle;
+}
+
 #myInput {
-  /* background-image: url('/css/searchicon.png'); */
+  background-image: url('/css/searchicon.png');
   background-position: 10px 12px;
   background-repeat: no-repeat;
   width: 100%;
@@ -70,11 +74,6 @@ input[type=number]{
 h2, h4, h6 {
   margin: 12px;
   padding: 12px;
-}
-
-p {
-  margin-left: 24px;
-  font-size: 14px;
 }
 
 h1 {
@@ -190,9 +189,4 @@ th     { background:#eee; }
 
 .navigationbar .active {
   background-color: #3399CC;
-}
-
-#mattable {
-  table-layout: fixed;
-  width: 100%;
 }
