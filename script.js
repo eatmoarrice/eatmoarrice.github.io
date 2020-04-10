@@ -208,7 +208,7 @@ const materialLocation = [
 
   ["Wind Alcryst (Green)", "113", "121", "129"],
   ["Wind Alcryst (Blue)", "137", "216", "224"],
-  ["Wind Alcryst (Purple)", "232", "2310", "318", "331", "326", "334", "412", "423", "428"],
+  ["Wind Alcryst (Purple)", "232", "2310", "318", "326", "334", "412", "423", "428"],
   ["Wind Alcryst (Yellow)", "435", "515"],
 
   ["Ice Alcryst (Green)", "112", "1110", "128"],
