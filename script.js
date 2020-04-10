@@ -2625,11 +2625,14 @@ function removeNumbers(array) {
     array[1] = array[0];
   }
 }
-// function outputmaterials(){
-//   let size = Object.keys(myObj).length;
-//   let name1 = char[0];
-//   for (i = 1; i < size; i++) {
 
-//   }
+// test
 
-// }
+function addToClipBoard(){
+ let copyText = document.getElementById("cb");
+  copyText.value = materialNeed;
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  document.execCommand("copy");
+
+}
