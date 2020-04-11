@@ -335,7 +335,7 @@ const materialLocation = [
   ["Warrior's Memory (Yellow)", "4310", "5110"],
 
   ["Soldier's Memory (Green)", "114", "123"],
-  ["Soldier's Memory (Blue)", "134", "212", "224"],
+  ["Soldier's Memory (Blue)", "134", "214", "224"],
   ["Soldier's Memory (Purple)", "233", "314", "322", "334", "411", "424"],
   ["Soldier's Memory (Yellow)", "433", "513"],
 
