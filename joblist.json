@@ -1,0 +1,138 @@
+{
+  "Squire":{
+    "Statue": "Angel",
+    "Weapon": "Sword",
+    "Orb": "Squire"
+  },
+  "Dark Knight":{
+    "Statue": "Wyvern",
+    "Weapon": "Sword",
+    "Orb": "Dark Knight"
+  },
+  "Sword Saint":{
+    "Statue": "Angel",
+    "Weapon": "Sword",
+    "Orb": "Sword Saint"
+  },
+  "Viking":{
+    "Statue": "Wyvern",
+    "Weapon": "Axe",
+    "Orb": "Viking"
+  },
+  "Warrior":{
+    "Statue": "Angel",
+    "Weapon": "Sword",
+    "Orb": "Warrior"
+  },
+  "Knight":{
+    "Statue": "Wyvern",
+    "Weapon": "Sword",
+    "Orb": "Knight"
+  },
+  "Soldier":{
+    "Statue": "Wyvern",
+    "Weapon": "Greatsword",
+    "Orb": "Soldier"
+  },
+  "Ranger":{
+    "Statue": "Angel",
+    "Weapon": "Bow",
+    "Orb": "Ranger"
+  },
+  "Monk":{
+    "Statue": "Wyvern",
+    "Weapon": "Fists",
+    "Orb": "Monk"
+  },
+  "Lancer":{
+    "Statue": "Angel",
+    "Weapon": "Spear",
+    "Orb": "Lancer"
+  },
+  "Gunner":{
+    "Statue": "Wyvern",
+    "Weapon": "Gun",
+    "Orb": "Gunner"
+  },
+  "White Mage":{
+    "Statue": "Angel",
+    "Weapon": "Staff",
+    "Orb": "White Mage"
+  },
+  "Black Mage":{
+    "Statue": "Wyvern",
+    "Weapon": "Staff",
+    "Orb": "Black Mage"
+  },
+  "Red Mage":{
+    "Statue": "Wyvern",
+    "Weapon": "Sword",
+    "Orb": "Red Mage"
+  },
+  "Green Mage":{
+    "Statue": "Angel",
+    "Weapon": "Staff",
+    "Orb": "Green Mage"
+  },
+  "Samurai":{
+    "Statue": "Wyvern",
+    "Weapon": "Katana",
+    "Orb": "Samurai"
+  },
+  "Paladin":{
+    "Statue": "Angel",
+    "Weapon": "Sword",
+    "Orb": "Paladin"
+  },
+  "Time Mage":{
+    "Statue": "Angel",
+    "Weapon": "Staff",
+    "Orb": "Time Mage"
+  },
+  "Spellblade":{
+    "Statue": "Angel",
+    "Weapon": "Sword",
+    "Orb": "Spellblade"
+  },
+  "Cleric":{
+    "Statue": "Wyvern",
+    "Weapon": "Mace",
+    "Orb": "Cleric"
+  },
+  "Ninja":{
+    "Statue": "Wyvern",
+    "Weapon": "Ninja Blade",
+    "Orb": "Ninja"
+  },
+  "Dragoon":{
+    "Statue": "Wyvern",
+    "Weapon": "Spear",
+    "Orb": "Dragoon"
+  },
+  "Winged One":{
+    "Statue": "Wyvern",
+    "Weapon": "Sword",
+    "Orb": "Winged One"
+  },
+  "Gunbreaker":{
+    "Statue": "Wyvern",
+    "Weapon": "Sword",
+    "Orb": "Gunbreaker"
+  },
+  "Sorceress":{
+    "Statue": "Angel",
+    "Weapon": "Staff",
+    "Orb": "Sorceress"
+  },
+  "Lord":{
+    "Statue": "Angel",
+    "Weapon": "Sword",
+    "Orb": "Warrior"
+  },
+  "White Mage of Lapis":{
+    "Statue": "Angel",
+    "Weapon": "Bow",
+    "Orb": "White Mage"
+  }
+
+}

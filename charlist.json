@@ -1,0 +1,302 @@
+{
+  "Ramza": {
+    "Element":"Light",
+    "Job1":"Squire",
+    "Job2":"Spellblade",
+    "Job3":"Ninja"
+  },
+    "Gaffgarion": {
+    "Element":"Dark",
+    "Job1":"Dark Knight",
+    "Job2":"Warrior",
+    "Job3":"Monk"
+    },
+  "Orlandeau": {
+   "Element":"Lightning",
+   "Job1":"Sword Saint",
+   "Job2":"Samurai",
+   "Job3":"Knight"
+ },
+ "Etre": {
+   "Element":"Earth",
+   "Job1":"Monk",
+   "Job2":"Cleric",
+   "Job3":"Knight"
+ },
+ "Yerma": {
+   "Element":"Wind",
+   "Job1":"Viking",
+   "Job2":"Knight",
+   "Job3":"Thief"
+ },
+ "Nasha": {
+   "Element":"Ice",
+   "Job1":"Paladin",
+   "Job2":"White Mage",
+   "Job3":"Dragoon"
+ },
+ "Thancred": {
+   "Element":"Light",
+   "Job1":"Gunbreaker",
+   "Job2":"Dragoon",
+   "Job3":"Red Mage"
+ },
+ "Gilgamesh": {
+   "Element":"Ice",
+   "Job1":"Winged One",
+   "Job2":"Time Mage",
+   "Job3":"Soldier"
+ },
+ "Macherie": {
+   "Element":"Light",
+   "Job1":"Cleric",
+   "Job2":"Monk",
+   "Job3":"Black Mage"
+ },
+ "Engelbert": {
+   "Element":"Light",
+   "Job1":"Paladin",
+   "Job2":"Knight",
+   "Job3":"Monk "
+ },
+ "Mediena": {
+   "Element":"Ice",
+   "Job1":"Black Mage",
+   "Job2":"Green Mage",
+   "Job3":"Ninja"
+ },
+ "Robb": {
+   "Element":"Light",
+   "Job1":"Samurai",
+   "Job2":"Soldier",
+   "Job3":"Lancer"
+ },
+ "Ayaka": {
+   "Element":"Wind",
+   "Job1":"White Mage",
+   "Job2":"Time Mage",
+   "Job3":"Green Mage"
+ },
+ "Oelde": {
+   "Element":"Fire",
+   "Job1":"Lancer",
+   "Job2":"Monk",
+   "Job3":"Samurai"
+ },
+ "Aileen": {
+   "Element":"Earth",
+   "Job1":"Lancer",
+   "Job2":"Warrior",
+   "Job3":"Soldier"
+ },
+ "Xiza": {
+   "Element":"Dark",
+   "Job1":"Monk",
+   "Job2":"Thief",
+   "Job3":"Lancer"
+ },
+ "Sterne": {
+   "Element":"Dark",
+   "Job1":"Soldier",
+   "Job2":"Dragoon",
+   "Job3":"Ninja"
+ },
+ "Frederika": {
+   "Element":"Lightning",
+   "Job1":"Gunner",
+   "Job2":"Ninja",
+   "Job3":"Ranger"
+ },
+ "Mont": {
+   "Element":"Earth",
+   "Job1":"Lord",
+   "Job2":"Paladin",
+   "Job3":"Knight"
+ },
+ "Helena": {
+   "Element":"Wind",
+   "Job1":"Green Mage",
+   "Job2":"Time Mage",
+   "Job3":"White Mage"
+ },
+ "Lilyth": {
+   "Element":"Fire",
+   "Job1":"Knight",
+   "Job2":"Soldier",
+   "Job3":"Ranger"
+ },
+ "Ramada": {
+   "Element":"Water",
+   "Job1":"Lancer",
+   "Job2":"Spellblade",
+   "Job3":"Thief"
+ },
+ "Grace": {
+   "Element":"Light",
+   "Job1":"White Mage",
+   "Job2":"Green Mage",
+   "Job3":"Lancer"
+ },
+ "Khury": {
+   "Element":"Ice",
+   "Job1":"Ranger",
+   "Job2":"Dragoon",
+   "Job3":"Green Mage"
+ },
+ "Rairyuu": {
+   "Element":"Dark",
+   "Job1":"Gunner",
+   "Job2":"Thief",
+   "Job3":"Red Mage"
+ },
+ "Owe": {
+   "Element":"Lightning",
+   "Job1":"Samurai",
+   "Job2":"Warrior",
+   "Job3":"Ninja"
+ },
+ "Lorenzo": {
+   "Element":"Earth",
+   "Job1":"Dragoon",
+   "Job2":"Lancer",
+   "Job3":"Time Mage"
+ },
+ "Schuzelt": {
+   "Element":"Lightning",
+   "Job1":"Soldier",
+   "Job2":"Knight",
+   "Job3":"Ranger"
+ },
+ "YShtola": {
+   "Element":"Fire",
+   "Job1":"Sorceress",
+   "Job2":"White Mage",
+   "Job3":"Green Mage"
+ },
+ "Margritte": {
+   "Element":"Fire",
+   "Job1":"Time Mage",
+   "Job2":"Black Mage",
+   "Job3":"Red Mage"
+ },
+ "Meriluke": {
+   "Element":"Lightning",
+   "Job1":"Monk",
+   "Job2":"Knight",
+   "Job3":"Green Mage"
+ },
+ "Cadia": {
+   "Element":"Wind",
+   "Job1":"Cleric",
+   "Job2":"White Mage",
+   "Job3":"Spellblade"
+ },
+ "Fina": {
+   "Element":"Light",
+   "Job1":"White Mage of Lapis",
+   "Job2":"Gunner",
+   "Job3":"Cleric"
+ },
+ "Vistralle": {
+   "Element":"Light",
+   "Job1":"Thief",
+   "Job2":"Red Mage",
+   "Job3":"Soldier"
+ },
+ "Shadowlynx": {
+   "Element":"Dark",
+   "Job1":"Ninja",
+   "Job2":"Dragoon",
+   "Job3":"Samurai"
+ },
+ "Vallaide": {
+   "Element":"Ice",
+   "Job1":"Green Mage",
+   "Job2":"White Mage",
+   "Job3":"Red Mage"
+ },
+ "Severo": {
+   "Element":"Water",
+   "Job1":"Black Mage",
+   "Job2":"Red Mage",
+   "Job3":"Monk"
+ },
+ "Naiah": {
+   "Element":"Fire",
+   "Job1":"White Mage",
+   "Job2":"Cleric",
+   "Job3":"Red Mage"
+ },
+ "Sosha": {
+   "Element":"Wind",
+   "Job1":"Dragoon",
+   "Job2":"Warrior",
+   "Job3":"Ranger"
+ },
+ "Serjes": {
+   "Element":"Ice",
+   "Job1":"Lancer",
+   "Job2":"Paladin",
+   "Job3":"Cleric"
+ },
+ "Leela": {
+   "Element":"Dark",
+   "Job1":"Spellblade",
+   "Job2":"Knight",
+   "Job3":"White Mage"
+ },
+ "Phoebe": {
+   "Element":"Light",
+   "Job1":"Time Mage",
+   "Job2":"Dragoon",
+   "Job3":"White Mage"
+ },
+ "Murmur": {
+   "Element":"Earth",
+   "Job1":"Red Mage",
+   "Job2":"Black Mage",
+   "Job3":"Lancer"
+ },
+ "Baelo": {
+   "Element":"Earth",
+   "Job1":"Knight",
+   "Job2":"Warrior",
+   "Job3":"Paladin"
+ },
+ "Vadim": {
+   "Element":"Lightning",
+   "Job1":"Thief",
+   "Job2":"Warrior",
+   "Job3":"Samurai"
+ },
+ "Yuni": {
+   "Element":"Water",
+   "Job1":"Ranger",
+   "Job2":"Black Mage",
+   "Job3":"Spellblade"
+ },
+ "Mia": {
+   "Element":"Wind",
+   "Job1":"Thief",
+   "Job2":"Cleric",
+   "Job3":"Spellblade"
+ },
+ "Miche": {
+   "Element":"Fire",
+   "Job1":"Black Mage",
+   "Job2":"Thief",
+   "Job3":"Ranger"
+ },
+ "Learte": {
+   "Element":"Lightning",
+   "Job1":"Ranger",
+   "Job2":"Lancer",
+   "Job3":"White Mage"
+ },
+ "Zazan": {
+   "Element":"Water",
+   "Job1":"Warrior",
+   "Job2":"Knight",
+   "Job3":"Thief"
+ }
+}
