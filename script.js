@@ -1022,6 +1022,26 @@ const locationlist = {
   "Etre-05": {
     "Name":"Etre Training Quest V",
     "Materials": ["Spear Charoite", "Fire Alcryst (Purple)", "Prowling Wyvern Statue (Purple)", "Dragoon's Memory (Purple)"]
+    },
+    "FFT-01":{
+      "Name":"FINAL FANTASY TACTICS Battle #1",
+      "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
+    },
+    "FFT-02":{
+      "Name":"FINAL FANTASY TACTICS Battle #2",
+      "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
+    },
+    "FFT-03":{
+      "Name":"FINAL FANTASY TACTICS Battle #3",
+      "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
+    },
+    "FFT-04":{
+      "Name":"Lionel Castle — Outer Gates",
+      "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
+    },
+    "FFT-05":{
+      "Name":"Lionel Castle — Interior",
+      "Materials": ["Sword Azurite", "Dark Alcryst (Purple)", "Light Alcryst (Purple)", "Lightning Alcryst (Purple)", "Praying Angel Statue (Purple)", "Prowling Wyvern Statue (Purple)"]
     }
 
   // "Not available": {
