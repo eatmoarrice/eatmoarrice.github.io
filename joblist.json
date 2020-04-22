@@ -4,10 +4,10 @@
     "Weapon": "Sword",
     "Orb": "Squire"
   },
-  "Dark Knight":{
+  "Fell Knight":{
     "Statue": "Wyvern",
     "Weapon": "Sword",
-    "Orb": "Dark Knight"
+    "Orb": "Fell Knight"
   },
   "Sword Saint":{
     "Statue": "Angel",
@@ -134,5 +134,4 @@
     "Weapon": "Bow",
     "Orb": "White Mage"
   }
-
 }
