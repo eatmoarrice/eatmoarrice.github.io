@@ -1148,15 +1148,19 @@ function refreshElement() {
 let tablebody = ""
 
 function searchInput() {
-    var input, filter, ul1, ul2, ul3, li1, li2, li3, a, i, txtValue;
+    var input, filter, ul1, ul2, ul3, newunits, soon, li1, li2, li3, li4, li5, a, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     ul1 = document.getElementById("myUL");
     ul2 = document.getElementById("myULMR");
     ul3 = document.getElementById("myULSR");
+    newunits =  document.getElementById("newunits");
+    soon = document.getElementById("soon");
     li1 = ul1.getElementsByTagName("li");
     li2 = ul2.getElementsByTagName("li");
     li3 = ul3.getElementsByTagName("li");
+    li4 = newunits.getElementsByTagName("li");
+    li5 = soon.getElementsByTagName("li");
     for (i = 0; i < li1.length; i++) {
         a = li1[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
@@ -1182,6 +1186,24 @@ function searchInput() {
             li3[i].style.display = "";
         } else {
             li3[i].style.display = "none";
+        }
+    }
+    for (i = 0; i < li4.length; i++) {
+        a = li4[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li4[i].style.display = "";
+        } else {
+            li4[i].style.display = "none";
+        }
+    }
+    for (i = 0; i < li5.length; i++) {
+        a = li5[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li5[i].style.display = "";
+        } else {
+            li5[i].style.display = "none";
         }
     }
 }
