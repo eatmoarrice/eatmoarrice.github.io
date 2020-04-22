@@ -2814,7 +2814,8 @@ function cleanup() {
         u1Job[2][0] = +document.getElementById(`u1job3startinglevel`).value;
         u1Job[2][1] = +document.getElementById(`u1job3goallevel`).value;
         removeNumbers(u1Job[2]);
-
+        document.getElementById('u1job3startinglevel').value = u1Job[2][0];
+        document.getElementById('u1job3goallevel').value = u1Job[2][1];
     }
     if (char.length > 1) {
         u2Job[0][0] = +document.getElementById(`u2job1startinglevel`).value;
@@ -2887,6 +2888,9 @@ function cleanup() {
 }
 
 function removeNumbers(array) {
+    if (array[1] == 0) {
+    array[1] = array[0] + 1;
+  }
     if (array[1] > 12) {
         array[1] = 12;
     }
@@ -2902,6 +2906,7 @@ function removeNumbers(array) {
     if (array[1] < array[0]) {
         array[1] = array[0];
     }
+
 }
 
 // test
