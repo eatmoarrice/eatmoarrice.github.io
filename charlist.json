@@ -1,4 +1,28 @@
 {
+  "Kitone": {
+    "Element":"Earth",
+    "Job1":"Ninja",
+    "Job2":"Soldier",
+    "Job3":"Time Mage"
+  },
+  "Whisper": {
+    "Element":"Dark",
+    "Job1":"Knight",
+    "Job2":"Samurai",
+    "Job3":"Spellblade"
+  },
+  "Miranda": {
+    "Element":"Water",
+    "Job1":"Red Mage",
+    "Job2":"Time Mage",
+    "Job3":"Paladin"
+  },
+  "Drand": {
+    "Element":"Earth",
+    "Job1":"Viking",
+    "Job2":"Monk",
+    "Job3":"Gunner"
+  },
   "Ramza": {
     "Element":"Light",
     "Job1":"Squire",

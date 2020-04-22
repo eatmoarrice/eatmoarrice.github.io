@@ -1,6 +1,30 @@
 // Edit objects below to update --------------------------------------------------
 // There are 3 objects to change/update: charlist, joblist & locationlist---------
 const charlist = {
+    "Kitone": {
+      "Element":"Earth",
+      "Job1":"Ninja",
+      "Job2":"Soldier",
+      "Job3":"Time Mage"
+    },
+    "Whisper": {
+      "Element":"Dark",
+      "Job1":"Knight",
+      "Job2":"Samurai",
+      "Job3":"Spellblade"
+    },
+    "Miranda": {
+      "Element":"Water",
+      "Job1":"Red Mage",
+      "Job2":"Time Mage",
+      "Job3":"Paladin"
+    },
+    "Drand": {
+      "Element":"Earth",
+      "Job1":"Viking",
+      "Job2":"Monk",
+      "Job3":"Gunner"
+    },
     "Ramza": {
         "Element": "Light",
         "Job1": "Squire",
@@ -1047,12 +1071,12 @@ const locationlist = {
     "FFT-05":{
       "Name":"Lionel Castle — Interior",
       "Materials": ["Sword Azurite", "Dark Alcryst (Purple)", "Light Alcryst (Purple)", "Lightning Alcryst (Purple)", "Praying Angel Statue (Purple)", "Prowling Wyvern Statue (Purple)"]
-    }
+    },
 
-  // "Not available": {
-  //   "Name":" Maybe if you wish really hard, they will come back.",
-  //   "Materials": ["Sword Saint's Memory (Green)", "Sword Saint's Memory (Blue)", "Sword Saint's Memory (Purple)", "Sword Saint's Memory (Yellow)"]
-  //    }
+    "Event Reward/Shop": {
+    "Name":"Check Missions and Mog Shop",
+    "Materials": ["Sword Saint's Memory (Green)", "Sword Saint's Memory (Blue)", "Sword Saint's Memory (Purple)", "Sword Saint's Memory (Yellow)", "Squire's Memory (Green)", "Squire's Memory (Blue)", "Squire's Memory (Yellow)", "Squire's Memory (Purple)", "Fell Knight's Memory (Green)", "Fell Knight's Memory (Blue)", "Fell Knight's Memory (Purple)", "Fell Knight's Memory (Yellow)"]
+     }
 }
 //Edit Above^^^^ to update------------------------------------------------
 
