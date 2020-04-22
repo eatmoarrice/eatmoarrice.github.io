@@ -1206,6 +1206,11 @@ function searchInput() {
             li5[i].style.display = "none";
         }
     }
+    let divsToHide = document.getElementsByClassName("titletohide");
+    for(i = 0; i < divsToHide.length; i++){
+
+        divsToHide[i].style.display = "none";
+    }
 }
 
 // const weaponstring = [
