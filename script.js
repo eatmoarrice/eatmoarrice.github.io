@@ -438,6 +438,11 @@ const joblist = {
         "Statue": "Angel",
         "Weapon": "Bow",
         "Orb": "White Mage"
+    },
+    "Thief": {
+        "Statue": "Angel",
+        "Weapon": "Dagger",
+        "Orb": "Thief"
     }
 };
 
