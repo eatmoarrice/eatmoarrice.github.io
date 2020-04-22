@@ -4,9 +4,9 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Job Material Planner</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="oldstyle.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163103228-1"></script>
@@ -25,6 +25,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a class="active" href="old.html">Old Version</a></li>
+        <li><a href="older.html">Older Version</a></li>
         <li><a href="instructions.html">Instructions</a></li>
       </ul>
     </nav>
@@ -579,7 +580,10 @@
     </div>
     <hr class="solid" width="75%">
     <div id="lookhere" style="text-align: center;">
-      <a class="myButton" href="javascript:void(0)" onclick='calculate()'>CALCULATE</a>
+      <a class="btn btn-info" href="javascript:void(0)" onclick='calculate()'>CALCULATE</a>
+       <button class="btn btn-info" onclick= "addToClipBoard()">Copy to Clipboard</button>
+       <br>
+     <textarea class="m-3" id="cb" placeholder="Copy and paste into /https://wotvfarmcalculator.github.io/ by /u/BrandonIsABadass" style="min-width: 80%" rows="3"></textarea>
 
       <h4>Materials needed (scroll down for best locations):</h4>
 
@@ -604,10 +608,10 @@
       <h6 style="text-align: center;">Faint Memory is excluded. Up to 20 locations that have the most are displayed.</h6>
       <div id="table2">
       </div>
-      <div id="Location"></div>
+      <!-- <div id="Location"></div> -->
       <div class="scallop-up"></div>
       <div class="colour-block">
-        Version 1.02
+        Version 1.1
       <br>
         If this tool is helpful to you, consider supporting me by buying me a coffee! <br><br>
         <style>
@@ -660,7 +664,7 @@
         <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/EatMoarRice"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
             alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
       </div>
-      <script src="oldscript.js"></script>
+      <script src="pre20200422.js"></script>
 </body>
 
 </html>

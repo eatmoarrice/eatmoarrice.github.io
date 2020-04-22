@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Job Material Planner</title>
+  <link href="oldstyle.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163103228-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163103228-1');
+</script>
+</head>
+
+<body>
+  <div class="navigationbar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="old.html">Old Version</a></li>
+        <li><a class="active" href="older.html">Older Version</a></li>
+        <li><a href="instructions.html">Instructions</a></li>
+      </ul>
+    </nav>
+  </div>
+  <h2>WOTV Job Material Planner</h2>
+  <!-- <h6>Last Updated: 10:24 AM -->
+  <!-- Wednesday, April 9, 2020 (UTC)</h6> -->
+  <input type="text" id="myInput" onkeyup="searchInput()" placeholder="Search..." title="Type in a name">
+  <h6 id="top">Choose up to 5 units.</h6>
+  <div>
+    <h1>SOON<sup><small><small>TM</small></small></sup></h1>
+    <ul class="grid list" id="soon">
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Orlandeau")'>
+          <img src='images/Orlandeau.png' alt='' />
+          <div>Orlandeau</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Ramza")'>
+          <img src='images/Ramza.png' alt='' />
+          <div>Ramza</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Gaffgarion")'>
+          <img src='images/Gaffgarion.png' alt='' />
+          <div>Gaffgarion</div>
+        </a>
+      </li>
+    </ul>
+    <h1>UR</h1>
+    <ul class="grid list" id="myUL">
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Ayaka")'>
+          <img src='images/Ayaka.png' alt='' />
+          <div>Ayaka</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Engelbert")'>
+          <img src='images/Engelbert.png' alt='' />
+          <div>Engelbert</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Frederika")'>
+          <img src='images/Frederika.png' alt='' />
+          <div>Frederika</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Gilgamesh")'>
+          <img src='images/Gilgamesh.png' alt='' />
+          <div>Gilgamesh</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Aileen")'>
+          <img src='images/Aileen.png' alt='' />
+          <div>Aileen</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Macherie")'>
+          <img src='images/Macherie.png' alt='' />
+          <div>Machérie </div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Mediena")'>
+          <img src='images/Mediena.png' alt='' />
+          <div>Mediena</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Oelde")'>
+          <img src='images/Oelde.png' alt='' />
+          <div>Oelde Leonis</div>
+        </a>
+      </li>
+
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Sterne")'>
+          <img src='images/Sterne.png' alt='' />
+          <div>Sterne Leonis</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Robb")'>
+          <img src='images/Robb.png' alt='' />
+          <div>Robb Hourne</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Xiza")'>
+          <img src='images/Xiza.png' alt='' />
+          <div>Xiza</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Thancred")'>
+          <img src='images/Thancred.png' alt='' />
+          <div>Thancred</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Yerma")'>
+          <img src='images/Yerma.png' alt='' />
+          <div>Yerma</div>
+        </a>
+      </li>
+    </ul>
+    <h1>MR</h1>
+    <ul class="grid list" id="myULMR">
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Mont")'>
+          <img src='images/Mont.png' alt='' />
+          <div>Mont Leonis</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("YShtola")'>
+          <img src='images/YShtola.png' alt='' />
+          <div>Y'Shtola</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Shadowlynx")'>
+          <img src='images/Shadowlynx.png' alt='' />
+          <div>Shadowlynx</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Helena")'>
+          <img src='images/Helena.png' alt='' />
+          <div>Helena</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Lilyth")'>
+          <img src='images/Lilyth.png' alt='' />
+          <div>Lilyth</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Ramada")'>
+          <img src='images/Ramada.png' alt='' />
+          <div>Ramada</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Grace")'>
+          <img src='images/Grace.png' alt='' />
+          <div>"Grace"</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Khury")'>
+          <img src='images/Khury.png' alt='' />
+          <div>Khury Wezette</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Rairyuu")'>
+          <img src='images/Rairyuu.png' alt='' />
+          <div>Rairyuu</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Schuzelt")'>
+          <img src='images/Schuzelt.png' alt='' />
+          <div>Schuzelt</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Lorenzo")'>
+          <img src='images/Lorenzo.png' alt='' />
+          <div>Lorenzo</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Owe")'>
+          <img src='images/Owe.png' alt='' />
+          <div>Owe</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Fina")'>
+          <img src='images/Fina.png' alt='' />
+          <div>Fina</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Meriluke")'>
+          <img src='images/Meriluke.png' alt='' />
+          <div>Meriluke</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Vistralle")'>
+          <img src='images/Vistralle.png' alt='' />
+          <div>Vistralle</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Cadia")'>
+          <img src='images/Cadia.png' alt='' />
+          <div>Cadia</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Margritte")'>
+          <img src='images/Margritte.png' alt='' />
+          <div>Margritte</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Nasha")'>
+          <img src='images/Nasha.png' alt='' />
+          <div>Nasha</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Etre")'>
+          <img src='images/Etre.png' alt='' />
+          <div>Etre</div>
+        </a>
+      </li>
+    </ul>
+    <h1>SR, R and N</h1>
+    <ul class="grid list" id="myULSR">
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Vallaide")'>
+          <img src='images/Vallaide.png' alt='' />
+          <div>Vallaide</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Severo")'>
+          <img src='images/Severo.png' alt='' />
+          <div>Severo</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Naiah")'>
+          <img src='images/Naiah.png' alt='' />
+          <div>Naiah</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Sosha")'>
+          <img src='images/Sosha.png' alt='' />
+          <div>Sosha</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Serjes")'>
+          <img src='images/Serjes.png' alt='' />
+          <div>Serjes</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Phoebe")'>
+          <img src='images/Phoebe.png' alt='' />
+          <div>Phoebe</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Leela")'>
+          <img src='images/Leela.png' alt='' />
+          <div>Little Leela</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Murmur")'>
+          <img src='images/Murmur.png' alt='' />
+          <div>"Murmur"</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Baelo")'>
+          <img src='images/Baelo.png' alt='' />
+          <div>Baelo</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Vadim")'>
+          <img src='images/Vadim.png' alt='' />
+          <div>Vadim</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Yuni")'>
+          <img src='images/Yuni.png' alt='' />
+          <div>Yuni</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Mia")'>
+          <img src='images/Mia.png' alt='' />
+          <div>Mia</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Miche")'>
+          <img src='images/Miche.png' alt='' />
+          <div>Miche</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Learte")'>
+          <img src='images/Learte.png' alt='' />
+          <div>Learte</div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick='changeCard("Zazan")'>
+          <img src='images/Zazan.png' alt='' />
+          <div>Zazan</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <hr class="solid" width="75%">
+    <h6 id="customize1">Choose starting and goal job levels:</h6>
+    <div>
+    <div id="unit01">
+      <ul class="grid list" id="myUL1">
+	<li>
+		<a href="javascript:void(0)" onclick='removeCard("unit1")'>
+			<img id="u1" src='images/questionmark.png' alt=''/>
+			<div id="customize1">Unit 1</div>
+		</a>
+			<a href="javascript:void(0)" onclick='gotop()'>
+			<div>Go to top</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u1j1" src='images/questionmark.png' alt='' />
+			<div id="u1j1text">Job 1</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u1job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u1job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u1j2" src='images/questionmark.png' alt=''/>
+			<div id="u1j2text">Job 2</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u1job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u1job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id ="u1j3" src='images/questionmark.png' alt=''/>
+			<div id="u1j3text">Job 3</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u1job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u1job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+</ul>
+    </div>
+    <div id="unit02">
+      <ul class="grid list" id="myUL2">
+	<li>
+		<a href="javascript:void(0)" onclick='removeCard("unit2")'>
+			<img id="u2" src='images/questionmark.png' alt=''/>
+			<div id="customize2">Unit 2</div>
+		</a>
+			<a href="javascript:void(0)" onclick='gotop()'>
+			<div>Go to top</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u2j1" src='images/questionmark.png' alt='' />
+			<div id="u2j1text">Job 1</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u2job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u2job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u2j2" src='images/questionmark.png' alt=''/>
+			<div id="u2j2text">Job 2</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u2job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u2job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id ="u2j3" src='images/questionmark.png' alt=''/>
+			<div id="u2j3text">Job 3</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u2job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u2job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+</ul>
+    </div>
+    <div id="unit03">
+      <ul class="grid list" id="myUL3">
+	<li>
+		<a href="javascript:void(0)" onclick='removeCard("unit3")'>
+			<img id="u3" src='images/questionmark.png' alt=''/>
+			<div id="customize3">Unit 3</div>
+		</a>
+			<a href="javascript:void(0)" onclick='gotop()'>
+			<div>Go to top</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u3j1" src='images/questionmark.png' alt='' />
+			<div id="u3j1text">Job 1</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u3job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u3job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u3j2" src='images/questionmark.png' alt=''/>
+			<div id="u3j2text">Job 2</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u3job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u3job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id ="u3j3" src='images/questionmark.png' alt=''/>
+			<div id="u3j3text">Job 3</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u3job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u3job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+</ul>
+    </div>
+    <div id="unit04">
+      <ul class="grid list" id="myUL4">
+	<li>
+		<a href="javascript:void(0)" onclick='removeCard("unit4")'>
+			<img id="u4" src='images/questionmark.png' alt=''/>
+			<div id="customize4">Unit 4</div>
+		</a>
+			<a href="javascript:void(0)" onclick='gotop()'>
+			<div>Go to top</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u4j1" src='images/questionmark.png' alt='' />
+			<div id="u4j1text">Job 1</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u4job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u4job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u4j2" src='images/questionmark.png' alt=''/>
+			<div id="u4j2text">Job 2</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u4job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u4job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id ="u4j3" src='images/questionmark.png' alt=''/>
+			<div id="u4j3text">Job 3</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u4job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u4job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+</ul>
+    </div>
+    <div id="unit05">
+      <ul class="grid list" id="myUL5">
+	<li>
+		<a href="javascript:void(0)" onclick='removeCard("unit5")'>
+			<img id="u5" src='images/questionmark.png' alt=''/>
+			<div id="customize5">Unit 5</div>
+		</a>
+			<a href="javascript:void(0)" onclick='gotop()'>
+			<div>Go to top</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u5j1" src='images/questionmark.png' alt='' />
+			<div id="u5j1text">Job 1</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u5job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u5job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id="u5j2" src='images/questionmark.png' alt=''/>
+			<div id="u5j2text">Job 2</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u5job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u5job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+	<li>
+		<a href="javascript:void(0)">
+			<img id ="u5j3" src='images/questionmark.png' alt=''/>
+			<div id="u5j3text">Job 3</div>
+		</a>
+		<input type="number" required pattern="\d+" id="u5job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
+		 <input type="number" required pattern="\d+" class="inputbox" id="u5job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
+	</li>
+</ul>
+    </div>
+      <div id="unit06">
+        <ul class="grid list">
+          <li>
+            <a>
+              <img src='images/questionmark.png' id="unknown" alt='' />
+              <div>Unit ?</div>
+            </a>
+
+            <a href="javascript:void(0)" onclick='gotop()'>
+              <div>Go to top</div>
+            </a>
+          </li>
+          <li>
+            <a>
+              <img src='images/questionmark.png' alt='' />
+              <div>Job 1</div>
+            </a>
+            <input type="number" required pattern="\d+" placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
+            <input type="number" required pattern="\d+" class="inputbox" placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
+          </li>
+          <li>
+            <a>
+              <img src='images/questionmark.png' alt='' />
+              <div>Job 2</div>
+            </a>
+            <input type="number" required pattern="\d+" placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
+            <input type="number" required pattern="\d+" class="inputbox" placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
+          </li>
+          <li>
+            <a>
+              <img src='images/questionmark.png' alt='' />
+              <div>Job 3</div>
+            </a>
+            <input type="number" required pattern="\d+" placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
+            <input type="number" required pattern="\d+" class="inputbox" placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="solid" width="75%">
+    <div id="lookhere" style="text-align: center;">
+      <a class="myButton" href="javascript:void(0)" onclick='calculate()'>CALCULATE</a>
+
+      <h4>Materials needed (scroll down for best locations):</h4>
+
+      <table class="table tableFixHead">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Location</th>
+
+          </tr>
+        </thead>
+        <tbody id="mattable">
+          <col width="40%">
+          <col width="10%">
+          <col width="50%">
+        </tbody>
+
+      </table>
+
+      <h4 style="text-align: center;">Best farming locations:</h4>
+      <h6 style="text-align: center;">Faint Memory is excluded. Up to 20 locations that have the most are displayed.</h6>
+      <div id="table2">
+      </div>
+      <div id="Location"></div>
+      <div class="scallop-up"></div>
+      <div class="colour-block">
+        Version 1.02
+      <br>
+        If this tool is helpful to you, consider supporting me by buying me a coffee! <br><br>
+        <style>
+          .bmc-button img {
+            height: 34px !important;
+            width: 35px !important;
+            margin-bottom: 1px !important;
+            box-shadow: none !important;
+            border: none !important;
+            vertical-align: middle !important;
+          }
+
+          .bmc-button {
+            padding: 7px 10px 7px 10px !important;
+            line-height: 35px !important;
+            height: 51px !important;
+            min-width: 217px !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            color: #000000 !important;
+            background-color: #FFFFFF !important;
+            border-radius: 5px !important;
+            border: 1px solid transparent !important;
+            padding: 7px 10px 7px 10px !important;
+            font-size: 28px !important;
+            letter-spacing: 0.6px !important;
+            box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+            -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+            margin: 0 auto !important;
+            font-family: 'Cookie', cursive !important;
+            -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+            -o-transition: 0.3s all linear !important;
+            -webkit-transition: 0.3s all linear !important;
+            -moz-transition: 0.3s all linear !important;
+            -ms-transition: 0.3s all linear !important;
+            transition: 0.3s all linear !important;
+          }
+
+          .bmc-button:hover,
+          .bmc-button:active,
+          .bmc-button:focus {
+            -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+            text-decoration: none !important;
+            box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+            opacity: 0.85 !important;
+            color: #000000 !important;
+          }
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/EatMoarRice"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+            alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+      </div>
+      <script src="oldscript.js"></script>
+</body>
+
+</html>
