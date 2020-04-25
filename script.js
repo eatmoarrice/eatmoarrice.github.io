@@ -1775,54 +1775,42 @@ function changeCard(val) {
 
 }
 
-function switchAroundInput(replacing,removed){
-  let temp1 = 0;
-      temp2 = 0;
+function switchAroundInput(removed){
+ // console.log(char.length);
+ let temp1 ="";
+     temp2 ="";
+  for (let x = removed; x < char.length; x++){
+    for (let z = 1; z < 4; z++){
+  temp1 = document.getElementById(`u${x+1}job${z}startinglevel`).value;
+  temp2 = document.getElementById(`u${x+1}job${z}goallevel`).value;
+  document.getElementById(`u${x}job${z}startinglevel`).value = temp1;
+  document.getElementById(`u${x}job${z}goallevel`).value = temp2;
 
-  temp1 = document.getElementById(`u1job3startinglevel`).value;
-  temp2 = document.getElementById(`u1job3goallevel`).value;
-
-  document.getElementById('u1job3startinglevel').value = u1Job[2][0];
-  document.getElementById('u1job3goallevel').value = u1Job[2][1];
+}
+}
 }
 
 function removeCard(val) {
-    let modChar = []
     if (val == "unit1") {
+      switchAroundInput(1);
         char.splice(0, 1);
-        // switchAroundInput("unit2","unit1");
-        // switchAroundInput("unit3","unit2");
-        // switchAroundInput("unit4","unit3");
-        // switchAroundInput("unit5","unit4");
-        // modChar[0] = char[1];
-        // modChar[1] = char[2];
-        // modChar[2] = char[3];
-        // modChar[3] = char[4];
+
     }
     if (val == "unit2") {
+      switchAroundInput(2);
         char.splice(1, 1);
-        // modChar[0] = char[0];
-        // modChar[1] = char[2];
-        // modChar[2] = char[3];
-        // modChar[3] = char[4];
+
     }
     if (val == "unit3") {
+      switchAroundInput(3);
         char.splice(2, 1);
-        // modChar[0] = char[0];
-        // modChar[1] = char[1];
-        // modChar[2] = char[3];
-        // modChar[3] = char[4];
-        // modChar = modChar.filter(item => item);
-        // char = modChar.slice();
+
+
     }
     if (val == "unit4") {
+      switchAroundInput(4);
         char.splice(3, 1);
-        // modChar[0] = char[0];
-        // modChar[1] = char[1];
-        // modChar[2] = char[2];
-        // modChar[3] = char[4];
-        // modChar = modChar.filter(item => item);
-        // char = modChar.slice();
+
     }
     if (val == "unit5") {
         char.splice(4, 1);
@@ -1834,96 +1822,16 @@ function removeCard(val) {
         // char = modChar.slice();
     }
 
-    // console.log(char);
     showPic()
 }
 
-// function getText(i) {
-//
-//   let extraOption = `
-// <ul class="grid list" id="myUL${i}">
-// 	<li>
-// 		<a href="javascript:void(0)" onclick='removeCard("unit${i}")'>
-// 			<img id="u${i}" src='images/questionmark.png' alt=''/>
-// 			<div id="customize${i}">Unit ${i}</div>
-// 		</a>
-// 			<a href="javascript:void(0)" onclick='gotop()'>
-// 			<div>Go to top</div>
-// 		</a>
-// 	</li>
-// 	<li>
-// 		<a href="javascript:void(0)">
-// 			<img id="u${i}j1" src='images/questionmark.png' alt='' />
-// 			<div>${unitx5[i-1][0]}</div>
-// 		</a>
-// 		<input type="number" required pattern="\d+" id="u${i}job1startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-// 		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job1goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
-// 	</li>
-// 	<li>
-// 		<a href="javascript:void(0)">
-// 			<img id="u${i}j2" src='images/questionmark.png' alt=''/>
-// 			<div>${unitx5[i-1][1]}</div>
-// 		</a>
-// 		<input type="number" required pattern="\d+" id="u${i}job2startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-// 		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job2goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
-// 	</li>
-// 	<li>
-// 		<a href="javascript:void(0)">
-// 			<img id ="u${i}j3" src='images/questionmark.png' alt=''/>
-// 			<div>${unitx5[i-1][2]}</div>
-// 		</a>
-// 		<input type="number" required pattern="\d+" id="u${i}job3startinglevel"  placeholder="Starting lvl (1-12)" title="Type in a number">
-// 		 <input type="number" required pattern="\d+" class="inputbox" id="u${i}job3goallevel"  placeholder="Goal lvl (2-12)" title="Type in a number">
-// 	</li>
-// </ul>`;
-//   return extraOption;
-// }
-//
-// function getDisabledText(i) { // i = nth number of unit, e.g.
-//   let disabledOption = `
-// <ul class="grid list">
-// 	<li>
-// 		<a>
-// 			<img src='images/questionmark.png' id ="unknown" alt=''/>
-// 			<div>Unit ${i}</div>
-// 		</a>
-// 		<a href="javascript:void(0)" onclick='gotop()'>
-// 			<div>Go to top</div>
-// 		</a>
-// 	</li>
-// 	<li>
-// 		<a>
-// 			<img src='images/questionmark.png' alt='' />
-// 			<div>Job 1</div>
-// 		</a>
-// 		<input type="number" required pattern="\d+"  placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
-// 		 <input type="number" required pattern="\d+" class="inputbox"  placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
-// 	</li>
-// 	<li>
-// 		<a>
-// 			<img src='images/questionmark.png' alt=''/>
-// 			<div>Job 2</div>
-// 		</a>
-// 		<input type="number" required pattern="\d+"   placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
-// 		 <input type="number" required pattern="\d+" class="inputbox"   placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
-// 	</li>
-// 	<li>
-// 		<a>
-// 			<img src='images/questionmark.png' alt=''/>
-// 			<div>Job 3</div>
-// 		</a>
-// 		<input type="number" required pattern="\d+"  placeholder="Starting lvl (1-12)" title="Type in a number" disabled>
-// 		 <input type="number" required pattern="\d+" class="inputbox" placeholder="Goal lvl (2-12)" title="Type in a number" disabled>
-// 	</li>
-// </ul>
-// `
-//   return disabledOption;
-// }
+
 hideUnit(1);
 hideUnit(2);
 hideUnit(3);
 hideUnit(4);
 hideUnit(5);
+
 function hideUnit(i) {
     let x = document.getElementById(`unit0${i}`);
     x.style.display = "none";
