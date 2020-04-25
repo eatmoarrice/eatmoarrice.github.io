@@ -6,6 +6,10 @@
      vertical-align: middle;
 }
 
+/* body {
+  background-color: #feffe4!important
+} */
+
 #myInput {
   /* background-image: url('/css/searchicon.png'); */
   background-position: 10px 12px;
@@ -54,7 +58,7 @@ input[type=number]{
 .list li a {
   border: 1px solid #ddd;
   margin-top: -1px;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
   padding: 14px;
   padding-bottom: 5px;
   text-decoration: none;
@@ -65,7 +69,7 @@ input[type=number]{
  }
 
 .list li a:hover:not(.header) {
-  background-color: #eee;
+  background-color: #a3de83;
 }
 
 .list li a img {
@@ -126,6 +130,7 @@ hr.solid {
 body {
   margin:0px;
 }
+
 .colour-block {
   background:#3399CC;
   width:100%;
@@ -164,11 +169,11 @@ h1 {
 }
 
 
-.tableFixHead          { overflow-y: auto; height: 100px; }
+.tableFixHead          { overflow-y: auto; height: 1000px; }
 .tableFixHead thead th { position: sticky; top: 0; }
 
 
-table  { border-collapse: collapse; width: 100%; }
+table  { border-collapse: collapse; width: 100%; max-width: 1400px; margin-left:auto; margin-right:auto;}
 th, td { padding: 8px 16px; }
 th     { background:#eee; }
 
