@@ -1,34 +1,30 @@
-{
- box-sizing: border-box;
-}
-
 body {
- background-image: url("images/UI/kale-salad.jpg");
- background-repeat: repeat;
- padding-bottom: 50px;
+  background-image: url("images/UI/kale-salad.jpg");
+  background-repeat: repeat;
+  padding-bottom: 50px;
 }
 
 .table > thead > tr > th {
- vertical-align: middle;
+  vertical-align: middle;
 }
 
 /* body {
- background-color: #feffe4!important
+  background-color: #feffe4!important
 } */
 
 #myInput {
- /* background-image: url('/css/searchicon.png'); */
- background-position: 10px 12px;
- background-repeat: no-repeat;
- width: 100%;
- font-size: 16px;
- padding: 12px 20px 12px 40px;
- border: 1px solid #ddd;
- margin-bottom: 12px;
+  /* background-image: url('/css/searchicon.png'); */
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
 }
 
 input:focus {
- background-color: rgb(238, 255, 247);
+  background-color: rgb(238, 255, 247);
 }
 
 #FaintMemory,
@@ -37,162 +33,130 @@ input:focus {
 #JobMemory,
 #Statue,
 #Location {
- margin: 12px;
- padding: 12px;
+  margin: 12px;
+  padding: 12px;
 }
 input[type="number"] {
- -moz-appearance: textfield;
- padding: 5px 5px;
- margin-left: 5px;
- box-sizing: border-box;
- width: 70px;
+  -moz-appearance: textfield;
+  padding: 5px 5px;
+  margin-left: 5px;
+  box-sizing: border-box;
+  width: 70px;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
- -webkit-appearance: none;
- margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .profilepic {
- width: 60px;
- height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 .tablepic {
- width: 50px;
- height: 50px;
- margin-top: 5px;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
 }
 /* margin: 5%; must be half of '100% - width' */
 
 .titletohide {
- display: block;
- margin-left: auto;
- margin-right: auto;
- max-height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 60px;
 }
 
 .rarity {
- display: inline-block;
- max-height: 60px;
+  display: inline-block;
+  max-height: 60px;
 }
 
 h2,
 h4,
 h6 {
- margin: 12px;
- padding: 12px;
+  margin: 12px;
+  padding: 12px;
 }
 
 h1 {
- text-align: center;
+  text-align: center;
 }
 
 hr.solid {
- border-top: 3px solid #bbb;
+  border-top: 3px solid #bbb;
 }
 
 hr.slim {
- border-top: 1px solid #bbb;
+  border-top: 1px solid #bbb;
 }
 
 .myButton {
- box-shadow: inset 0px 1px 0px 0px #276873;
- background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
- background-color: #599bb3;
- border-radius: 6px;
- border: 1px solid #29668f;
- display: inline-block;
- cursor: pointer;
- color: #ffffff;
- font-family: Arial;
- font-size: 15px;
- font-weight: bold;
- padding: 9px 24px;
- text-decoration: none;
- text-shadow: 0px 1px 0px #3d768a;
+  box-shadow: inset 0px 1px 0px 0px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 6px;
+  border: 1px solid #29668f;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 9px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
 }
 .myButton:hover {
- background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
- background-color: #408c99;
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
 }
 .myButton:active {
- position: relative;
- top: 1px;
+  position: relative;
+  top: 1px;
 }
 .job-text {
- font-size: 12px;
+  font-size: 12px;
 }
 
 body {
- margin: 0px;
+  margin: 0px;
 }
 
 .colour-block {
- background: #3399cc;
- width: 100%;
- padding: 7% 20% 10% 20%;
- color: #fff;
+  background: #3399cc;
+  width: 100%;
+  padding: 7% 20% 10% 20%;
+  color: #fff;
 }
 .white-block {
- background: #fff;
- width: 60%;
- padding: 7% 20% 10% 20%;
- color: #3399cc;
+  background: #fff;
+  width: 60%;
+  padding: 7% 20% 10% 20%;
+  color: #3399cc;
 }
 h1 {
- text-align: center;
- font-size: 80px;
- font-family: "wire one", serif;
- font-weight: normal;
+  text-align: center;
+  font-size: 80px;
+  font-family: "wire one", serif;
+  font-weight: normal;
 }
 #Materials {
- font-size: 20px;
- font-family: "Raleway", serif;
+  font-size: 20px;
+  font-family: "Raleway", serif;
 }
 
-.scallop-down {
- height: 100px;
- width: 100%;
- background: -webkit-gradient(
-   radial,
-   50% 0,
-   10,
-   50% 0,
-   40,
-   from(#3399cc),
-   color-stop(0.49, #3399cc),
-   color-stop(0.51, #fff),
-   to(white)
- );
- -webkit-background-size: 49px 100%;
-}
 
-.scallop-up {
- height: 100px;
- width: 100%;
- background: -webkit-gradient(
-   radial,
-   50% 100%,
-   10,
-   50% 100%,
-   40,
-   from(#3399cc),
-   color-stop(0.49, #3399cc),
-   color-stop(0.51, #fff),
-   to(white)
- );
- -webkit-background-size: 49px 100%;
-}
 
 .tableFixHead {
- overflow-y: auto;
- height: 1000px;
+  overflow-y: auto;
+  height: 1000px;
 }
 .tableFixHead thead th {
- position: sticky;
- top: 0;
+  position: sticky;
+  top: 0;
 }
 
 /* table  { border-collapse: collapse; width: 100%; max-width: 1400px; margin-left:auto; margin-right:auto;}
@@ -200,189 +164,197 @@ th, td { padding: 8px 16px; }
 th     { background:#eee; } */
 
 .jobtable {
- display: inline-block;
- border-spacing: 0;
- border: 0;
+  display: inline-block;
+  border-spacing: 0;
+  border: 0;
 }
 
 .navigationbar ul {
- list-style-type: none;
- margin: 0;
- padding: 0;
- overflow: hidden;
- background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
 .navigationbar ul {
- list-style: none;
+  list-style: none;
 }
 
 .navigationbar li {
- float: left;
+  float: left;
 }
 
 .navigationbar li a {
- display: block;
- color: white;
- text-align: center;
- padding: 14px 16px;
- text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .navigationbar li a:hover {
- background-color: #111;
+  background-color: #111;
 }
 
 .navigationbar .active {
- background-color: #3399cc;
+  background-color: #3399cc;
 }
 
 .job-icon {
- height: 30px !important;
- width: 30px !important;
+  height: 30px !important;
+  width: 30px !important;
 }
 .material-icon {
- vertical-align: middle;
- height: 64px;
- width: 64px;
+  vertical-align: middle;
+  height: 64px;
+  width: 64px;
 }
 .material-icon-best {
- vertical-align: middle;
- height: 40px;
- width: 40px;
+  vertical-align: middle;
+  height: 40px;
+  width: 40px;
 }
 
 #main-container {
- background-color: white;
- max-width: 1300px;
- border: 5px solid #333;
- border-top: 0;
+  background-color: white;
+  max-width: 1300px;
+  border: 5px solid #333;
+  border-top: 0;
 }
 
 th {
- background-color: #b0ffea;
- width: 80px;
- text-align: center !important;
- /* border-bottom: 1px solid #333; */
+  background-color: #b0ffea;
+  width: 80px;
+  text-align: center !important;
+  /* border-bottom: 1px solid #333; */
 }
 
 .jobtable img {
- margin-left: auto;
- margin-right: auto;
- display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .startinggoal {
- background-color: #f2f2f2;
- padding-left: 10px;
- width: 84px;
- height: 50px;
- text-align: left !important;
+  background-color: #f2f2f2;
+  padding-left: 10px;
+  width: 84px;
+  height: 50px;
+  text-align: left !important;
 }
 
 .startgoallevel {
- font-size: 10px;
+  font-size: 10px;
 }
 .jobtable th {
- background: rgb(254, 255, 230);
- background: linear-gradient(
-   0deg,
-   rgba(254, 255, 230, 1) 37%,
-   rgba(121, 90, 9, 1) 84%
- );
+  background: rgb(254, 255, 230);
+  background: linear-gradient(
+    0deg,
+    rgba(254, 255, 230, 1) 37%,
+    rgba(121, 90, 9, 1) 84%
+  );
 }
 
 #totalTable {
- margin-left: auto;
- margin-right: auto;
- text-align: center;
- color: white;
- background-image: url("images/UI/chalkboard.jpg");
- background-repeat: repeat;
- max-width: 660px;
- height: auto;
- border-left: 5px solid palevioletred;
- border-right: 5px solid palevioletred;
- border-bottom: 5px solid palevioletred;
- border-top: 5px solid palevioletred;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  background-image: url("images/UI/chalkboard.jpg");
+  background-repeat: repeat;
+  max-width: 660px;
+  height: auto;
+  border-left: 5px solid palevioletred;
+  border-right: 5px solid palevioletred;
+  border-bottom: 5px solid palevioletred;
+  border-top: 5px solid palevioletred;
 }
 
 #tablesection {
- text-align: center;
- display: none;
+  text-align: center;
+  display: none;
 }
 
 #locforeachmat {
- display: none;
+  display: none;
 }
 
 .navigationbarbot {
- width: 100%;
- background-color: #333;
- overflow: auto;
+  width: 100%;
+  background-color: #333;
+  overflow: auto;
 }
 
 /* Navigation links */
 .navigationbarbot a {
- float: left;
- padding: 12px;
- color: white;
- font-size: 16px;
- text-decoration: none;
- width: 33.33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
- text-align: center; /* If you want the text to be centered */
+  float: left;
+  padding: 12px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  width: 33.33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
 }
 
 /* Add a background color on mouse-over */
 .navigationbarbot a:hover {
- text-decoration: none;
- /* background-color: #000;*/
- color: white;
+  text-decoration: none;
+  /* background-color: #000;*/
+  color: white;
 }
 
 .footer {
- max-height: 50px;
+  max-height: 50px;
 }
 
 .bmc-button img {
- height: 34px !important;
- width: 35px !important;
- margin-bottom: 1px !important;
- box-shadow: none !important;
- border: none !important;
- vertical-align: middle !important;
+  height: 34px !important;
+  width: 35px !important;
+  margin-bottom: 1px !important;
+  box-shadow: none !important;
+  border: none !important;
+  vertical-align: middle !important;
 }
 
 .bmc-button {
- position: relative;
- float: right;
- line-height: 25px !important;
- height: 50px !important;
- min-width: 100px !important;
- text-decoration: none !important;
- display: inline-flex !important;
- color: #ffffff !important;
- background-color: #ff813f !important;
- border-radius: 5px !important;
- border: 1px solid transparent !important;
- padding: 10px 10px !important;
- font-size: 10px !important;
- letter-spacing: -0.08px !important;
- font-family: Cookie !important;
- -webkit-box-sizing: border-box !important;
- box-sizing: border-box !important;
- -o-transition: 0.3s all linear !important;
- -webkit-transition: 0.3s all linear !important;
- -moz-transition: 0.3s all linear !important;
- -ms-transition: 0.3s all linear !important;
- transition: 0.3s all linear !important;
+  position: relative;
+  float: right;
+  line-height: 25px !important;
+  height: 50px !important;
+  min-width: 100px !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  color: #ffffff !important;
+  background-color: #ff813f !important;
+  border-radius: 5px !important;
+  border: 1px solid transparent !important;
+  padding: 10px 10px !important;
+  font-size: 10px !important;
+  letter-spacing: -0.08px !important;
+  font-family: Cookie !important;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  -o-transition: 0.3s all linear !important;
+  -webkit-transition: 0.3s all linear !important;
+  -moz-transition: 0.3s all linear !important;
+  -ms-transition: 0.3s all linear !important;
+  transition: 0.3s all linear !important;
 }
 
 .bmc-button:hover,
 .bmc-button:active,
 .bmc-button:focus {
- text-decoration: none !important;
- background-color: rgb(96, 255, 207) !important;
+  text-decoration: none !important;
+  background-color: rgb(96, 255, 207) !important;
 
- color: rgb(255, 255, 255) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+p {
+   max-width: 1000px;
+}
+
+.tutorial {
+  border: 2px solid #333;
 }

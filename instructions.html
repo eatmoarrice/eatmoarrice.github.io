@@ -1,96 +1,85 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Job Material Planner</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-163103228-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
+      gtag("config", "UA-163103228-1");
+    </script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div class="navigationbar">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="instructions.html">Instructions</a></li>
+          <a
+            class="bmc-button"
+            target="_blank"
+            href="https://www.buymeacoffee.com/EatMoarRice"
+            ><img
+              src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+              alt="Buy me a coffee"
+            /><span style="margin-left: 15px; font-size: 20px !important;"
+              >Buy me a coffee</span
+            ></a
+          >
+        </ul>
+      </nav>
+    </div>
+    <div class="container" id="main-container">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Job Material Planner</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163103228-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-163103228-1');
-</script>
-</head>
+      <h2>WOTV Job Material Planner</h2>
+      <h4>HOW TO USE THIS TOOL:</h5>
+      <h5>Step 1: Choose the units you want to find materials for</h5>
 
-<body>
-  <div class="navigationbar">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <!-- <li><a href="old.html">Old Version</a></li>
-        <li><a href="older.html">Older Version</a></li> -->
-        <li><a class="active" href="instructions.html">Instructions</a></li>
-      </ul>
-    </nav>
-  </div>
-  <h2>HOW TO USE THIS WEBSITE</h2>
-  <h4><a href="https://reddit.com/r/wotv_ffbe/comments/g5uk03/tool_job_material_planner_updated/" target="_blank"> Check out my Reddit post.</a></h4>
+      <p>You can do this by clicking on the portrait(s) of your unit(s). You can find them more quickly by typing their name in the search box. After choosing one, it will automatically scrolls to the next section where you can enter the starting levels and the goal levels of the unit's jobs.<br><br>
 
-      <div id="Location"></div>
-      <div class="scallop-up"></div>
-      <div class="colour-block">
-        Version 1.1
-        Version 1.2.1
-        <br> If you love the tool, help me get Orlandeau (I spent everything on Frederika)! Buy me a coffee!
-        <br><br>
-        <style>
-          .bmc-button img {
-            height: 34px !important;
-            width: 35px !important;
-            margin-bottom: 1px !important;
-            box-shadow: none !important;
-            border: none !important;
-            vertical-align: middle !important;
-          }
+      If you want to choose more units, simply click on "Units" at the bottom of the screen. The 3 buttons are there to help you navigate the website more easily. Note: "Materials" and "Locations" won't work right until you have completed step 3.<br><br>
 
-          .bmc-button {
-            padding: 7px 10px 7px 10px !important;
-            line-height: 35px !important;
-            height: 51px !important;
-            min-width: 217px !important;
-            text-decoration: none !important;
-            display: inline-flex !important;
-            color: #000000 !important;
-            background-color: #FFFFFF !important;
-            border-radius: 5px !important;
-            border: 1px solid transparent !important;
-            padding: 7px 10px 7px 10px !important;
-            font-size: 28px !important;
-            letter-spacing: 0.6px !important;
-            box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
-            -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-            margin: 0 auto !important;
-            font-family: 'Cookie', cursive !important;
-            -webkit-box-sizing: border-box !important;
-            box-sizing: border-box !important;
-            -o-transition: 0.3s all linear !important;
-            -webkit-transition: 0.3s all linear !important;
-            -moz-transition: 0.3s all linear !important;
-            -ms-transition: 0.3s all linear !important;
-            transition: 0.3s all linear !important;
-          }
+      You can choose up to 10 units. Choosing more will push the first unit in the queue out. If you make a mistake, you can click on the picture of the unit to remove them from the queue.
+      </p>
+        <img class="tutorial" src="images/tutorial/tut1.gif">
+      <h5>Step 2: Fill in the starting and goal levels and click CALCULATE</h5>
+        <p>Enter a number between 1 and 12. There's only 1 map to farm level 13+ job materials, so those levels won't be included for now.<br><br>
+        If you just want 1 level increases (e.g. the job is level 5 and you want to reach level 6), you can leave the goal level blank. Note: this only works BEFORE you click CALCULATE.<br><br>
+        Click the button when you're done.</p>
+        <img class="tutorial" src="images/tutorial/tut2.gif">
+      <h5>Step 3: Customize your results</h5>
+        <p>The first result will be a box of all the materials and the amount that you need. If you don't need something, click on the picture to "ignore" it. The picture will be grayed out indicating that the material will not be considered (for the location tables). Click on them again to undo it.</p>
+        <img class="tutorial" src="images/tutorial/tut3.gif">
+      <h5>Step 4: Enjoy the results!</h5>
+      <p> You can see the best locations to farm at the "Best Location" (very creative!) table. Note that the drop rates aren't the same for each map! The same material can have a higher drop rate at a different map. This table doesn't take drop rates into consideration. <br><br>
+      If you want to see individual materials and all their farming locations, toggle the last table on.<br><br>
+      That's it! Now get back to farming!</p>
+    </div>
 
-          .bmc-button:hover,
-          .bmc-button:active,
-          .bmc-button:focus {
-            -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-            text-decoration: none !important;
-            box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-            opacity: 0.85 !important;
-            color: #000000 !important;
-          }
-        </style>
-        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/EatMoarRice"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
-            alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
-      </div>
-      <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+    <script src="fitty.min.js"></script>
 
+  </body>
 </html>
