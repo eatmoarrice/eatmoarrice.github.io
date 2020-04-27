@@ -113,7 +113,7 @@
   },
   "139": {
     "Name":"If We Work Together...",
-    "Materials": [] //nothing here
+    "Materials": []
   },
   "1310": {
     "Name":"Reinforcements",
@@ -359,7 +359,7 @@
     "Name":"The Queen's Plan",
     "Materials": ["Ninja's Memory (Purple)", "Ninja Blade Charoite", "Prowling Wyvern Statue (Purple)", "Paladin's Memory (Purple)", "Staff Charoite", "Ice Alcryst (Purple)", "Winged One's Memory (Purple)", "Axe Charoite"]
   },
-"411": {
+  "411": {
   "Name":"Premonition",
   "Materials": ["Ranger's Memory (Purple)", "Mace Charoite", "Praying Angel Statue (Purple)", "Soldier's Memory (Purple)", "Bow Charoite", "Fire Alcryst (Purple)"]
 },
@@ -598,6 +598,11 @@
     },
     "FFT-05":{
       "Name":"Lionel Castle — Interior",
-      "Materials": ["Sword Azurite", "Dark Alcryst (Purple)", "Light Alcryst (Purple)", "Lightning Alcryst (Purple)", "Praying Angel Statue (Purple)", "Prowling Wyvern Statue (Purple)"]
-    }
+      "Materials": ["Sword Charoite", "Dark Alcryst (Purple)", "Light Alcryst (Purple)", "Lightning Alcryst (Purple)", "Praying Angel Statue (Purple)", "Prowling Wyvern Statue (Purple)"]
+    },
+
+    "Event Reward/Shop": {
+    "Name":"Check Missions and Mog Shop",
+    "Materials": ["Sword Saint's Memory (Green)", "Sword Saint's Memory (Blue)", "Sword Saint's Memory (Purple)", "Sword Saint's Memory (Yellow)", "Squire's Memory (Green)", "Squire's Memory (Blue)", "Squire's Memory (Yellow)", "Squire's Memory (Purple)", "Fell Knight's Memory (Green)", "Fell Knight's Memory (Blue)", "Fell Knight's Memory (Purple)", "Fell Knight's Memory (Yellow)"]
+     }
 }
