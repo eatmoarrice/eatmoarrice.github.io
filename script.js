@@ -1783,7 +1783,7 @@ const locationlist = {
       "Greatsword Citrine",
       "Prowling Wyvern Statue (Yellow)",
       "Paladin's Memory (Yellow)",
-      "Ninja Blade Citrine",
+      "Dagger Citrine",
       "Light Alcryst (Yellow)",
     ],
   },
