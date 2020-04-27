@@ -280,6 +280,10 @@ th {
   display: none;
 }
 
+#bottom-text-disable {
+  display: none;
+}
+
 .navigationbarbot {
   width: 100%;
   background-color: #333;

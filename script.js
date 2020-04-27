@@ -3302,6 +3302,7 @@ function showhideLocation() {
 function calculate() {
   document.getElementById("totalTable").innerHTML ="";
   document.getElementById("tablesection").style.display = "block";
+  document.getElementById("bottom-text-disable").style.display = "block";
   if (char.length != 0) {
     tablebody = "";
     fulltable2 = "";
