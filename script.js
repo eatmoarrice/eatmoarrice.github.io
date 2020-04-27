@@ -2382,7 +2382,7 @@ function showEachUnit(unit) {
   let unitTruncated = unit.replace(/\W/g, "");
   let temp = `<div class="float-left ml-4 filter">
         <a href="javascript:void(0)" onclick='changeCard("${unitTruncated}")'>
-        <img class="profilepic" src="images/${unitTruncated}.png"/></a>
+        <img class="profilepic" src="images/char/${unitTruncated}.png"/></a>
         <div><p style="width:60px;" class="listcharname" style="text-align: center;">${unit}</p></div>
       </div>`;
   return temp;
@@ -2827,7 +2827,7 @@ function showPic() {
       job2pic = `images/job/sub/${job2pic}.png`;
       job3pic = unitx5[i - 1][2].replace(/\W/g, "");
       job3pic = `images/job/sub/${job3pic}.png`;
-      document.getElementById(`u${i}`).src = `images/${char[i - 1]}.png`;
+      document.getElementById(`u${i}`).src = `images/char/${char[i - 1]}.png`;
       document.getElementById(`unit${i}`).innerHTML = char[i - 1];
       document.getElementById(`u${i}j1`).src = job1pic;
       document.getElementById(`u${i}j2`).src = job2pic;
