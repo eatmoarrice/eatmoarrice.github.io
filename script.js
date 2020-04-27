@@ -3578,12 +3578,17 @@ function removeNumbers(array) {
 
 // test
 
-function addToClipBoard() {
-  let copyText = document.getElementById("cb");
-  copyText.value = materialNeed;
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-  document.execCommand("copy");
+// function addToClipBoard() {
+//   let copyText = document.getElementById("cb");
+//   copyText.value = materialNeed;
+//   copyText.select();
+//   copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+//   document.execCommand("copy");
+// }
+
+function goToWebsite(){
+  let tempURL =`https://wotvfarmcalculator.github.io/beta.html?i=${materialNeed}`;
+  window.open(tempURL);
 }
 
 // function arrayToCookie(cookieName,array,daysToExpire)
