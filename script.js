@@ -3588,7 +3588,7 @@ function removeNumbers(array) {
 // }
 
 function goToWebsite(){
-  let tempURL =`https://wotvfarmcalculator.github.io/beta.html?i=${materialNeed}`;
+  let tempURL =`https://wotvfarmcalculator.github.io/index.html?i=${materialNeed}`;
   window.open(tempURL);
 }
 
