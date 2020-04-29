@@ -22,7 +22,7 @@ const charlist = {
     Job3: "Paladin",
     Rarity: "Soon",
   },
-  Drand: {
+  Dorando: {
     Element: "Earth",
     Job1: "Viking",
     Job2: "Monk",
@@ -524,1706 +524,634 @@ const joblist = {
   },
 };
 
-const locationlist = {
+const {
   "111": {
-    Name: "Twin Princes",
-    Materials: [
-      "Warrior's Memory (Green)",
-      "Sword Jadeite",
-      "Praying Angel Statue (Green)",
-      "Ranger's Memory (Green)",
-      "Bow Jadeite",
-      "Earth Alcryst (Green)",
-    ],
+    "Name":"Twin Princes",
+    "Materials": ["Warrior's Memory (Green)", "Sword Jadeite", "Praying Angel Statue (Green)", "Ranger's Memory (Green)", "Bow Jadeite", "Earth Alcryst (Green)"]
   },
   "112": {
-    Name: "Premonition of Blood and Ruin",
-    Materials: [
-      "Knight's Memory (Green)",
-      "Greatsword Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Gunner's Memory (Green)",
-      "Gun Jadeite",
-      "Ice Alcryst (Green)",
-    ],
+    "Name":"Premonition of Blood and Ruin",
+    "Materials": ["Knight's Memory (Green)", "Greatsword Jadeite", "Prowling Wyvern Statue (Green)", "Gunner's Memory (Green)", "Gun Jadeite", "Ice Alcryst (Green)"]
   },
   "113": {
-    Name: "United Front",
-    Materials: [
-      "Paladin's Memory (Green)",
-      "Katana Jadeite",
-      "Praying Angel Statue (Green)",
-      "White Mage's Memory (Green)",
-      "Staff Jadeite",
-      "Wind Alcryst (Green)",
-    ],
+    "Name":"United Front",
+    "Materials": ["Paladin's Memory (Green)", "Katana Jadeite", "Praying Angel Statue (Green)", "White Mage's Memory (Green)", "Staff Jadeite", "Wind Alcryst (Green)"]
   },
   "114": {
-    Name: "Do As the Lions Do",
-    Materials: [
-      "Soldier's Memory (Green)",
-      "Fists Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Black Mage's Memory (Green)",
-      "Mace Jadeite",
-      "Fire Alcryst (Green)",
-      "Axe Jadeite",
-    ],
+    "Name":"Do As the Lions Do",
+    "Materials": ["Soldier's Memory (Green)", "Fists Jadeite", "Prowling Wyvern Statue (Green)", "Black Mage's Memory (Green)", "Mace Jadeite", "Fire Alcryst (Green)", "Axe Jadeite"]
   },
   "115": {
-    Name: "Proof of Trust",
-    Materials: [
-      "Monk's Memory (Green)",
-      "Spear Jadeite",
-      "Praying Angel Statue (Green)",
-      "Red Mage's Memory (Green)",
-      "Sword Jadeite",
-      "Lightning Alcryst (Green)",
-    ],
+    "Name":"Proof of Trust",
+    "Materials": ["Monk's Memory (Green)", "Spear Jadeite", "Praying Angel Statue (Green)", "Red Mage's Memory (Green)", "Sword Jadeite", "Lightning Alcryst (Green)"]
   },
   "116": {
-    Name: "Amongst the Ruins",
-    Materials: [
-      "Samurai's Memory (Green)",
-      "Dagger Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Green Mage's Memory (Green)",
-      "Greatsword Jadeite",
-      "Water Alcryst (Green)",
-      "Viking's Memory (Green)",
-    ],
+    "Name":"Amongst the Ruins",
+    "Materials": ["Samurai's Memory (Green)", "Dagger Jadeite", "Prowling Wyvern Statue (Green)", "Green Mage's Memory (Green)", "Greatsword Jadeite", "Water Alcryst (Green)", "Viking's Memory (Green)"]
   },
   "117": {
-    Name: "Show Me Strength",
-    Materials: [
-      "Lancer's Memory (Green)",
-      "Ninja Blade Jadeite",
-      "Praying Angel Statue (Green)",
-      "Time Mage's Memory (Green)",
-      "Katana Jadeite",
-      "Light Alcryst (Green)",
-    ],
+    "Name":"Show Me Strength",
+    "Materials": ["Lancer's Memory (Green)", "Ninja Blade Jadeite", "Praying Angel Statue (Green)", "Time Mage's Memory (Green)", "Katana Jadeite", "Light Alcryst (Green)"]
   },
   "118": {
-    Name: "Ancient Relic",
-    Materials: [
-      "Dragoon's Memory (Green)",
-      "Bow Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Spellblade's Memory (Green)",
-      "Fists Jadeite",
-      "Dark Alcryst (Green)",
-      "Axe Jadeite",
-    ],
+    "Name":"Ancient Relic",
+    "Materials": ["Dragoon's Memory (Green)", "Bow Jadeite", "Prowling Wyvern Statue (Green)", "Spellblade's Memory (Green)", "Fists Jadeite", "Dark Alcryst (Green)","Axe Jadeite"]
   },
   "119": {
-    Name: "The Way of Hourne",
-    Materials: [
-      "Thief's Memory (Green)",
-      "Gun Jadeite",
-      "Praying Angel Statue (Green)",
-      "Cleric's Memory (Green)",
-      "Spear Jadeite",
-      "Earth Alcryst (Green)",
-    ],
+    "Name":"The Way of Hourne",
+    "Materials": ["Thief's Memory (Green)", "Gun Jadeite", "Praying Angel Statue (Green)", "Cleric's Memory (Green)", "Spear Jadeite", "Earth Alcryst (Green)"]
   },
   "1110": {
-    Name: "Prove Your Worth",
-    Materials: [
-      "Ninja's Memory (Green)",
-      "Staff Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Warrior's Memory (Green)",
-      "Dagger Jadeite",
-      "Ice Alcryst (Green)",
-      "Winged One's Memory (Green)",
-    ],
-  },
+    "Name":"Prove Your Worth",
+    "Materials": ["Ninja's Memory (Green)", "Staff Jadeite", "Prowling Wyvern Statue (Green)", "Warrior's Memory (Green)", "Dagger Jadeite", "Ice Alcryst (Green)", "Winged One's Memory (Green)"]
+   },
   "121": {
-    Name: "To the Lion's Den",
-    Materials: [
-      "Ranger's Memory (Green)",
-      "Mace Jadeite",
-      "Praying Angel Statue (Green)",
-      "Knight's Memory (Green)",
-      "Ninja Blade Jadeite",
-      "Wind Alcryst (Green)",
-    ],
+    "Name":"To the Lion's Den",
+    "Materials": ["Ranger's Memory (Green)", "Mace Jadeite", "Praying Angel Statue (Green)", "Knight's Memory (Green)", "Ninja Blade Jadeite", "Wind Alcryst (Green)"]
   },
   "122": {
-    Name: "The Savage King's Daughter",
-    Materials: [
-      "Paladin's Memory (Green)",
-      "Sword Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Gunner's Memory (Green)",
-      "Bow Jadeite",
-      "Fire Alcryst (Green)",
-    ],
+    "Name":"The Savage King's Daughter",
+    "Materials": ["Paladin's Memory (Green)", "Sword Jadeite", "Prowling Wyvern Statue (Green)", "Gunner's Memory (Green)", "Bow Jadeite", "Fire Alcryst (Green)"]
   },
   "123": {
-    Name: "All the Happiness in the World",
-    Materials: [
-      "Soldier's Memory (Green)",
-      "Greatsword Jadeite",
-      "Praying Angel Statue (Green)",
-      "White Mage's Memory (Green)",
-      "Gun Jadeite",
-      "Lightning Alcryst (Green)",
-    ],
+    "Name":"All the Happiness in the World",
+    "Materials": ["Soldier's Memory (Green)", "Greatsword Jadeite", "Praying Angel Statue (Green)", "White Mage's Memory (Green)", "Gun Jadeite", "Lightning Alcryst (Green)"]
   },
   "124": {
-    Name: "Afoul of the Gods",
-    Materials: [
-      "Monk's Memory (Green)",
-      "Katana Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Black Mage's Memory (Green)",
-      "Staff Jadeite",
-      "Water Alcryst (Green)",
-    ],
+    "Name":"Afoul of the Gods",
+    "Materials": ["Monk's Memory (Green)", "Katana Jadeite", "Prowling Wyvern Statue (Green)", "Black Mage's Memory (Green)", "Staff Jadeite", "Water Alcryst (Green)"]
   },
   "125": {
-    Name: "Volition",
-    Materials: [
-      "Samurai's Memory (Green)",
-      "Fists Jadeite",
-      "Praying Angel Statue (Green)",
-      "Red Mage's Memory (Green)",
-      "Mace Jadeite",
-      "Light Alcryst (Green)",
-    ],
+    "Name":"Volition",
+    "Materials": ["Samurai's Memory (Green)", "Fists Jadeite", "Praying Angel Statue (Green)", "Red Mage's Memory (Green)", "Mace Jadeite", "Light Alcryst (Green)"]
   },
   "126": {
-    Name: "What you should fear",
-    Materials: [
-      "Lancer's Memory (Green)",
-      "Spear Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Green Mage's Memory (Green)",
-      "Sword Jadeite",
-      "Dark Alcryst (Green)",
-      "Viking's Memory (Green)",
-    ],
+    "Name":"What you should fear",
+    "Materials": ["Lancer's Memory (Green)", "Spear Jadeite", "Prowling Wyvern Statue (Green)", "Green Mage's Memory (Green)", "Sword Jadeite", "Dark Alcryst (Green)", "Viking's Memory (Green)"]
   },
   "127": {
-    Name: "Wavering Spirit",
-    Materials: [
-      "Dragoon's Memory (Green)",
-      "Greatsword Jadeite",
-      "Praying Angel Statue (Green)",
-      "Time Mage's Memory (Green)",
-      "Dagger Jadeite",
-      "Earth Alcryst (Green)",
-    ],
+    "Name":"Wavering Spirit",
+    "Materials": ["Dragoon's Memory (Green)", "Greatsword Jadeite", "Praying Angel Statue (Green)", "Time Mage's Memory (Green)", "Dagger Jadeite", "Earth Alcryst (Green)"]
   },
   "128": {
-    Name: "Radiant Light",
-    Materials: [
-      "Thief's Memory (Green)",
-      "Ninja Blade Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Spellblade's Memory (Green)",
-      "Katana Jadeite",
-      "Ice Alcryst (Green)",
-      "Axe Jadeite",
-    ],
+    "Name":"Radiant Light",
+    "Materials": ["Thief's Memory (Green)", "Ninja Blade Jadeite", "Prowling Wyvern Statue (Green)", "Spellblade's Memory (Green)", "Katana Jadeite", "Ice Alcryst (Green)","Axe Jadeite"]
   },
   "129": {
-    Name: "Never-Ending Battle",
-    Materials: [
-      "Ninja's Memory (Green)",
-      "Bow Jadeite",
-      "Praying Angel Statue (Green)",
-      "Cleric's Memory (Green)",
-      "Fists Jadeite",
-      "Wind Alcryst (Green)",
-    ],
+    "Name":"Never-Ending Battle",
+    "Materials": ["Ninja's Memory (Green)", "Bow Jadeite", "Praying Angel Statue (Green)", "Cleric's Memory (Green)", "Fists Jadeite", "Wind Alcryst (Green)"]
   },
   "1210": {
-    Name: "Redemption",
-    Materials: [
-      "Ranger's Memory (Green)",
-      "Gun Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Warrior's Memory (Green)",
-      "Spear Jadeite",
-      "Fire Alcryst (Green)",
-      "Winged One's Memory (Green)",
-    ],
+    "Name":"Redemption",
+    "Materials": ["Ranger's Memory (Green)", "Gun Jadeite", "Prowling Wyvern Statue (Green)", "Warrior's Memory (Green)", "Spear Jadeite", "Fire Alcryst (Green)", "Winged One's Memory (Green)"]
   },
   "131": {
-    Name: "Concerns",
-    Materials: [
-      "Ranger's Memory (Blue)",
-      "Sword Azurite",
-      "Praying Angel Statue (Blue)",
-      "Warrior's Memory (Blue)",
-      "Bow Azurite",
-      "Lightning Alcryst (Blue)",
-    ],
+    "Name":"Concerns",
+    "Materials": ["Ranger's Memory (Blue)", "Sword Azurite", "Praying Angel Statue (Blue)", "Warrior's Memory (Blue)", "Bow Azurite", "Lightning Alcryst (Blue)"]
   },
   "132": {
-    Name: "Shadow in the Ruins",
-    Materials: [
-      "Knight's Memory (Blue)",
-      "Greatsword Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Gunner's Memory (Blue)",
-      "Gun Azurite",
-      "Water Alcryst (Blue)",
-    ],
+    "Name":"Shadow in the Ruins",
+    "Materials": ["Knight's Memory (Blue)", "Greatsword Azurite", "Prowling Wyvern Statue (Blue)", "Gunner's Memory (Blue)", "Gun Azurite", "Water Alcryst (Blue)"]
   },
   "133": {
-    Name: "False Accusations",
-    Materials: [
-      "Paladin's Memory (Blue)",
-      "Katana Azurite",
-      "Praying Angel Statue (Blue)",
-      "White Mage's Memory (Blue)",
-      "Staff Azurite",
-      "Light Alcryst (Blue)",
-    ],
+    "Name":"False Accusations",
+    "Materials": ["Paladin's Memory (Blue)", "Katana Azurite", "Praying Angel Statue (Blue)", "White Mage's Memory (Blue)", "Staff Azurite", "Light Alcryst (Blue)"]
   },
   "134": {
-    Name: "Road to Ruin I",
-    Materials: [
-      "Soldier's Memory (Blue)",
-      "Fists Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Black Mage's Memory (Blue)",
-      "Mace Azurite",
-      "Dark Alcryst (Blue)",
-    ],
+    "Name":"Road to Ruin I",
+    "Materials": ["Soldier's Memory (Blue)", "Fists Azurite", "Prowling Wyvern Statue (Blue)", "Black Mage's Memory (Blue)", "Mace Azurite", "Dark Alcryst (Blue)"]
   },
   "135": {
-    Name: "Road to Ruin II",
-    Materials: [
-      "Monk's Memory (Blue)",
-      "Spear Azurite",
-      "Praying Angel Statue (Blue)",
-      "Red Mage's Memory (Blue)",
-      "Sword Azurite",
-      "Earth Alcryst (Blue)",
-      "Viking's Memory (Blue)",
-    ],
+    "Name":"Road to Ruin II",
+    "Materials": ["Monk's Memory (Blue)", "Spear Azurite", "Praying Angel Statue (Blue)", "Red Mage's Memory (Blue)", "Sword Azurite", "Earth Alcryst (Blue)", "Viking's Memory (Blue)"]
   },
   "136": {
-    Name: "Boisterous Stars",
-    Materials: [
-      "Samurai's Memory (Blue)",
-      "Greatsword Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Green Mage's Memory (Blue)",
-      "Dagger Azurite",
-      "Ice Alcryst (Blue)",
-    ],
+    "Name":"Boisterous Stars",
+    "Materials": ["Samurai's Memory (Blue)", "Greatsword Azurite", "Prowling Wyvern Statue (Blue)", "Green Mage's Memory (Blue)", "Dagger Azurite", "Ice Alcryst (Blue)"]
   },
   "137": {
-    Name: "What Has Been Lost",
-    Materials: [
-      "Lancer's Memory (Blue)",
-      "Katana Azurite",
-      "Praying Angel Statue (Blue)",
-      "Time Mage's Memory (Blue)",
-      "Ninja Blade Azurite",
-      "Wind Alcryst (Blue)",
-    ],
+    "Name":"What Has Been Lost",
+    "Materials": ["Lancer's Memory (Blue)", "Katana Azurite", "Praying Angel Statue (Blue)", "Time Mage's Memory (Blue)", "Ninja Blade Azurite", "Wind Alcryst (Blue)"]
   },
   "138": {
-    Name: "To Keep One Person Safe",
-    Materials: [
-      "Dragoon's Memory (Blue)",
-      "Bow Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Spellblade's Memory (Blue)",
-      "Fists Azurite",
-      "Fire Alcryst (Blue)",
-      "Axe Azurite",
-    ],
+    "Name":"To Keep One Person Safe",
+    "Materials": ["Dragoon's Memory (Blue)", "Bow Azurite", "Prowling Wyvern Statue (Blue)", "Spellblade's Memory (Blue)", "Fists Azurite", "Fire Alcryst (Blue)","Axe Azurite"]
   },
   "139": {
-    Name: "If We Work Together...",
-    Materials: [],
+    "Name":"If We Work Together...",
+    "Materials": []
   },
   "1310": {
-    Name: "Reinforcements",
-    Materials: [
-      "Thief's Memory (Blue)",
-      "Gun Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Cleric's Memory (Blue)",
-      "Spear Azurite",
-      "Lightning Alcryst (Blue)",
-      "Axe Azurite",
-    ],
+    "Name":"Reinforcements",
+    "Materials": ["Thief's Memory (Blue)", "Gun Azurite", "Prowling Wyvern Statue (Blue)", "Cleric's Memory (Blue)", "Spear Azurite", "Lightning Alcryst (Blue)", "Axe Azurite"]
   },
   "211": {
-    Name: "«Fortem» Move Out I",
-    Materials: [
-      "Warrior's Memory (Blue)",
-      "Dagger Azurite",
-      "Praying Angel Statue (Blue)",
-      "Ninja's Memory (Blue)",
-      "Staff Azurite",
-      "Water Alcryst (Blue)",
-      "Winged One's Memory (Blue)",
-    ],
+    "Name":"«Fortem» Move Out I",
+    "Materials": ["Warrior's Memory (Blue)", "Dagger Azurite", "Praying Angel Statue (Blue)", "Ninja's Memory (Blue)", "Staff Azurite", "Water Alcryst (Blue)", "Winged One's Memory (Blue)"]
   },
   "212": {
-    Name: "«Fortem» Move Out II",
-    Materials: [
-      "Knight's Memory (Blue)",
-      "Sword Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Gunner's Memory (Blue)",
-      "Ninja Blade Azurite",
-      "Light Alcryst (Blue)",
-    ],
+    "Name":"«Fortem» Move Out II",
+    "Materials": ["Knight's Memory (Blue)", "Sword Azurite", "Prowling Wyvern Statue (Blue)", "Gunner's Memory (Blue)", "Ninja Blade Azurite", "Light Alcryst (Blue)"]
   },
   "213": {
-    Name: "What It Takes to Be a Prince",
-    Materials: [
-      "Paladin's Memory (Blue)",
-      "Greatsword Azurite",
-      "Praying Angel Statue (Blue)",
-      "White Mage's Memory (Blue)",
-      "Bow Azurite",
-      "Dark Alcryst (Blue)",
-    ],
+    "Name":"What It Takes to Be a Prince",
+    "Materials": ["Paladin's Memory (Blue)", "Greatsword Azurite", "Praying Angel Statue (Blue)", "White Mage's Memory (Blue)", "Bow Azurite", "Dark Alcryst (Blue)"]
   },
-  "214": {
-    Name: "The Successor",
-    Materials: [
-      "Soldier's Memory (Blue)",
-      "Katana Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Black Mage's Memory (Blue)",
-      "Gun Azurite",
-      "Earth Alcryst (Blue)",
-    ],
+    "214": {
+    "Name":"The Successor",
+    "Materials": ["Soldier's Memory (Blue)", "Katana Azurite", "Prowling Wyvern Statue (Blue)", "Black Mage's Memory (Blue)", "Gun Azurite", "Earth Alcryst (Blue)"]
   },
-  "215": {
-    Name: "Bloom I",
-    Materials: [
-      "Monk's Memory (Blue)",
-      "Fists Azurite",
-      "Praying Angel Statue (Blue)",
-      "Red Mage's Memory (Blue)",
-      "Staff Azurite",
-      "Ice Alcryst (Blue)",
-      "Viking's Memory (Blue)",
-    ],
+    "215": {
+    "Name":"Bloom I",
+    "Materials": ["Monk's Memory (Blue)", "Fists Azurite", "Praying Angel Statue (Blue)", "Red Mage's Memory (Blue)", "Staff Azurite", "Ice Alcryst (Blue)", "Viking's Memory (Blue)"]
   },
-  "216": {
-    Name: "Bloom II",
-    Materials: [
-      "Samurai's Memory (Blue)",
-      "Spear Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Green Mage's Memory (Blue)",
-      "Mace Azurite",
-      "Wind Alcryst (Blue)",
-    ],
+    "216": {
+    "Name":"Bloom II",
+    "Materials": ["Samurai's Memory (Blue)", "Spear Azurite", "Prowling Wyvern Statue (Blue)", "Green Mage's Memory (Blue)", "Mace Azurite", "Wind Alcryst (Blue)"]
   },
-  "217": {
-    Name: "Continuing Attack",
-    Materials: [
-      "Lancer's Memory (Blue)",
-      "Sword Azurite",
-      "Praying Angel Statue (Blue)",
-      "Time Mage's Memory (Blue)",
-      "Dagger Azurite",
-      "Fire Alcryst (Blue)",
-    ],
+    "217": {
+    "Name":"Continuing Attack",
+    "Materials": ["Lancer's Memory (Blue)", "Sword Azurite", "Praying Angel Statue (Blue)", "Time Mage's Memory (Blue)", "Dagger Azurite", "Fire Alcryst (Blue)"]
   },
-  "218": {
-    Name: "You Should As Well",
-    Materials: [
-      "Dragoon's Memory (Blue)",
-      "Ninja Blade Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Spellblade's Memory (Blue)",
-      "Greatsword Azurite",
-      "Lightning Alcryst (Blue)",
-    ],
+    "218": {
+    "Name":"You Should As Well",
+    "Materials": ["Dragoon's Memory (Blue)", "Ninja Blade Azurite", "Prowling Wyvern Statue (Blue)", "Spellblade's Memory (Blue)", "Greatsword Azurite", "Lightning Alcryst (Blue)"]
   },
-  "219": {
-    Name: "«Fortem» Has Arrived",
-    Materials: [
-      "Thief's Memory (Blue)",
-      "Bow Azurite",
-      "Praying Angel Statue (Blue)",
-      "Cleric's Memory (Blue)",
-      "Katana Azurite",
-      "Water Alcryst (Blue)",
-    ],
+    "219": {
+    "Name":"«Fortem» Has Arrived",
+    "Materials": ["Thief's Memory (Blue)", "Bow Azurite", "Praying Angel Statue (Blue)", "Cleric's Memory (Blue)", "Katana Azurite", "Water Alcryst (Blue)"]
   },
-  "2110": {
-    Name: "What the Stars Say",
-    Materials: [
-      "Ninja's Memory (Blue)",
-      "Gun Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Warrior's Memory (Blue)",
-      "Fists Azurite",
-      "Light Alcryst (Blue)",
-      "Winged One's Memory (Blue)",
-      "Axe Azurite",
-    ],
+    "2110": {
+    "Name":"What the Stars Say",
+    "Materials": ["Ninja's Memory (Blue)", "Gun Azurite", "Prowling Wyvern Statue (Blue)", "Warrior's Memory (Blue)", "Fists Azurite", "Light Alcryst (Blue)", "Winged One's Memory (Blue)", "Axe Azurite"]
   },
   "221": {
-    Name: "A Fighting Retreat I",
-    Materials: [
-      "Ranger's Memory (Blue)",
-      "Staff Azurite",
-      "Praying Angel Statue (Blue)",
-      "Knight's Memory (Blue)",
-      "Spear Azurite",
-      "Dark Alcryst (Blue)",
-    ],
-  },
+    "Name":"A Fighting Retreat I",
+    "Materials": ["Ranger's Memory (Blue)", "Staff Azurite", "Praying Angel Statue (Blue)", "Knight's Memory (Blue)", "Spear Azurite", "Dark Alcryst (Blue)"]
+    },
   "222": {
-    Name: "Message",
-    Materials: [
-      "Ranger's Memory (Blue)",
-      "Mace Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Gunner's Memory (Blue)",
-      "Dagger Azurite",
-      "Earth Alcryst (Blue)",
-    ],
+    "Name":"Message",
+    "Materials": ["Ranger's Memory (Blue)", "Mace Azurite", "Prowling Wyvern Statue (Blue)", "Gunner's Memory (Blue)", "Dagger Azurite", "Earth Alcryst (Blue)"]
   },
   "223": {
-    Name: "A Fighting Retreat II",
-    Materials: [
-      "Paladin's Memory (Blue)",
-      "Sword Azurite",
-      "Praying Angel Statue (Blue)",
-      "White Mage's Memory (Blue)",
-      "Ninja Blade Azurite",
-      "Ice Alcryst (Blue)",
-    ],
+    "Name":"A Fighting Retreat II",
+    "Materials": ["Paladin's Memory (Blue)", "Sword Azurite", "Praying Angel Statue (Blue)", "White Mage's Memory (Blue)", "Ninja Blade Azurite", "Ice Alcryst (Blue)"]
   },
-  "224": {
-    Name: "I Would Shed a Tear",
-    Materials: [
-      "Soldier's Memory (Blue)",
-      "Greatsword Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Black Mage's Memory (Blue)",
-      "Bow Azurite",
-      "Wind Alcryst (Blue)",
-    ],
+    "224": {
+    "Name":"I Would Shed a Tear",
+    "Materials": ["Soldier's Memory (Blue)", "Greatsword Azurite", "Prowling Wyvern Statue (Blue)", "Black Mage's Memory (Blue)", "Bow Azurite", "Wind Alcryst (Blue)"]
   },
-  "225": {
-    Name: "Duty As a Guardian",
-    Materials: [
-      "Monk's Memory (Blue)",
-      "Katana Azurite",
-      "Praying Angel Statue (Blue)",
-      "Red Mage's Memory (Blue)",
-      "Gun Azurite",
-      "Fire Alcryst (Blue)",
-      "Viking's Memory (Blue)",
-    ],
+    "225": {
+    "Name":"Duty As a Guardian",
+    "Materials": ["Monk's Memory (Blue)", "Katana Azurite", "Praying Angel Statue (Blue)", "Red Mage's Memory (Blue)", "Gun Azurite", "Fire Alcryst (Blue)", "Viking's Memory (Blue)"]
   },
-  "226": {
-    Name: "Silent Lion's Den",
-    Materials: [
-      "Samurai's Memory (Blue)",
-      "Staff Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Green Mage's Memory (Blue)",
-      "Fists Azurite",
-      "Lightning Alcryst (Blue)",
-    ],
+    "226": {
+    "Name":"Silent Lion's Den",
+    "Materials": ["Samurai's Memory (Blue)", "Staff Azurite", "Prowling Wyvern Statue (Blue)", "Green Mage's Memory (Blue)", "Fists Azurite", "Lightning Alcryst (Blue)"]
   },
-  "227": {
-    Name: "Two Shinobi",
-    Materials: [
-      "Lancer's Memory (Blue)",
-      "Spear Azurite",
-      "Praying Angel Statue (Blue)",
-      "Time Mage's Memory (Blue)",
-      "Mace Azurite",
-      "Fire Alcryst (Blue)",
-      "Axe Azurite",
-    ],
+    "227": {
+    "Name":"Two Shinobi",
+    "Materials": ["Lancer's Memory (Blue)", "Spear Azurite", "Praying Angel Statue (Blue)", "Time Mage's Memory (Blue)", "Mace Azurite", "Fire Alcryst (Blue)", "Axe Azurite"]
   },
-  "228": {
-    Name: "The Royal Bloodline",
-    Materials: [
-      "Dragoon's Memory (Blue)",
-      "Dagger Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Spellblade's Memory (Blue)",
-      "Sword Azurite",
-      "Light Alcryst (Blue)",
-    ],
+    "228": {
+    "Name":"The Royal Bloodline",
+    "Materials": ["Dragoon's Memory (Blue)", "Dagger Azurite", "Prowling Wyvern Statue (Blue)", "Spellblade's Memory (Blue)", "Sword Azurite", "Light Alcryst (Blue)"]
   },
-  "229": {
-    Name: "Return of the Prince",
-    Materials: [
-      "Thief's Memory (Blue)",
-      "Greatsword Azurite",
-      "Praying Angel Statue (Blue)",
-      "Cleric's Memory (Blue)",
-      "Ninja Blade Azurite",
-      "Dark Alcryst (Blue)",
-    ],
+    "229": {
+    "Name":"Return of the Prince",
+    "Materials": ["Thief's Memory (Blue)", "Greatsword Azurite", "Praying Angel Statue (Blue)", "Cleric's Memory (Blue)", "Ninja Blade Azurite", "Dark Alcryst (Blue)"]
   },
-  "2210": {
-    Name: "Pride of the Lion",
-    Materials: [
-      "Ninja's Memory (Blue)",
-      "Bow Azurite",
-      "Prowling Wyvern Statue (Blue)",
-      "Warrior's Memory (Blue)",
-      "Katana Azurite",
-      "Earth Alcryst (Blue)",
-      "Winged One's Memory (Blue)",
-    ],
+    "2210": {
+    "Name":"Pride of the Lion",
+    "Materials": ["Ninja's Memory (Blue)", "Bow Azurite", "Prowling Wyvern Statue (Blue)", "Warrior's Memory (Blue)", "Katana Azurite", "Earth Alcryst (Blue)", "Winged One's Memory (Blue)"]
   },
   "231": {
-    Name: "Goddess's Revelation",
-    Materials: [
-      "Ranger's Memory (Purple)",
-      "Sword Charoite",
-      "Praying Angel Statue (Purple)",
-      "Knight's Memory (Purple)",
-      "Fists Charoite",
-      "Ice Alcryst (Purple)",
-    ],
+    "Name":"Goddess's Revelation",
+    "Materials": ["Ranger's Memory (Purple)", "Sword Charoite", "Praying Angel Statue (Purple)", "Knight's Memory (Purple)", "Fists Charoite", "Ice Alcryst (Purple)"]
   },
   "232": {
-    Name: "Before I Forget You",
-    Materials: [
-      "Paladin's Memory (Purple)",
-      "Greatsword Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Gunner's Memory (Purple)",
-      "Spear Charoite",
-      "Wind Alcryst (Purple)",
-    ],
+    "Name":"Before I Forget You",
+    "Materials": ["Paladin's Memory (Purple)", "Greatsword Charoite", "Prowling Wyvern Statue (Purple)", "Gunner's Memory (Purple)", "Spear Charoite", "Wind Alcryst (Purple)"]
   },
   "233": {
-    Name: "For the Sake of the Bloodline",
-    Materials: [
-      "Soldier's Memory (Purple)",
-      "Katana Charoite",
-      "Praying Angel Statue (Purple)",
-      "White Mage's Memory (Purple)",
-      "Dagger Charoite",
-      "Fire Alcryst (Purple)",
-    ],
+    "Name":"For the Sake of the Bloodline",
+    "Materials": ["Soldier's Memory (Purple)", "Katana Charoite", "Praying Angel Statue (Purple)", "White Mage's Memory (Purple)", "Dagger Charoite", "Fire Alcryst (Purple)"]
   },
   "234": {
-    Name: "Master's Spirit",
-    Materials: [
-      "Monk's Memory (Purple)",
-      "Fists Azurite",
-      "Prowling Wyvern Statue (Purple)",
-      "Black Mage's Memory (Purple)",
-      "Dagger Charoite",
-      "Lightning Alcryst (Purple)",
-      "Axe Charoite",
-    ],
+    "Name":"Master's Spirit",
+    "Materials": ["Monk's Memory (Purple)", "Fists Azurite", "Prowling Wyvern Statue (Purple)", "Black Mage's Memory (Purple)", "Dagger Charoite", "Lightning Alcryst (Purple)", "Axe Charoite"]
   },
   "235": {
-    Name: "Return the Favor",
-    Materials: [
-      "Samurai's Memory (Purple)",
-      "Spear Charoite",
-      "Praying Angel Statue (Purple)",
-      "Red Mage's Memory (Purple)",
-      "Bow Charoite",
-      "Water Alcryst (Purple)",
-      "Viking's Memory (Purple)",
-    ],
+    "Name":"Return the Favor",
+    "Materials": ["Samurai's Memory (Purple)", "Spear Charoite", "Praying Angel Statue (Purple)", "Red Mage's Memory (Purple)", "Bow Charoite", "Water Alcryst (Purple)", "Viking's Memory (Purple)"]
   },
   "236": {
-    Name: "On the Run",
-    Materials: [
-      "Lancer's Memory (Purple)",
-      "Dagger Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Green Mage's Memory (Purple)",
-      "Gun Charoite",
-      "Light Alcryst (Purple)",
-    ],
+    "Name":"On the Run",
+    "Materials": ["Lancer's Memory (Purple)", "Dagger Charoite", "Prowling Wyvern Statue (Purple)", "Green Mage's Memory (Purple)", "Gun Charoite", "Light Alcryst (Purple)"]
   },
   "237": {
-    Name: "The Bull and the Viper",
-    Materials: [
-      "Dragoon's Memory (Purple)",
-      "Ninja Blade Charoite",
-      "Praying Angel Statue (Purple)",
-      "Time Mage's Memory (Purple)",
-      "Staff Charoite",
-      "Dark Alcryst (Purple)",
-    ],
+    "Name":"The Bull and the Viper",
+    "Materials": ["Dragoon's Memory (Purple)", "Ninja Blade Charoite", "Praying Angel Statue (Purple)", "Time Mage's Memory (Purple)", "Staff Charoite", "Dark Alcryst (Purple)"]
   },
   "238": {
-    Name: "Threat to the West",
-    Materials: [
-      "Thief's Memory (Purple)",
-      "Bow Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Spellblade's Memory (Purple)",
-      "Mace Charoite",
-      "Earth Alcryst (Purple)",
-    ],
+    "Name":"Threat to the West",
+    "Materials": ["Thief's Memory (Purple)", "Bow Charoite", "Prowling Wyvern Statue (Purple)", "Spellblade's Memory (Purple)", "Mace Charoite", "Earth Alcryst (Purple)"]
   },
   "239": {
-    Name: "Enclosing Plots",
-    Materials: [
-      "Ninja's Memory (Purple)",
-      "Gun Charoite",
-      "Praying Angel Statue (Purple)",
-      "Cleric's Memory (Purple)",
-      "Sword Charoite",
-      "Ice Alcryst (Purple)",
-    ],
+    "Name":"Enclosing Plots",
+    "Materials": ["Ninja's Memory (Purple)", "Gun Charoite", "Praying Angel Statue (Purple)", "Cleric's Memory (Purple)", "Sword Charoite", "Ice Alcryst (Purple)"]
   },
   "2310": {
-    Name: "First Sword",
-    Materials: [
-      "Monk's Memory (Purple)",
-      "Staff Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Ranger's Memory (Purple)",
-      "Greatsword Charoite",
-      "Wind Alcryst (Purple)",
-      "Winged One's Memory (Purple)",
-      "Axe Charoite",
-    ],
+    "Name":"First Sword",
+    "Materials": ["Monk's Memory (Purple)", "Staff Charoite", "Prowling Wyvern Statue (Purple)", "Ranger's Memory (Purple)", "Greatsword Charoite", "Wind Alcryst (Purple)", "Winged One's Memory (Purple)", "Axe Charoite"]
   },
   "311": {
-    Name: "Creeping Despair",
-    Materials: [
-      "Warrior's Memory (Purple)",
-      "Mace Charoite",
-      "Praying Angel Statue (Purple)",
-      "Gunner's Memory (Purple)",
-      "Katana Charoite",
-      "Fire Alcryst (Purple)",
-    ],
+    "Name":"Creeping Despair",
+    "Materials": ["Warrior's Memory (Purple)", "Mace Charoite", "Praying Angel Statue (Purple)", "Gunner's Memory (Purple)", "Katana Charoite", "Fire Alcryst (Purple)"]
   },
   "312": {
-    Name: "Withering Hope",
-    Materials: [
-      "Knight's Memory (Purple)",
-      "Sword Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "White Mage's Memory (Purple)",
-      "Fists Charoite",
-      "Lightning Alcryst (Purple)",
-    ],
+    "Name":"Withering Hope",
+    "Materials": ["Knight's Memory (Purple)", "Sword Charoite", "Prowling Wyvern Statue (Purple)", "White Mage's Memory (Purple)", "Fists Charoite", "Lightning Alcryst (Purple)"]
   },
   "313": {
-    Name: "The Church's Aim I",
-    Materials: [
-      "Paladin's Memory (Purple)",
-      "Greatsword Charoite",
-      "Praying Angel Statue (Purple)",
-      "Black Mage's Memory (Purple)",
-      "Spear Charoite",
-      "Water Alcryst (Purple)",
-    ],
+    "Name":"The Church's Aim I",
+    "Materials": ["Paladin's Memory (Purple)", "Greatsword Charoite", "Praying Angel Statue (Purple)", "Black Mage's Memory (Purple)", "Spear Charoite", "Water Alcryst (Purple)"]
   },
   "314": {
-    Name: "The Church's Aim II",
-    Materials: [
-      "Soldier's Memory (Purple)",
-      "Katana Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Red Mage's Memory (Purple)",
-      "Dagger Charoite",
-      "Light Alcryst (Purple)",
-    ],
+    "Name":"The Church's Aim II",
+    "Materials": ["Soldier's Memory (Purple)", "Katana Charoite", "Prowling Wyvern Statue (Purple)", "Red Mage's Memory (Purple)", "Dagger Charoite", "Light Alcryst (Purple)"]
   },
   "315": {
-    Name: "The True State of Wezette I",
-    Materials: [
-      "Monk's Memory (Purple)",
-      "Fists Charoite",
-      "Praying Angel Statue (Purple)",
-      "Green Mage's Memory (Purple)",
-      "Ninja Blade Charoite",
-      "Dark Alcryst (Purple)",
-      "Viking's Memory (Purple)",
-    ],
+    "Name":"The True State of Wezette I",
+    "Materials": ["Monk's Memory (Purple)", "Fists Charoite", "Praying Angel Statue (Purple)", "Green Mage's Memory (Purple)", "Ninja Blade Charoite", "Dark Alcryst (Purple)", "Viking's Memory (Purple)"]
   },
   "316": {
-    Name: "The True State of Wezette II",
-    Materials: [
-      "Samurai's Memory (Purple)",
-      "Spear Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Time Mage's Memory (Purple)",
-      "Bow Charoite",
-      "Earth Alcryst (Purple)",
-    ],
+    "Name":"The True State of Wezette II",
+    "Materials": ["Samurai's Memory (Purple)", "Spear Charoite", "Prowling Wyvern Statue (Purple)", "Time Mage's Memory (Purple)", "Bow Charoite", "Earth Alcryst (Purple)"]
   },
   "317": {
-    Name: "Remote Village",
-    Materials: [
-      "Lancer's Memory (Purple)",
-      "Dagger Charoite",
-      "Praying Angel Statue (Purple)",
-      "Spellblade's Memory (Purple)",
-      "Gun Charoite",
-      "Ice Alcryst (Purple)",
-    ],
+    "Name":"Remote Village",
+    "Materials": ["Lancer's Memory (Purple)", "Dagger Charoite", "Praying Angel Statue (Purple)", "Spellblade's Memory (Purple)", "Gun Charoite", "Ice Alcryst (Purple)"]
   },
   "318": {
-    Name: "Defiance",
-    Materials: [
-      "Lancer's Memory (Purple)",
-      "Ninja Blade Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Cleric's Memory (Purple)",
-      "Staff Charoite",
-      "Wind Alcryst (Purple)",
-    ],
+    "Name":"Defiance",
+    "Materials": ["Lancer's Memory (Purple)", "Ninja Blade Charoite", "Prowling Wyvern Statue (Purple)", "Cleric's Memory (Purple)", "Staff Charoite", "Wind Alcryst (Purple)"]
   },
   "319": {
-    Name: "Rebellion and Suppression",
-    Materials: [
-      "Thief's Memory (Purple)",
-      "Bow Charoite",
-      "Praying Angel Statue (Purple)",
-      "Warrior's Memory (Purple)",
-      "Mace Charoite",
-      "Fire Alcryst (Purple)",
-    ],
+    "Name":"Rebellion and Suppression",
+    "Materials": ["Thief's Memory (Purple)", "Bow Charoite", "Praying Angel Statue (Purple)", "Warrior's Memory (Purple)", "Mace Charoite", "Fire Alcryst (Purple)"]
   },
   "3110": {
-    Name: "Pay with Your Life",
-    Materials: [
-      "Ninja's Memory (Purple)",
-      "Gun Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Knight's Memory (Purple)",
-      "Sword Charoite",
-      "Lightning Alcryst (Purple)",
-      "Winged One's Memory (Purple)",
-      "Axe Charoite",
-    ],
+    "Name":"Pay with Your Life",
+    "Materials": ["Ninja's Memory (Purple)", "Gun Charoite", "Prowling Wyvern Statue (Purple)", "Knight's Memory (Purple)", "Sword Charoite", "Lightning Alcryst (Purple)", "Winged One's Memory (Purple)", "Axe Charoite"]
   },
   "321": {
-    Name: "Mastermind",
-    Materials: [
-      "Ranger's Memory (Purple)",
-      "Staff Charoite",
-      "Praying Angel Statue (Purple)",
-      "Paladin's Memory (Purple)",
-      "Greatsword Charoite",
-      "Water Alcryst (Purple)",
-    ],
+    "Name":"Mastermind",
+    "Materials": ["Ranger's Memory (Purple)", "Staff Charoite", "Praying Angel Statue (Purple)", "Paladin's Memory (Purple)", "Greatsword Charoite", "Water Alcryst (Purple)"]
   },
   "322": {
-    Name: "Allow Me",
-    Materials: [
-      "Gunner's Memory (Purple)",
-      "Mace Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Soldier's Memory (Purple)",
-      "Katana Charoite",
-      "Light Alcryst (Purple)",
-    ],
+    "Name":"Allow Me",
+    "Materials": ["Gunner's Memory (Purple)", "Mace Charoite", "Prowling Wyvern Statue (Purple)", "Soldier's Memory (Purple)", "Katana Charoite", "Light Alcryst (Purple)"]
   },
   "323": {
-    Name: "No Need For Mercy I",
-    Materials: [
-      "Monk's Memory (Purple)",
-      "Sword Charoite",
-      "Praying Angel Statue (Purple)",
-      "White Mage's Memory (Purple)",
-      "Fists Charoite",
-      "Dark Alcryst (Purple)",
-    ],
+    "Name":"No Need For Mercy I",
+    "Materials": ["Monk's Memory (Purple)", "Sword Charoite", "Praying Angel Statue (Purple)", "White Mage's Memory (Purple)", "Fists Charoite", "Dark Alcryst (Purple)"]
   },
   "324": {
-    Name: "No Need For Mercy II",
-    Materials: [
-      "Samurai's Memory (Purple)",
-      "Greatsword Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Black Mage's Memory (Purple)",
-      "Spear Charoite",
-      "Earth Alcryst (Purple)",
-    ],
+    "Name":"No Need For Mercy II",
+    "Materials": ["Samurai's Memory (Purple)", "Greatsword Charoite", "Prowling Wyvern Statue (Purple)", "Black Mage's Memory (Purple)", "Spear Charoite", "Earth Alcryst (Purple)"]
   },
   "325": {
-    Name: "Minwu the Villager",
-    Materials: [
-      "Lancer's Memory (Purple)",
-      "Katana Charoite",
-      "Praying Angel Statue (Purple)",
-      "Red Mage's Memory (Purple)",
-      "Dagger Charoite",
-      "Ice Alcryst (Purple)",
-      "Viking's Memory (Purple)",
-    ],
+    "Name":"Minwu the Villager",
+    "Materials": ["Lancer's Memory (Purple)", "Katana Charoite", "Praying Angel Statue (Purple)", "Red Mage's Memory (Purple)", "Dagger Charoite", "Ice Alcryst (Purple)", "Viking's Memory (Purple)"]
   },
   "326": {
-    Name: "Keep the Coin",
-    Materials: [
-      "Dragoon's Memory (Purple)",
-      "Fists Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Green Mage's Memory (Purple)",
-      "Ninja Blade Charoite",
-      "Wind Alcryst (Purple)",
-    ],
+    "Name":"Keep the Coin",
+    "Materials": ["Dragoon's Memory (Purple)", "Fists Charoite", "Prowling Wyvern Statue (Purple)", "Green Mage's Memory (Purple)", "Ninja Blade Charoite", "Wind Alcryst (Purple)"]
   },
   "327": {
-    Name: "Leave the Village",
-    Materials: [
-      "Thief's Memory (Purple)",
-      "Spear Charoite",
-      "Praying Angel Statue (Purple)",
-      "Time Mage's Memory (Purple)",
-      "Bow Charoite",
-      "Fire Alcryst (Purple)",
-      "Axe Charoite",
-    ],
+    "Name":"Leave the Village",
+    "Materials": ["Thief's Memory (Purple)", "Spear Charoite", "Praying Angel Statue (Purple)", "Time Mage's Memory (Purple)", "Bow Charoite", "Fire Alcryst (Purple)", "Axe Charoite"]
   },
   "328": {
-    Name: "A Gift",
-    Materials: [
-      "Ninja's Memory (Purple)",
-      "Dagger Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Spellblade's Memory (Purple)",
-      "Gun Charoite",
-      "Lightning Alcryst (Purple)",
-    ],
+    "Name":"A Gift",
+    "Materials": ["Ninja's Memory (Purple)", "Dagger Charoite", "Prowling Wyvern Statue (Purple)", "Spellblade's Memory (Purple)", "Gun Charoite", "Lightning Alcryst (Purple)"]
   },
   "329": {
-    Name: "Radiance of Destruction",
-    Materials: [
-      "Cleric's Memory (Purple)",
-      "Ninja Blade Charoite",
-      "Praying Angel Statue (Purple)",
-      "Ranger's Memory (Purple)",
-      "Staff Charoite",
-      "Water Alcryst (Purple)",
-    ],
+    "Name":"Radiance of Destruction",
+    "Materials": ["Cleric's Memory (Purple)", "Ninja Blade Charoite", "Praying Angel Statue (Purple)", "Ranger's Memory (Purple)", "Staff Charoite", "Water Alcryst (Purple)"]
   },
   "3210": {
-    Name: "Uncertainty",
-    Materials: [
-      "Dragoon's Memory (Purple)",
-      "Bow Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Gunner's Memory (Purple)",
-      "Mace Charoite",
-      "Light Alcryst (Purple)",
-      "Winged One's Memory (Purple)",
-      "Axe Charoite",
-    ],
+    "Name":"Uncertainty",
+    "Materials": ["Dragoon's Memory (Purple)", "Bow Charoite", "Prowling Wyvern Statue (Purple)", "Gunner's Memory (Purple)", "Mace Charoite", "Light Alcryst (Purple)", "Winged One's Memory (Purple)", "Axe Charoite"]
   },
   "331": {
-    Name: "«Nitor» Move Out",
-    Materials: [
-      "Warrior's Memory (Purple)",
-      "Gun Charoite",
-      "Praying Angel Statue (Purple)",
-      "White Mage's Memory (Purple)",
-      "Sword Charoite",
-      "Dark Alcryst (Purple)",
-    ],
+    "Name":"«Nitor» Move Out",
+    "Materials": ["Warrior's Memory (Purple)", "Gun Charoite", "Praying Angel Statue (Purple)", "White Mage's Memory (Purple)", "Sword Charoite", "Dark Alcryst (Purple)"]
   },
   "332": {
-    Name: "True Intentions",
-    Materials: [
-      "Knight's Memory (Purple)",
-      "Staff Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Black Mage's Memory (Purple)",
-      "Greatsword Charoite",
-      "Earth Alcryst (Purple)",
-    ],
+    "Name":"True Intentions",
+    "Materials": ["Knight's Memory (Purple)", "Staff Charoite", "Prowling Wyvern Statue (Purple)", "Black Mage's Memory (Purple)", "Greatsword Charoite", "Earth Alcryst (Purple)"]
   },
   "333": {
-    Name: "Growing Mistrust",
-    Materials: [
-      "Paladin's Memory (Purple)",
-      "Mace Charoite",
-      "Praying Angel Statue (Purple)",
-      "Red Mage's Memory (Purple)",
-      "Katana Charoite",
-      "Ice Alcryst (Purple)",
-    ],
+    "Name":"Growing Mistrust",
+    "Materials": ["Paladin's Memory (Purple)", "Mace Charoite", "Praying Angel Statue (Purple)", "Red Mage's Memory (Purple)", "Katana Charoite", "Ice Alcryst (Purple)"]
   },
   "334": {
-    Name: "Road to Wezette",
-    Materials: [
-      "Soldier's Memory (Purple)",
-      "Sword Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Green Mage's Memory (Purple)",
-      "Fists Charoite",
-      "Wind Alcryst (Purple)",
-    ],
+    "Name":"Road to Wezette",
+    "Materials": ["Soldier's Memory (Purple)", "Sword Charoite", "Prowling Wyvern Statue (Purple)", "Green Mage's Memory (Purple)", "Fists Charoite", "Wind Alcryst (Purple)"]
   },
   "335": {
-    Name: "Muraga's Prey",
-    Materials: [
-      "Monk's Memory (Purple)",
-      "Greatsword Charoite",
-      "Praying Angel Statue (Purple)",
-      "Time Mage's Memory (Purple)",
-      "Spear Charoite",
-      "Ice Alcryst (Purple)",
-      "Viking's Memory (Purple)",
-    ],
+    "Name":"Muraga's Prey",
+    "Materials": ["Monk's Memory (Purple)", "Greatsword Charoite", "Praying Angel Statue (Purple)", "Time Mage's Memory (Purple)", "Spear Charoite", "Ice Alcryst (Purple)", "Viking's Memory (Purple)"]
   },
   "336": {
-    Name: "Reckless Brothers I",
-    Materials: [
-      "Samurai's Memory (Purple)",
-      "Katana Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Spellblade's Memory (Purple)",
-      "Dagger Charoite",
-      "Lightning Alcryst (Purple)",
-    ],
+    "Name":"Reckless Brothers I",
+    "Materials": ["Samurai's Memory (Purple)", "Katana Charoite", "Prowling Wyvern Statue (Purple)", "Spellblade's Memory (Purple)", "Dagger Charoite", "Lightning Alcryst (Purple)"]
   },
   "337": {
-    Name: "Reckless Brothers II",
-    Materials: [
-      "Lancer's Memory (Purple)",
-      "Fists Charoite",
-      "Praying Angel Statue (Purple)",
-      "Cleric's Memory (Purple)",
-      "Ninja Blade Charoite",
-      "Water Alcryst (Purple)",
-    ],
+    "Name":"Reckless Brothers II",
+    "Materials": ["Lancer's Memory (Purple)", "Fists Charoite", "Praying Angel Statue (Purple)", "Cleric's Memory (Purple)", "Ninja Blade Charoite", "Water Alcryst (Purple)"]
   },
   "338": {
-    Name: "Unforgettable",
-    Materials: [
-      "Dragoon's Memory (Purple)",
-      "Spear Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Warrior's Memory (Purple)",
-      "Bow Charoite",
-      "Light Alcryst (Purple)",
-    ],
+    "Name":"Unforgettable",
+    "Materials": ["Dragoon's Memory (Purple)", "Spear Charoite", "Prowling Wyvern Statue (Purple)", "Warrior's Memory (Purple)", "Bow Charoite", "Light Alcryst (Purple)"]
   },
   "339": {
-    Name: "Reasons",
-    Materials: [
-      "Thief's Memory (Purple)",
-      "Dagger Charoite",
-      "Praying Angel Statue (Purple)",
-      "Knight's Memory (Purple)",
-      "Gun Charoite",
-      "Dark Alcryst (Purple)",
-    ],
+    "Name":"Reasons",
+    "Materials": ["Thief's Memory (Purple)", "Dagger Charoite", "Praying Angel Statue (Purple)", "Knight's Memory (Purple)", "Gun Charoite", "Dark Alcryst (Purple)"]
   },
   "3310": {
-    Name: "The Queen's Plan",
-    Materials: [
-      "Ninja's Memory (Purple)",
-      "Ninja Blade Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Paladin's Memory (Purple)",
-      "Staff Charoite",
-      "Ice Alcryst (Purple)",
-      "Winged One's Memory (Purple)",
-      "Axe Charoite",
-    ],
+    "Name":"The Queen's Plan",
+    "Materials": ["Ninja's Memory (Purple)", "Ninja Blade Charoite", "Prowling Wyvern Statue (Purple)", "Paladin's Memory (Purple)", "Staff Charoite", "Ice Alcryst (Purple)", "Winged One's Memory (Purple)", "Axe Charoite"]
   },
   "411": {
-    Name: "Premonition",
-    Materials: [
-      "Ranger's Memory (Purple)",
-      "Mace Charoite",
-      "Praying Angel Statue (Purple)",
-      "Soldier's Memory (Purple)",
-      "Bow Charoite",
-      "Fire Alcryst (Purple)",
-    ],
-  },
+  "Name":"Premonition",
+  "Materials": ["Ranger's Memory (Purple)", "Mace Charoite", "Praying Angel Statue (Purple)", "Soldier's Memory (Purple)", "Bow Charoite", "Fire Alcryst (Purple)"]
+},
   "412": {
-    Name: "Swelling Doubts",
-    Materials: [
-      "Gunner's Memory (Purple)",
-      "Sword Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Monk's Memory (Purple)",
-      "Gun Charoite",
-      "Wind Alcryst (Purple)",
-    ],
+    "Name":"Swelling Doubts",
+    "Materials": ["Gunner's Memory (Purple)", "Sword Charoite", "Prowling Wyvern Statue (Purple)", "Monk's Memory (Purple)", "Gun Charoite", "Wind Alcryst (Purple)"]
   },
   "413": {
-    Name: "Abandon the Cave",
-    Materials: [
-      "Samurai's Memory (Purple)",
-      "Greatsword Charoite",
-      "Praying Angel Statue (Purple)",
-      "White Mage's Memory (Purple)",
-      "Staff Charoite",
-      "Water Alcryst (Purple)",
-    ],
+    "Name":"Abandon the Cave",
+    "Materials": ["Samurai's Memory (Purple)", "Greatsword Charoite", "Praying Angel Statue (Purple)", "White Mage's Memory (Purple)", "Staff Charoite", "Water Alcryst (Purple)"]
   },
-  "414": {
-    Name: "To Anvil Castle I",
-    Materials: [
-      "Lancer's Memory (Purple)",
-      "Katana Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Black Mage's Memory (Purple)",
-      "Mace Charoite",
-      "Lightning Alcryst (Purple)",
-    ],
+    "414": {
+    "Name":"To Anvil Castle I",
+    "Materials": ["Lancer's Memory (Purple)", "Katana Charoite", "Prowling Wyvern Statue (Purple)", "Black Mage's Memory (Purple)", "Mace Charoite", "Lightning Alcryst (Purple)"]
   },
-  "415": {
-    Name: "To Anvil Castle II",
-    Materials: [
-      "Dragoon's Memory (Purple)",
-      "Fists Charoite",
-      "Praying Angel Statue (Purple)",
-      "Red Mage's Memory (Purple)",
-      "Sword Charoite",
-      "Fire Alcryst (Purple)",
-      "Viking's Memory (Purple)",
-      "Axe Charoite",
-    ],
+    "415": {
+    "Name":"To Anvil Castle II",
+    "Materials": ["Dragoon's Memory (Purple)", "Fists Charoite", "Praying Angel Statue (Purple)", "Red Mage's Memory (Purple)", "Sword Charoite", "Fire Alcryst (Purple)", "Viking's Memory (Purple)", "Axe Charoite"]
   },
-  "416": {
-    Name: "Perilous Road I",
-    Materials: [
-      "Thief's Memory (Purple)",
-      "Greatsword Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Green Mage's Memory (Purple)",
-      "Spear Charoite",
-      "Light Alcryst (Purple)",
-    ],
+    "416": {
+    "Name":"Perilous Road I",
+    "Materials": ["Thief's Memory (Purple)", "Greatsword Charoite", "Prowling Wyvern Statue (Purple)", "Green Mage's Memory (Purple)", "Spear Charoite", "Light Alcryst (Purple)"]
   },
-  "417": {
-    Name: "Perilous Road II",
-    Materials: [
-      "Time Mage's Memory (Purple)",
-      "Dagger Charoite",
-      "Praying Angel Statue (Purple)",
-      "Ninja's Memory (Purple)",
-      "Katana Charoite",
-      "Dark Alcryst (Purple)",
-    ],
+    "417": {
+    "Name":"Perilous Road II",
+    "Materials": ["Time Mage's Memory (Purple)", "Dagger Charoite", "Praying Angel Statue (Purple)", "Ninja's Memory (Purple)", "Katana Charoite", "Dark Alcryst (Purple)"]
   },
-  "418": {
-    Name: "For Leonis!",
-    Materials: [
-      "Spellblade's Memory (Purple)",
-      "Ninja Blade Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Ranger's Memory (Purple)",
-      "Fists Charoite",
-      "Earth Alcryst (Purple)",
-    ],
+    "418": {
+    "Name":"For Leonis!",
+    "Materials": ["Spellblade's Memory (Purple)", "Ninja Blade Charoite", "Prowling Wyvern Statue (Purple)", "Ranger's Memory (Purple)", "Fists Charoite", "Earth Alcryst (Purple)"]
   },
-  "419": {
-    Name: "A Peculiar Sign",
-    Materials: [
-      "Cleric's Memory (Purple)",
-      "Bow Charoite",
-      "Praying Angel Statue (Purple)",
-      "Gunner's Memory (Purple)",
-      "Spear Charoite",
-      "Ice Alcryst (Purple)",
-    ],
+    "419": {
+    "Name":"A Peculiar Sign",
+    "Materials": ["Cleric's Memory (Purple)", "Bow Charoite", "Praying Angel Statue (Purple)", "Gunner's Memory (Purple)", "Spear Charoite", "Ice Alcryst (Purple)"]
   },
-  "4110": {
-    Name: "Four Stone Chests",
-    Materials: [
-      "Samurai's Memory (Purple)",
-      "Gun Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "White Mage's Memory (Purple)",
-      "Dagger Charoite",
-      "Water Alcryst (Purple)",
-      "Winged One's Memory (Purple)",
-    ],
+    "4110": {
+    "Name":"Four Stone Chests",
+    "Materials": ["Samurai's Memory (Purple)", "Gun Charoite", "Prowling Wyvern Statue (Purple)", "White Mage's Memory (Purple)", "Dagger Charoite", "Water Alcryst (Purple)", "Winged One's Memory (Purple)"]
   },
   "421": {
-    Name: "Shinobi of Fennes",
-    Materials: [
-      "Warrior's Memory (Purple)",
-      "Staff Charoite",
-      "Praying Angel Statue (Purple)",
-      "Black Mage's Memory (Purple)",
-      "Ninja Blade Charoite",
-      "Fire Alcryst (Purple)",
-    ],
+    "Name":"Shinobi of Fennes",
+    "Materials": ["Warrior's Memory (Purple)", "Staff Charoite", "Praying Angel Statue (Purple)", "Black Mage's Memory (Purple)", "Ninja Blade Charoite", "Fire Alcryst (Purple)"]
   },
   "422": {
-    Name: "Mere Sham",
-    Materials: [
-      "Knight's Memory (Purple)",
-      "Mace Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Red Mage's Memory (Purple)",
-      "Bow Charoite",
-      "Dark Alcryst (Purple)",
-    ],
+    "Name":"Mere Sham",
+    "Materials": ["Knight's Memory (Purple)", "Mace Charoite", "Prowling Wyvern Statue (Purple)", "Red Mage's Memory (Purple)", "Bow Charoite", "Dark Alcryst (Purple)"]
   },
   "423": {
-    Name: "Break Through I",
-    Materials: [
-      "Paladin's Memory (Purple)",
-      "Sword Charoite",
-      "Praying Angel Statue (Purple)",
-      "Green Mage's Memory (Purple)",
-      "Gun Charoite",
-      "Wind Alcryst (Purple)",
-    ],
+    "Name":"Break Through I",
+    "Materials": ["Paladin's Memory (Purple)", "Sword Charoite", "Praying Angel Statue (Purple)", "Green Mage's Memory (Purple)", "Gun Charoite", "Wind Alcryst (Purple)"]
   },
-  "424": {
-    Name: "Break Through II",
-    Materials: [
-      "Soldier's Memory (Purple)",
-      "Greatsword Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Time Mage's Memory (Purple)",
-      "Staff Charoite",
-      "Light Alcryst (Purple)",
-    ],
+    "424": {
+    "Name":"Break Through II",
+    "Materials": ["Soldier's Memory (Purple)", "Greatsword Charoite", "Prowling Wyvern Statue (Purple)", "Time Mage's Memory (Purple)", "Staff Charoite", "Light Alcryst (Purple)"]
   },
-  "425": {
-    Name: "Sir Owe I",
-    Materials: [
-      "Monk's Memory (Purple)",
-      "Katana Charoite",
-      "Praying Angel Statue (Purple)",
-      "Spellblade's Memory (Purple)",
-      "Mace Charoite",
-      "Lightning Alcryst (Purple)",
-      "Viking's Memory (Purple)",
-    ],
+    "425": {
+    "Name":"Sir Owe I",
+    "Materials": ["Monk's Memory (Purple)", "Katana Charoite", "Praying Angel Statue (Purple)", "Spellblade's Memory (Purple)", "Mace Charoite", "Lightning Alcryst (Purple)", "Viking's Memory (Purple)"]
   },
-  "426": {
-    Name: "Sir Owe II",
-    Materials: [
-      "Samurai's Memory (Purple)",
-      "Fists Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Cleric's Memory (Purple)",
-      "Sword Charoite",
-      "Earth Alcryst (Purple)",
-    ],
+    "426": {
+    "Name":"Sir Owe II",
+    "Materials": ["Samurai's Memory (Purple)", "Fists Charoite", "Prowling Wyvern Statue (Purple)", "Cleric's Memory (Purple)", "Sword Charoite", "Earth Alcryst (Purple)"]
   },
-  "427": {
-    Name: "A Dance of Blades and Blood",
-    Materials: [
-      "Lancer's Memory (Purple)",
-      "Spear Charoite",
-      "Praying Angel Statue (Purple)",
-      "Warrior's Memory (Purple)",
-      "Greatsword Charoite",
-      "Ice Alcryst (Purple)",
-      "Axe Charoite",
-    ],
+    "427": {
+    "Name":"A Dance of Blades and Blood",
+    "Materials": ["Lancer's Memory (Purple)", "Spear Charoite", "Praying Angel Statue (Purple)", "Warrior's Memory (Purple)", "Greatsword Charoite", "Ice Alcryst (Purple)", "Axe Charoite"]
   },
-  "428": {
-    Name: "Scumbags Pay Their Respect",
-    Materials: [
-      "Dragoon's Memory (Purple)",
-      "Dagger Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Knight's Memory (Purple)",
-      "Katana Charoite",
-      "Wind Alcryst (Purple)",
-    ],
+    "428": {
+    "Name":"Scumbags Pay Their Respect",
+    "Materials": ["Dragoon's Memory (Purple)", "Dagger Charoite", "Prowling Wyvern Statue (Purple)", "Knight's Memory (Purple)", "Katana Charoite", "Wind Alcryst (Purple)"]
   },
-  "429": {
-    Name: "Good Idea",
-    Materials: [
-      "Thief's Memory (Purple)",
-      "Ninja Blade Charoite",
-      "Praying Angel Statue (Purple)",
-      "Paladin's Memory (Purple)",
-      "Fists Charoite",
-      "Fire Alcryst (Purple)",
-    ],
+    "429": {
+    "Name":"Good Idea",
+    "Materials": ["Thief's Memory (Purple)", "Ninja Blade Charoite", "Praying Angel Statue (Purple)", "Paladin's Memory (Purple)", "Fists Charoite", "Fire Alcryst (Purple)"]
   },
-  "4210": {
-    Name: "Enough to Kill",
-    Materials: [
-      "Ninja's Memory (Purple)",
-      "Bow Charoite",
-      "Prowling Wyvern Statue (Purple)",
-      "Warrior's Memory (Purple)",
-      "Spear Charoite",
-      "Lightning Alcryst (Purple)",
-      "Winged One's Memory (Purple)",
-    ],
+    "4210": {
+    "Name":"Enough to Kill",
+    "Materials": ["Ninja's Memory (Purple)", "Bow Charoite", "Prowling Wyvern Statue (Purple)", "Warrior's Memory (Purple)", "Spear Charoite", "Lightning Alcryst (Purple)", "Winged One's Memory (Purple)"]
   },
   "431": {
-    Name: "Dawn at Hand",
-    Materials: [
-      "Ranger's Memory (Yellow)",
-      "Spear Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Knight's Memory (Yellow)",
-      "Sword Citrine",
-      "Water Alcryst (Yellow)",
-    ],
+    "Name":"Dawn at Hand",
+    "Materials": ["Ranger's Memory (Yellow)", "Spear Citrine", "Praying Angel Statue (Yellow)", "Knight's Memory (Yellow)", "Sword Citrine", "Water Alcryst (Yellow)"]
   },
   "432": {
-    Name: "At Wit's End",
-    Materials: [
-      "Gunner's Memory (Yellow)",
-      "Greatsword Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Paladin's Memory (Yellow)",
-      "Dagger Citrine",
-      "Light Alcryst (Yellow)",
-    ],
+    "Name":"At Wit's End",
+    "Materials": ["Gunner's Memory (Yellow)", "Greatsword Citrine", "Prowling Wyvern Statue (Yellow)", "Paladin's Memory (Yellow)", "Ninja Blade Citrine", "Light Alcryst (Yellow)"]
   },
   "433": {
-    Name: "Two Paths",
-    Materials: [
-      "Soldier's Memory (Yellow)",
-      "Ninja Blade Citrine",
-      "Praying Angel Statue (Yellow)",
-      "White Mage's Memory (Yellow)",
-      "Katana Citrine",
-      "Dark Alcryst (Yellow)",
-    ],
+    "Name":"Two Paths",
+    "Materials": ["Soldier's Memory (Yellow)", "Ninja Blade Citrine", "Praying Angel Statue (Yellow)", "White Mage's Memory (Yellow)", "Katana Citrine", "Dark Alcryst (Yellow)"]
   },
   "434": {
-    Name: "Three Stone Chests",
-    Materials: [
-      "Monk's Memory (Yellow)",
-      "Bow Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Black Mage's Memory (Yellow)",
-      "Fists Citrine",
-      "Earth Alcryst (Yellow)",
-      "Axe Citrine",
-    ],
+    "Name":"Three Stone Chests",
+    "Materials": ["Monk's Memory (Yellow)", "Bow Citrine", "Prowling Wyvern Statue (Yellow)", "Black Mage's Memory (Yellow)", "Fists Citrine", "Earth Alcryst (Yellow)", "Axe Citrine"]
   },
   "435": {
-    Name: "Survive! I",
-    Materials: [
-      "Samurai's Memory (Yellow)",
-      "Gun Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Red Mage's Memory (Yellow)",
-      "Spear Citrine",
-      "Wind Alcryst (Yellow)",
-      "Viking's Memory (Yellow)",
-    ],
+    "Name":"Survive! I",
+    "Materials": ["Samurai's Memory (Yellow)", "Gun Citrine", "Praying Angel Statue (Yellow)", "Red Mage's Memory (Yellow)", "Spear Citrine", "Wind Alcryst (Yellow)", "Viking's Memory (Yellow)"]
   },
   "436": {
-    Name: "Head North",
-    Materials: [
-      "Time Mage's Memory (Yellow)",
-      "Dagger Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Lancer's Memory (Yellow)",
-      "Staff Citrine",
-      "Ice Alcryst (Yellow)",
-    ],
+    "Name":"Head North",
+    "Materials": ["Time Mage's Memory (Yellow)", "Dagger Citrine", "Prowling Wyvern Statue (Yellow)", "Lancer's Memory (Yellow)", "Staff Citrine", "Ice Alcryst (Yellow)"]
   },
   "437": {
-    Name: "Survive! II",
-    Materials: [
-      "Dragoon's Memory (Yellow)",
-      "Mace Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Time Mage's Memory (Yellow)",
-      "Ninja Blade Citrine",
-      "Fire Alcryst (Yellow)",
-    ],
+    "Name":"Survive! II",
+    "Materials": ["Dragoon's Memory (Yellow)", "Mace Citrine", "Praying Angel Statue (Yellow)", "Time Mage's Memory (Yellow)", "Ninja Blade Citrine", "Fire Alcryst (Yellow)"]
   },
   "438": {
-    Name: "To Hourne Castle",
-    Materials: [
-      "Spellblade's Memory (Yellow)",
-      "Sword Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Thief's Memory (Yellow)",
-      "Bow Citrine",
-      "Lightning Alcryst (Yellow)",
-    ],
+    "Name":"To Hourne Castle",
+    "Materials": ["Spellblade's Memory (Yellow)", "Sword Citrine", "Prowling Wyvern Statue (Yellow)", "Thief's Memory (Yellow)", "Bow Citrine", "Lightning Alcryst (Yellow)"]
   },
   "439": {
-    Name: "Crossing Shadows",
-    Materials: [
-      "Cleric's Memory (Yellow)",
-      "Greatsword Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Ninja's Memory (Yellow)",
-      "Gun Citrine",
-      "Water Alcryst (Yellow)",
-    ],
+    "Name":"Crossing Shadows",
+    "Materials": ["Cleric's Memory (Yellow)", "Greatsword Citrine", "Praying Angel Statue (Yellow)", "Ninja's Memory (Yellow)", "Gun Citrine", "Water Alcryst (Yellow)"]
   },
   "4310": {
-    Name: "Survive! III",
-    Materials: [
-      "Warrior's Memory (Yellow)",
-      "Katana Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Ranger's Memory (Yellow)",
-      "Staff Citrine",
-      "Dark Alcryst (Yellow)",
-      "Winged One's Memory (Yellow)",
-    ],
+    "Name":"Survive! III",
+    "Materials": ["Warrior's Memory (Yellow)", "Katana Citrine", "Prowling Wyvern Statue (Yellow)", "Ranger's Memory (Yellow)", "Staff Citrine", "Dark Alcryst (Yellow)", "Winged One's Memory (Yellow)"]
   },
   "511": {
-    Name: "The Meaning of Strength",
-    Materials: [
-      "Ranger's Memory (Yellow)",
-      "Mace Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Knight's Memory (Yellow)",
-      "Fists Citrine",
-      "Light Alcryst (Yellow)",
-    ],
-  },
+    "Name":"The Meaning of Strength",
+    "Materials": ["Ranger's Memory (Yellow)", "Mace Citrine", "Praying Angel Statue (Yellow)", "Knight's Memory (Yellow)", "Fists Citrine", "Light Alcryst (Yellow)"]
+    },
   "512": {
-    Name: "The Time Has Come",
-    Materials: [
-      "Gunner's Memory (Yellow)",
-      "Sword Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Paladin's Memory (Yellow)",
-      "Spear Citrine",
-      "Dark Alcryst (Yellow)",
-    ],
-  },
+    "Name":"The Time Has Come",
+    "Materials": ["Gunner's Memory (Yellow)", "Sword Citrine", "Prowling Wyvern Statue (Yellow)", "Paladin's Memory (Yellow)", "Spear Citrine", "Dark Alcryst (Yellow)"]
+    },
   "513": {
-    Name: "Assassination Squad",
-    Materials: [
-      "Soldier's Memory (Yellow)",
-      "Greatsword Citrine",
-      "Praying Angel Statue (Yellow)",
-      "White Mage's Memory (Yellow)",
-      "Dagger Citrine",
-      "Earth Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Assassination Squad",
+    "Materials": ["Soldier's Memory (Yellow)", "Greatsword Citrine", "Praying Angel Statue (Yellow)", "White Mage's Memory (Yellow)", "Dagger Citrine", "Earth Alcryst (Yellow)"]
+    },
   "514": {
-    Name: "Conviction",
-    Materials: [
-      "Monk's Memory (Yellow)",
-      "Katana Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Black Mage's Memory (Yellow)",
-      "Ninja Blade Citrine",
-      "Lightning Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Conviction",
+    "Materials": ["Monk's Memory (Yellow)", "Katana Citrine", "Prowling Wyvern Statue (Yellow)", "Black Mage's Memory (Yellow)", "Ninja Blade Citrine", "Lightning Alcryst (Yellow)"]
+    },
   "515": {
-    Name: "Northward Bound",
-    Materials: [
-      "Samurai's Memory (Yellow)",
-      "Fists Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Red Mage's Memory (Yellow)",
-      "Bow Citrine",
-      "Wind Alcryst (Yellow)",
-      "Viking's Memory (Yellow)",
-      "Axe Citrine",
-    ],
-  },
+    "Name":"Northward Bound",
+    "Materials": ["Samurai's Memory (Yellow)", "Fists Citrine", "Praying Angel Statue (Yellow)", "Red Mage's Memory (Yellow)", "Bow Citrine", "Wind Alcryst (Yellow)", "Viking's Memory (Yellow)", "Axe Citrine"]
+    },
   "516": {
-    Name: "Spark of the Dragon",
-    Materials: [
-      "Lancer's Memory (Yellow)",
-      "Gun Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Green Mage's Memory (Yellow)",
-      "Spear Citrine",
-      "Fire Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Spark of the Dragon",
+    "Materials": ["Lancer's Memory (Yellow)", "Gun Citrine", "Prowling Wyvern Statue (Yellow)", "Green Mage's Memory (Yellow)", "Spear Citrine", "Fire Alcryst (Yellow)"]
+    },
   "517": {
-    Name: "First Things First",
-    Materials: [
-      "Time Mage's Memory (Yellow)",
-      "Dagger Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Dragoon's Memory (Yellow)",
-      "Staff Citrine",
-      "Lightning Alcryst (Yellow)",
-    ],
-  },
+    "Name":"First Things First",
+    "Materials": ["Time Mage's Memory (Yellow)", "Dagger Citrine", "Praying Angel Statue (Yellow)", "Dragoon's Memory (Yellow)", "Staff Citrine", "Lightning Alcryst (Yellow)"]
+    },
   "518": {
-    Name: "The Wounded Lion I",
-    Materials: [
-      "Spellblade's Memory (Yellow)",
-      "Ninja Blade Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Thief's Memory (Yellow)",
-      "Mace Citrine",
-      "Water Alcryst (Yellow)",
-    ],
-  },
+    "Name":"The Wounded Lion I",
+    "Materials": ["Spellblade's Memory (Yellow)", "Ninja Blade Citrine", "Prowling Wyvern Statue (Yellow)", "Thief's Memory (Yellow)", "Mace Citrine", "Water Alcryst (Yellow)"]
+    },
   "519": {
-    Name: "Vengeance",
-    Materials: [
-      "Cleric's Memory (Yellow)",
-      "Bow Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Ninja's Memory (Yellow)",
-      "Sword Citrine",
-      "Light Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Vengeance",
+    "Materials": ["Cleric's Memory (Yellow)", "Bow Citrine", "Praying Angel Statue (Yellow)", "Ninja's Memory (Yellow)", "Sword Citrine", "Light Alcryst (Yellow)"]
+    },
   "5110": {
-    Name: "The Wounded Lion II",
-    Materials: [
-      "Warrior's Memory (Yellow)",
-      "Gun Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Ranger's Memory (Yellow)",
-      "Greatsword Citrine",
-      "Dark Alcryst (Yellow)",
-      "Winged One's Memory (Yellow)",
-    ],
-  },
+    "Name":"The Wounded Lion II",
+    "Materials": ["Warrior's Memory (Yellow)", "Gun Citrine", "Prowling Wyvern Statue (Yellow)", "Ranger's Memory (Yellow)", "Greatsword Citrine", "Dark Alcryst (Yellow)", "Winged One's Memory (Yellow)"]
+    },
   "521": {
-    Name: "When Forces Collide",
-    Materials: [
-      "Knight's Memory (Yellow)",
-      "Staff Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Gunner's Memory (Yellow)",
-      "Katana Citrine",
-      "Earth Alcryst (Yellow)",
-    ],
-  },
+    "Name":"When Forces Collide",
+    "Materials": ["Knight's Memory (Yellow)", "Staff Citrine", "Praying Angel Statue (Yellow)", "Gunner's Memory (Yellow)", "Katana Citrine", "Earth Alcryst (Yellow)"]
+    },
   "522": {
-    Name: "Killer of the North",
-    Materials: [
-      "Paladin's Memory (Yellow)",
-      "Mace Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "White Mage's Memory (Yellow)",
-      "Fists Citrine",
-      "Ice Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Killer of the North",
+    "Materials": ["Paladin's Memory (Yellow)", "Mace Citrine", "Prowling Wyvern Statue (Yellow)", "White Mage's Memory (Yellow)", "Fists Citrine", "Ice Alcryst (Yellow)"]
+    },
   "523": {
-    Name: "Spies Afoot I",
-    Materials: [
-      "Soldier's Memory (Yellow)",
-      "Spear Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Black Mage's Memory (Yellow)",
-      "Axe Citrine",
-      "Wind Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Spies Afoot I",
+    "Materials": ["Soldier's Memory (Yellow)", "Spear Citrine", "Praying Angel Statue (Yellow)", "Black Mage's Memory (Yellow)", "Axe Citrine", "Wind Alcryst (Yellow)"]
+    },
   "524": {
-    Name: "Spies Afoot II",
-    Materials: [
-      "Monk's Memory (Yellow)",
-      "Sword Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Red Mage's Memory (Yellow)",
-      "Dagger Citrine",
-      "Fire Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Spies Afoot II",
+    "Materials": ["Monk's Memory (Yellow)", "Sword Citrine", "Prowling Wyvern Statue (Yellow)", "Red Mage's Memory (Yellow)", "Dagger Citrine", "Fire Alcryst (Yellow)"]
+    },
   "525": {
-    Name: "Spies Afoot III",
-    Materials: [
-      "Samurai's Memory (Yellow)",
-      "Greatsword Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Green Mage's Memory (Yellow)",
-      "Ninja Blade Citrine",
-      "Lightning Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Spies Afoot III",
+    "Materials": ["Samurai's Memory (Yellow)", "Greatsword Citrine", "Praying Angel Statue (Yellow)", "Green Mage's Memory (Yellow)", "Ninja Blade Citrine", "Lightning Alcryst (Yellow)"]
+    },
   "526": {
-    Name: "Endowed Strength",
-    Materials: [
-      "Lancer's Memory (Yellow)",
-      "Katana Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Time Mage's Memory (Yellow)",
-      "Bow Citrine",
-      "Water Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Endowed Strength",
+    "Materials": ["Lancer's Memory (Yellow)", "Katana Citrine", "Prowling Wyvern Statue (Yellow)", "Time Mage's Memory (Yellow)", "Bow Citrine", "Water Alcryst (Yellow)"]
+    },
   "527": {
-    Name: "Ambush",
-    Materials: [
-      "Dragoon's Memory (Yellow)",
-      "Fists Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Spellblade's Memory (Yellow)",
-      "Gun Citrine",
-      "Light Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Ambush",
+    "Materials": ["Dragoon's Memory (Yellow)", "Fists Citrine", "Praying Angel Statue (Yellow)", "Spellblade's Memory (Yellow)", "Gun Citrine", "Light Alcryst (Yellow)"]
+    },
   "528": {
-    Name: "Swelling Abhorrence I",
-    Materials: [
-      "Thief's Memory (Yellow)",
-      "Staff Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Cleric's Memory (Yellow)",
-      "Spear Citrine",
-      "Dark Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Swelling Abhorrence I",
+    "Materials": ["Thief's Memory (Yellow)", "Staff Citrine", "Prowling Wyvern Statue (Yellow)", "Cleric's Memory (Yellow)", "Spear Citrine", "Dark Alcryst (Yellow)"]
+    },
   "529": {
-    Name: "Swelling Abhorrence II",
-    Materials: [
-      "Ninja's Memory (Yellow)",
-      "Dagger Citrine",
-      "Praying Angel Statue (Yellow)",
-      "Viking's Memory (Yellow)",
-      "Mace Citrine",
-      "Earth Alcryst (Yellow)",
-    ],
-  },
+    "Name":"Swelling Abhorrence II",
+    "Materials": ["Ninja's Memory (Yellow)", "Dagger Citrine", "Praying Angel Statue (Yellow)", "Viking's Memory (Yellow)", "Mace Citrine", "Earth Alcryst (Yellow)"]
+    },
   "5210": {
-    Name: "Last Resort",
-    Materials: [
-      "Ranger's Memory (Yellow)",
-      "Ninja Blade Citrine",
-      "Prowling Wyvern Statue (Yellow)",
-      "Warrior's Memory (Yellow)",
-      "Axe Citrine",
-      "Ice Alcryst (Yellow)",
-      "Winged One's Memory (Yellow)",
-    ],
+    "Name":"Last Resort",
+    "Materials": ["Ranger's Memory (Yellow)", "Ninja Blade Citrine", "Prowling Wyvern Statue (Yellow)", "Warrior's Memory (Yellow)", "Axe Citrine", "Ice Alcryst (Yellow)", "Winged One's Memory (Yellow)"]
+    },
+  "531": {
+    "Name":"Entrapped",
+    "Materials": ["Knight's Memory (Yellow)", "Sword Citrine", "Praying Angel Statue (Yellow)", "Gunner's Memory (Yellow)", "Bow Citrine", "Wind Alcryst (Yellow)"]
+    },
+  "532": {
+    "Name":"Schuzelt",
+    "Materials": ["Paladin's Memory (Yellow)", "Greatsword Citrine", "Prowling Wyvern Statue (Yellow)", "White Mage's Memory (Yellow)", "Gun Citrine", "Fire Alcryst (Yellow)"]
+    },
+  "533": {
+    "Name":"Resolve",
+    "Materials": ["Soldier's Memory (Yellow)", "Katana Citrine", "Praying Angel Statue (Yellow)", "Black Mage's Memory (Yellow)", "Staff Citrine", "Lightning Alcryst (Yellow)"]
+    },
+  "534": {
+    "Name":"Golden Armor",
+    "Materials": ["Monk's Memory (Yellow)", "Fists Citrine", "Prowling Wyvern Statue (Yellow)", "Red Mage's Memory (Yellow)", "Mace Citrine", "Water Alcryst (Yellow)"]
+    },
+  "535": {
+    "Name":"Lies and Falsehoods I",
+    "Materials": ["Samurai's Memory (Yellow)", "Spear Citrine", "Praying Angel Statue (Yellow)", "Green Mage's Memory (Yellow)", "Axe Blade Citrine", "Light Alcryst (Yellow)"]
+    },
+  "536": {
+    "Name":"Lies and Falsehoods II",
+    "Materials": ["Lancer's Memory (Yellow)", "Sword Citrine", "Prowling Wyvern Statue (Yellow)", "Time Mage's Memory (Yellow)", "Dagger Citrine", "Dark Alcryst (Yellow)"]
+    },
+  "537": {
+    "Name":"First Defeat",
+    "Materials": ["Dragoon's Memory (Yellow)", "Greatsword Citrine", "Praying Angel Statue (Yellow)", "Spellblade's Memory (Yellow)", "Ninja Blade Citrine", "Earth Alcryst (Yellow)"]
+    },
+  "538": {
+    "Name":"Who Will Succeed",
+    "Materials": ["Thief's Memory (Yellow)", "Katana Citrine", "Prowling Wyvern Statue (Yellow)", "Cleric's Memory (Yellow)", "Bow Citrine", "Ice Alcryst (Yellow)"]
+    },
+  "539": {
+    "Name":"Rampaging Young Lion",
+    "Materials": ["Ninja's Memory (Yellow)", "Gun Citrine", "Praying Angel Statue (Yellow)", "Viking's Memory (Yellow)", "Fists Citrine", "Wind Alcryst (Yellow)"]
+    },
+  "5310": {
+    "Name":"«Solidus»",
+    "Materials": ["Ranger's Memory (Yellow)", "Spear Citrine", "Prowling Wyvern Statue (Yellow)", "Warrior's Memory (Yellow)", "Staff Citrine", "Fire Alcryst (Yellow)"]
+    },
+  "FFT-01":{
+    "Name":"FINAL FANTASY TACTICS Battle #1",
+    "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
   },
-
-  "Etre-01": {
-    Name: "Etre Training Quest I",
-    Materials: [
-      "Dragoon's Memory (Green)",
-      "Spear Jadeite",
-      "Prowling Wyvern Statue (Green)",
-      "Monk's Memory (Green)",
-      "Fire Alcryst (Green)",
-      "Earth Alcryst (Green)",
-    ],
+  "FFT-02":{
+    "Name":"FINAL FANTASY TACTICS Battle #2",
+    "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
   },
-  "Etre-02": {
-    Name: "Etre Training Quest II",
-    Materials: [
-      "Fists Azurite",
-      "Earth Alcryst (Blue)",
-      "Monk's Memory (Blue)",
-      "Praying Angel Statue (Blue)",
-    ],
+  "FFT-03":{
+    "Name":"FINAL FANTASY TACTICS Battle #3",
+    "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
   },
-  "Etre-03": {
-    Name: "Etre Training Quest III",
-    Materials: [
-      "Spear Azurite",
-      "Fire Alcryst (Blue)",
-      "Prowling Wyvern Statue (Blue)",
-      "Dragoon's Memory (Blue)",
-    ],
+  "FFT-04":{
+    "Name":"Lionel Castle — Outer Gates",
+    "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
   },
-  "Etre-04": {
-    Name: "Etre Training Quest IV",
-    Materials: [
-      "Fists Charoite",
-      "Earth Alcryst (Purple)",
-      "Praying Angel Statue (Purple)",
-      "Monk's Memory (Purple)",
-    ],
-  },
-  "Etre-05": {
-    Name: "Etre Training Quest V",
-    Materials: [
-      "Spear Charoite",
-      "Fire Alcryst (Purple)",
-      "Prowling Wyvern Statue (Purple)",
-      "Dragoon's Memory (Purple)",
-    ],
-  },
-  "FFT-01": {
-    Name: "FINAL FANTASY TACTICS Battle #1",
-    Materials: [
-      "Sword Jadeite",
-      "Dark Alcryst (Green)",
-      "Light Alcryst (Green)",
-      "Lightning Alcryst (Green)",
-      "Praying Angel Statue (Green)",
-      "Prowling Wyvern Statue (Green)",
-    ],
-  },
-  "FFT-02": {
-    Name: "FINAL FANTASY TACTICS Battle #2",
-    Materials: [
-      "Sword Jadeite",
-      "Dark Alcryst (Green)",
-      "Light Alcryst (Green)",
-      "Lightning Alcryst (Green)",
-      "Praying Angel Statue (Green)",
-      "Prowling Wyvern Statue (Green)",
-    ],
-  },
-  "FFT-03": {
-    Name: "FINAL FANTASY TACTICS Battle #3",
-    Materials: [
-      "Sword Azurite",
-      "Dark Alcryst (Blue)",
-      "Light Alcryst (Blue)",
-      "Lightning Alcryst (Blue)",
-      "Praying Angel Statue (Blue)",
-      "Prowling Wyvern Statue (Blue)",
-    ],
-  },
-  "FFT-04": {
-    Name: "Lionel Castle — Outer Gates",
-    Materials: [
-      "Sword Azurite",
-      "Dark Alcryst (Blue)",
-      "Light Alcryst (Blue)",
-      "Lightning Alcryst (Blue)",
-      "Praying Angel Statue (Blue)",
-      "Prowling Wyvern Statue (Blue)",
-    ],
-  },
-  "FFT-05": {
-    Name: "Lionel Castle — Interior",
-    Materials: [
-      "Sword Charoite",
-      "Dark Alcryst (Purple)",
-      "Light Alcryst (Purple)",
-      "Lightning Alcryst (Purple)",
-      "Praying Angel Statue (Purple)",
-      "Prowling Wyvern Statue (Purple)",
-    ],
+  "FFT-05":{
+    "Name":"Lionel Castle — Interior",
+    "Materials": ["Sword Charoite", "Dark Alcryst (Purple)", "Light Alcryst (Purple)", "Lightning Alcryst (Purple)", "Praying Angel Statue (Purple)", "Prowling Wyvern Statue (Purple)"]
   },
 
   "Event Reward/Shop": {
-    Name: "Check Missions and Mog Shop",
-    Materials: [
-      "Sword Saint's Memory (Green)",
-      "Sword Saint's Memory (Blue)",
-      "Sword Saint's Memory (Purple)",
-      "Sword Saint's Memory (Yellow)",
-      "Squire's Memory (Green)",
-      "Squire's Memory (Blue)",
-      "Squire's Memory (Yellow)",
-      "Squire's Memory (Purple)",
-      "Fell Knight's Memory (Green)",
-      "Fell Knight's Memory (Blue)",
-      "Fell Knight's Memory (Purple)",
-      "Fell Knight's Memory (Yellow)",
-    ],
-  },
-};
+  "Name":"Check Missions and Mog Shop",
+  "Materials": ["Sword Saint's Memory (Green)", "Sword Saint's Memory (Blue)", "Sword Saint's Memory (Purple)", "Sword Saint's Memory (Yellow)", "Squire's Memory (Green)", "Squire's Memory (Blue)", "Squire's Memory (Yellow)", "Squire's Memory (Purple)", "Fell Knight's Memory (Green)", "Fell Knight's Memory (Blue)", "Fell Knight's Memory (Purple)", "Fell Knight's Memory (Yellow)"]
+   }
+}
+
 //Edit Above^^^^ to update------------------------------------------------
 
 // declare stuff here

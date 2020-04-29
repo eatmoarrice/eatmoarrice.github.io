@@ -559,50 +559,69 @@
     "Name":"Last Resort",
     "Materials": ["Ranger's Memory (Yellow)", "Ninja Blade Citrine", "Prowling Wyvern Statue (Yellow)", "Warrior's Memory (Yellow)", "Axe Citrine", "Ice Alcryst (Yellow)", "Winged One's Memory (Yellow)"]
     },
+  "531": {
+    "Name":"Entrapped",
+    "Materials": ["Knight's Memory (Yellow)", "Sword Citrine", "Praying Angel Statue (Yellow)", "Gunner's Memory (Yellow)", "Bow Citrine", "Wind Alcryst (Yellow)"]
+    },
+  "532": {
+    "Name":"Schuzelt",
+    "Materials": ["Paladin's Memory (Yellow)", "Greatsword Citrine", "Prowling Wyvern Statue (Yellow)", "White Mage's Memory (Yellow)", "Gun Citrine", "Fire Alcryst (Yellow)"]
+    },
+  "533": {
+    "Name":"Resolve",
+    "Materials": ["Soldier's Memory (Yellow)", "Katana Citrine", "Praying Angel Statue (Yellow)", "Black Mage's Memory (Yellow)", "Staff Citrine", "Lightning Alcryst (Yellow)"]
+    },
+  "534": {
+    "Name":"Golden Armor",
+    "Materials": ["Monk's Memory (Yellow)", "Fists Citrine", "Prowling Wyvern Statue (Yellow)", "Red Mage's Memory (Yellow)", "Mace Citrine", "Water Alcryst (Yellow)"]
+    },
+  "535": {
+    "Name":"Lies and Falsehoods I",
+    "Materials": ["Samurai's Memory (Yellow)", "Spear Citrine", "Praying Angel Statue (Yellow)", "Green Mage's Memory (Yellow)", "Axe Blade Citrine", "Light Alcryst (Yellow)"]
+    },
+  "536": {
+    "Name":"Lies and Falsehoods II",
+    "Materials": ["Lancer's Memory (Yellow)", "Sword Citrine", "Prowling Wyvern Statue (Yellow)", "Time Mage's Memory (Yellow)", "Dagger Citrine", "Dark Alcryst (Yellow)"]
+    },
+  "537": {
+    "Name":"First Defeat",
+    "Materials": ["Dragoon's Memory (Yellow)", "Greatsword Citrine", "Praying Angel Statue (Yellow)", "Spellblade's Memory (Yellow)", "Ninja Blade Citrine", "Earth Alcryst (Yellow)"]
+    },
+  "538": {
+    "Name":"Who Will Succeed",
+    "Materials": ["Thief's Memory (Yellow)", "Katana Citrine", "Prowling Wyvern Statue (Yellow)", "Cleric's Memory (Yellow)", "Bow Citrine", "Ice Alcryst (Yellow)"]
+    },
+  "539": {
+    "Name":"Rampaging Young Lion",
+    "Materials": ["Ninja's Memory (Yellow)", "Gun Citrine", "Praying Angel Statue (Yellow)", "Viking's Memory (Yellow)", "Fists Citrine", "Wind Alcryst (Yellow)"]
+    },
+  "5310": {
+    "Name":"«Solidus»",
+    "Materials": ["Ranger's Memory (Yellow)", "Spear Citrine", "Prowling Wyvern Statue (Yellow)", "Warrior's Memory (Yellow)", "Staff Citrine", "Fire Alcryst (Yellow)"]
+    },
+  "FFT-01":{
+    "Name":"FINAL FANTASY TACTICS Battle #1",
+    "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
+  },
+  "FFT-02":{
+    "Name":"FINAL FANTASY TACTICS Battle #2",
+    "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
+  },
+  "FFT-03":{
+    "Name":"FINAL FANTASY TACTICS Battle #3",
+    "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
+  },
+  "FFT-04":{
+    "Name":"Lionel Castle — Outer Gates",
+    "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
+  },
+  "FFT-05":{
+    "Name":"Lionel Castle — Interior",
+    "Materials": ["Sword Charoite", "Dark Alcryst (Purple)", "Light Alcryst (Purple)", "Lightning Alcryst (Purple)", "Praying Angel Statue (Purple)", "Prowling Wyvern Statue (Purple)"]
+  },
 
-  "Etre-01": {
-    "Name":"Etre Training Quest I",
-    "Materials": ["Dragoon's Memory (Green)", "Spear Jadeite", "Prowling Wyvern Statue (Green)", "Monk's Memory (Green)", "Fire Alcryst (Green)", "Earth Alcryst (Green)"]
-    },
-  "Etre-02": {
-    "Name":"Etre Training Quest II",
-    "Materials": ["Fists Azurite", "Earth Alcryst (Blue)", "Monk's Memory (Blue)", "Praying Angel Statue (Blue)"]
-    },
-  "Etre-03": {
-    "Name":"Etre Training Quest III",
-    "Materials": ["Spear Azurite", "Fire Alcryst (Blue)", "Prowling Wyvern Statue (Blue)", "Dragoon's Memory (Blue)"]
-    },
-  "Etre-04": {
-    "Name":"Etre Training Quest IV",
-    "Materials": ["Fists Charoite", "Earth Alcryst (Purple)", "Praying Angel Statue (Purple)", "Monk's Memory (Purple)"]
-    },
-  "Etre-05": {
-    "Name":"Etre Training Quest V",
-    "Materials": ["Spear Charoite", "Fire Alcryst (Purple)", "Prowling Wyvern Statue (Purple)", "Dragoon's Memory (Purple)"]
-    },
-    "FFT-01":{
-      "Name":"FINAL FANTASY TACTICS Battle #1",
-      "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
-    },
-    "FFT-02":{
-      "Name":"FINAL FANTASY TACTICS Battle #2",
-      "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
-    },
-    "FFT-03":{
-      "Name":"FINAL FANTASY TACTICS Battle #3",
-      "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
-    },
-    "FFT-04":{
-      "Name":"Lionel Castle — Outer Gates",
-      "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
-    },
-    "FFT-05":{
-      "Name":"Lionel Castle — Interior",
-      "Materials": ["Sword Charoite", "Dark Alcryst (Purple)", "Light Alcryst (Purple)", "Lightning Alcryst (Purple)", "Praying Angel Statue (Purple)", "Prowling Wyvern Statue (Purple)"]
-    },
-
-    "Event Reward/Shop": {
-    "Name":"Check Missions and Mog Shop",
-    "Materials": ["Sword Saint's Memory (Green)", "Sword Saint's Memory (Blue)", "Sword Saint's Memory (Purple)", "Sword Saint's Memory (Yellow)", "Squire's Memory (Green)", "Squire's Memory (Blue)", "Squire's Memory (Yellow)", "Squire's Memory (Purple)", "Fell Knight's Memory (Green)", "Fell Knight's Memory (Blue)", "Fell Knight's Memory (Purple)", "Fell Knight's Memory (Yellow)"]
-     }
+  "Event Reward/Shop": {
+  "Name":"Check Missions and Mog Shop",
+  "Materials": ["Sword Saint's Memory (Green)", "Sword Saint's Memory (Blue)", "Sword Saint's Memory (Purple)", "Sword Saint's Memory (Yellow)", "Squire's Memory (Green)", "Squire's Memory (Blue)", "Squire's Memory (Yellow)", "Squire's Memory (Purple)", "Fell Knight's Memory (Green)", "Fell Knight's Memory (Blue)", "Fell Knight's Memory (Purple)", "Fell Knight's Memory (Yellow)"]
+   }
 }
