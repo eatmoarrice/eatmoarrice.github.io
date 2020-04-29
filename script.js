@@ -524,7 +524,7 @@ const joblist = {
   },
 };
 
-const {
+const locationlist = {
   "111": {
     "Name":"Twin Princes",
     "Materials": ["Warrior's Memory (Green)", "Sword Jadeite", "Praying Angel Statue (Green)", "Ranger's Memory (Green)", "Bow Jadeite", "Earth Alcryst (Green)"]
