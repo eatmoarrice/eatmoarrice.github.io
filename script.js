@@ -1184,6 +1184,7 @@ function refreshJobMemory() {
     totalJobMemory[i][2] = 0;
     totalJobMemory[i][3] = 0;
     totalJobMemory[i][4] = 0;
+    totalJobMemory[i][5] = 0;
     i += 1;
   }
 }
@@ -1201,20 +1202,20 @@ function refreshLocation() {
 
 function refreshElement() {
   totalElement = [
-    ["Fire", 0, 0, 0, 0],
-    ["Ice", 0, 0, 0, 0],
-    ["Wind", 0, 0, 0, 0],
-    ["Earth", 0, 0, 0, 0],
-    ["Lightning", 0, 0, 0, 0],
-    ["Water", 0, 0, 0, 0],
-    ["Light", 0, 0, 0, 0],
-    ["Dark", 0, 0, 0, 0],
+    ["Fire", 0, 0, 0, 0, 0],
+    ["Ice", 0, 0, 0, 0, 0],
+    ["Wind", 0, 0, 0, 0, 0],
+    ["Earth", 0, 0, 0, 0, 0],
+    ["Lightning", 0, 0, 0, 0, 0],
+    ["Water", 0, 0, 0, 0, 0],
+    ["Light", 0, 0, 0, 0, 0],
+    ["Dark", 0, 0, 0, 0, 0],
   ];
 }
 
 let tablebody = "";
 
-let faintmemory = [0, 0, 0, 0];
+let faintmemory = [0, 0, 0, 0, 0];
 
 let materialNeed = [];
 
@@ -1236,26 +1237,26 @@ let unitx5 = [
   ["", "", ""],
 ];
 
-let totalMemory = [0, 0, 0, 0];
+let totalMemory = [0, 0, 0, 0, 0];
 
 let totalWeapon = [
-  ["Axe", 0, 0, 0, 0],
-  ["Sword", 0, 0, 0, 0],
-  ["Greatsword", 0, 0, 0, 0],
-  ["Bow", 0, 0, 0, 0],
-  ["Fists", 0, 0, 0, 0],
-  ["Spear", 0, 0, 0, 0],
-  ["Gun", 0, 0, 0, 0],
-  ["Dagger", 0, 0, 0, 0],
-  ["Staff", 0, 0, 0, 0],
-  ["Katana", 0, 0, 0, 0],
-  ["Mace", 0, 0, 0, 0],
-  ["Ninja Blade", 0, 0, 0, 0],
+  ["Axe", 0, 0, 0, 0, 0],
+  ["Sword", 0, 0, 0, 0, 0],
+  ["Greatsword", 0, 0, 0, 0, 0],
+  ["Bow", 0, 0, 0, 0, 0],
+  ["Fists", 0, 0, 0, 0, 0],
+  ["Spear", 0, 0, 0, 0, 0],
+  ["Gun", 0, 0, 0, 0, 0],
+  ["Dagger", 0, 0, 0, 0, 0],
+  ["Katana", 0, 0, 0, 0, 0],
+  ["Staff", 0, 0, 0, 0, 0],
+  ["Mace", 0, 0, 0, 0, 0],
+  ["Ninja Blade", 0, 0, 0, 0, 0],
 ];
 
 let totalStatues = [
-  [0, 0, 0, 0],
-  [0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
 ];
 let weapons = [
   ["", "", ""],
@@ -1394,6 +1395,9 @@ function showJobTable() {
                 <option value="10">
                 <option value="11">
                 <option value="12">
+                <option value="13">
+                <option value="14">
+                <option value="15">
               </datalist></td>
               <td><input type="number" required pattern="\d+" id="u${x}job2startinglevel" placeholder="0" list="numlist"></td>
               <td><input type="number" required pattern="\d+" id="u${x}job3startinglevel" placeholder="0" list="numlist"></td>
@@ -1483,6 +1487,15 @@ function weaponPerLevel(level, n) {
   if (level == 12) {
     totalWeapon[n][4] += 15;
   }
+  if (level == 13) {
+    totalWeapon[n][5] += 5;
+  }
+  if (level == 14) {
+    totalWeapon[n][5] += 10;
+  }
+  if (level == 15) {
+    totalWeapon[n][5] += 15;
+  }
 }
 
 function getElement(name) {
@@ -1531,6 +1544,15 @@ function elementPerLevel(level, n) {
   if (level == 12) {
     totalElement[n][4] += 40;
   }
+  if (level == 13) {
+    totalElement[n][5] += 10;
+  }
+  if (level == 14) {
+    totalElement[n][5] += 20;
+  }
+  if (level == 15) {
+    totalElement[n][5] += 40;
+  }
 }
 
 function calculateElement(array, a) {
@@ -1576,6 +1598,9 @@ function calculateJobMemory(array, a) {
           }
           if (x + 1 == 12) {
             totalJobMemory[y][4] += 4;
+          }
+          if (x + 1 == 15) {
+            totalJobMemory[y][5] += 4;
           }
         }
       }
@@ -1639,6 +1664,15 @@ function statuePerLevel(level, number) {
   if (level == 12) {
     totalStatues[n][3] += 3;
   }
+  if (level == 13) {
+    totalStatues[n][4] += 1;
+  }
+  if (level == 14) {
+    totalStatues[n][4] += 2;
+  }
+  if (level == 15) {
+    totalStatues[n][4] += 3;
+  }
 }
 
 function memoryPerLevel(number) {
@@ -1662,6 +1696,12 @@ function memoryPerLevel(number) {
   }
   if (number == 11) {
     totalMemory[3] += 50;
+  }
+  if (number == 13) {
+    totalMemory[4] += 25;
+  }
+  if (number == 14) {
+    totalMemory[4] += 50;
   }
 }
 
@@ -1805,18 +1845,18 @@ function clearall() {
   materialNeed = [];
   refreshLocation();
   totalWeapon = [
-    ["Axe", 0, 0, 0, 0],
-    ["Sword", 0, 0, 0, 0],
-    ["Greatsword", 0, 0, 0, 0],
-    ["Bow", 0, 0, 0, 0],
-    ["Fists", 0, 0, 0, 0],
-    ["Spear", 0, 0, 0, 0],
-    ["Gun", 0, 0, 0, 0],
-    ["Dagger", 0, 0, 0, 0],
-    ["Staff", 0, 0, 0, 0],
-    ["Katana", 0, 0, 0, 0],
-    ["Mace", 0, 0, 0, 0],
-    ["Ninja Blade", 0, 0, 0, 0],
+    ["Axe", 0, 0, 0, 0, 0],
+    ["Sword", 0, 0, 0, 0, 0],
+    ["Greatsword", 0, 0, 0, 0, 0],
+    ["Bow", 0, 0, 0, 0, 0],
+    ["Fists", 0, 0, 0, 0, 0],
+    ["Spear", 0, 0, 0, 0, 0],
+    ["Gun", 0, 0, 0, 0, 0],
+    ["Dagger", 0, 0, 0, 0, 0],
+    ["Staff", 0, 0, 0, 0, 0],
+    ["Katana", 0, 0, 0, 0, 0],
+    ["Mace", 0, 0, 0, 0, 0],
+    ["Ninja Blade", 0, 0, 0, 0, 0],
   ];
 
   refreshLocation();
@@ -1825,11 +1865,11 @@ function clearall() {
 
   refreshElement();
 
-  totalMemory = [0, 0, 0, 0];
+  totalMemory = [0, 0, 0, 0, 0];
 
   totalStatues = [
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
   ];
 }
 
@@ -1956,7 +1996,7 @@ function presentByGrade() {
   let bgcolor = 1;
   let id = "";
   let styleHTML = "";
-  for (x = 1; x < 5; x++) {
+  for (x = 1; x < 6; x++) {
     if ((changeHappened = true)) {
       if (bgcolor == 0) {
         bgcolor = 1;
@@ -1991,6 +2031,10 @@ function presentByGrade() {
         drop = "Faint Memory (Yellow)";
         id = drop.replace(/\W/g, "");
       }
+      if (x - 1 == 4) {
+        drop = "Faint Memory (Red)";
+        id = drop.replace(/\W/g, "");
+      }
       showEachItemInTotalTable(drop, totalMemory[x - 1]);
       text += `       <tr ${styleHTML}>
                         <td><img class="material-icon-best" src="images/mat/${id}.png"></td>
@@ -2016,6 +2060,10 @@ function presentByGrade() {
         }
         if (x == 4) {
           drop = `${totalElement[i][0]} Alcryst (Yellow)`;
+          id = drop.replace(/\W/g, "");
+        }
+        if (x == 5) {
+          drop = `${totalElement[i][0]} Alcryst (Red)`;
           id = drop.replace(/\W/g, "");
         }
         arrayPush(materialNeed, drop);
@@ -2048,6 +2096,10 @@ function presentByGrade() {
           drop = `${totalWeapon[i][0]} Citrine`;
           id = drop.replace(/\W/g, "");
         }
+        if (x == 5) {
+          drop = `${totalWeapon[i][0]} Spinel`;
+          id = drop.replace(/\W/g, "");
+        }
         arrayPush(materialNeed, drop);
         farm = findLocation(drop);
         showEachItemInTotalTable(drop, totalWeapon[i][x]);
@@ -2075,6 +2127,10 @@ function presentByGrade() {
         }
         if (x == 4) {
           drop = `${totalJobMemory[i][0]}'s Memory (Yellow)`;
+          id = drop.replace(/\W/g, "");
+        }
+        if (x == 5) {
+          drop = `${totalJobMemory[i][0]}'s Memory (Red)`;
           id = drop.replace(/\W/g, "");
         }
         arrayPush(materialNeed, drop);
@@ -2108,6 +2164,10 @@ function presentByGrade() {
         }
         if (x - 1 == 3) {
           drop = `${w_or_a} (Yellow)`;
+          id = drop.replace(/\W/g, "");
+        }
+        if (x - 1 == 4) {
+          drop = `${w_or_a} (Red)`;
           id = drop.replace(/\W/g, "");
         }
         arrayPush(materialNeed, drop);
@@ -2488,8 +2548,8 @@ function removeNumbers(array) {
   if (array[1] == 0) {
     array[1] = array[0] + 1;
   }
-  if (array[1] > 12) {
-    array[1] = 12;
+  if (array[1] > 15) {
+    array[1] = 15;
   }
   if (array[1] < 1) {
     array[1] = 1;
@@ -2497,8 +2557,8 @@ function removeNumbers(array) {
   if (array[0] < 1) {
     array[0] = 1;
   }
-  if (array[0] > 12) {
-    array[0] = 12;
+  if (array[0] > 15) {
+    array[0] = 15;
   }
   if (array[1] < array[0]) {
     array[1] = array[0];
