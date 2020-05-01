@@ -1019,7 +1019,7 @@ const locationlist = {
     },
   "514": {
     "Name":"Conviction",
-    "Materials": ["Monk's Memory (Yellow)", "Katana Citrine", "Prowling Wyvern Statue (Yellow)", "Black Mage's Memory (Yellow)", "Ninja Blade Citrine", "Lightning Alcryst (Yellow)"]
+    "Materials": ["Monk's Memory (Yellow)", "Katana Citrine", "Prowling Wyvern Statue (Yellow)", "Black Mage's Memory (Yellow)", "Ninja Blade Citrine", "Ice Alcryst (Yellow)"]
     },
   "515": {
     "Name":"Northward Bound",
