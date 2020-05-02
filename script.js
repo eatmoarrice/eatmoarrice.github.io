@@ -96,7 +96,7 @@ const charlist = {
     Element: "Light",
     Job1: "Paladin",
     Job2: "Knight",
-    Job3: "Monk ",
+    Job3: "Monk",
     Rarity: "UR",
   },
   Mediena: {
