@@ -1600,7 +1600,7 @@ function calculateJobMemory(array, a) {
             totalJobMemory[y][4] += 4;
           }
           if (x + 1 == 15) {
-            totalJobMemory[y][5] += 4;
+            totalJobMemory[y][5] += 5;
           }
         }
       }
