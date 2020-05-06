@@ -6,14 +6,14 @@ const charlist = {
     Job1: "Ninja",
     Job2: "Soldier",
     Job3: "Time Mage",
-    Rarity: "Soon",
+    Rarity: "New",
   },
   Whisper: {
     Element: "Dark",
     Job1: "Knight",
     Job2: "Samurai",
     Job3: "Spellblade",
-    Rarity: "Soon",
+    Rarity: "New",
   },
   Miranda: {
     Element: "Water",
