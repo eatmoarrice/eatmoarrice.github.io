@@ -20,7 +20,7 @@
     "Job3":"Paladin",
     "Rarity":"Soon"
   },
-  "Drand": {
+  "Dorando": {
     "Element":"Earth",
     "Job1":"Viking",
     "Job2":"Monk",
@@ -94,7 +94,7 @@
    "Element":"Light",
    "Job1":"Paladin",
    "Job2":"Knight",
-   "Job3":"Monk ",
+   "Job3":"Monk",
    "Rarity":"UR"
  },
  "Mediena": {
