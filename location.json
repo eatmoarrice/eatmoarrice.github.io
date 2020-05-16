@@ -599,29 +599,69 @@
     "Name":"«Solidus»",
     "Materials": ["Ranger's Memory (Yellow)", "Spear Citrine", "Prowling Wyvern Statue (Yellow)", "Warrior's Memory (Yellow)", "Staff Citrine", "Fire Alcryst (Yellow)"]
     },
-  "FFT-01":{
-    "Name":"FINAL FANTASY TACTICS Battle #1",
-    "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
-  },
-  "FFT-02":{
-    "Name":"FINAL FANTASY TACTICS Battle #2",
-    "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
-  },
-  "FFT-03":{
-    "Name":"FINAL FANTASY TACTICS Battle #3",
-    "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
-  },
-  "FFT-04":{
-    "Name":"Lionel Castle — Outer Gates",
-    "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
-  },
-  "FFT-05":{
-    "Name":"Lionel Castle — Interior",
-    "Materials": ["Sword Charoite", "Dark Alcryst (Purple)", "Light Alcryst (Purple)", "Lightning Alcryst (Purple)", "Praying Angel Statue (Purple)", "Prowling Wyvern Statue (Purple)"]
-  },
+  "611": {
+    "Name":"Before the Cave I",
+    "Materials": ["Gunner's Memory (Yellow)", "Mace Citrine", "Praying Angel Statue (Yellow)", "Knight's Memory (Yellow)", "Dagger Citrine", "Lightning Alcryst (Yellow)", "Winged One's Memory (Yellow)"]
+    },
+  "612": {
+    "Name":"Before the Cave II",
+    "Materials": ["White Mage's Memory (Yellow)", "Axe Citrine", "Prowling Wyvern Statue (Yellow)", "Paladin's Memory (Yellow)", "Ninja Blade Citrine", "Water Alcryst (Yellow)"]
+    },
+  "613": {
+    "Name":"Wezette",
+    "Materials": ["Soldier's Memory (Yellow)", "Sword Citrine", "Praying Angel Statue (Yellow)", "Black Mage's Memory (Yellow)", "Bow Citrine", "Light Alcryst (Yellow)"]
+    },
+  "614": {
+    "Name":"I Will Fight I",
+    "Materials": ["Monk's Memory (Yellow)", "Greatsword Citrine", "Prowling Wyvern Statue (Yellow)", "Red Mage's Memory (Yellow)", "Gun Citrine", "Dark Alcryst (Yellow)"]
+    },
+  "615": {
+    "Name":"I Will Fight II",
+    "Materials": ["Samurai's Memory (Yellow)", "Staff Citrine", "Praying Angel Statue (Yellow)", "Green Mage's Memory (Yellow)", "Katana Citrine", "Earth Alcryst (Yellow)"]
+    },
+  "616": {
+    "Name":"Redeem Yourself",
+    "Materials": ["Lancer's Memory (Yellow)", "Fists Citrine", "Prowling Wyvern Statue (Yellow)", "Time Mage's Memory (Yellow)", "Mace Citrine", "Ice Alcryst (Yellow)"]
+    },
+  "617": {
+    "Name":"Broken Ties",
+    "Materials": ["Spellblade's Memory (Yellow)", "Spear Citrine", "Praying Angel Statue (Yellow)", "Dragoon's Memory (Yellow)", "Axe Citrine", "Wind Alcryst (Yellow)"]
+    },
+  "618": {
+    "Name":"Nonetheless I",
+    "Materials": ["Cleric's Memory (Yellow)", "Dagger Citrine", "Prowling Wyvern Statue (Yellow)", "Thief's Memory (Yellow)", "Sword Citrine", "Fire Alcryst (Yellow)"]
+    },
+  "619": {
+    "Name":"Nonetheless II",
+    "Materials": ["Viking's Memory (Yellow)", "Ninja Blade Citrine", "Praying Angel Statue (Yellow)", "Ninja's Memory (Yellow)", "Greatsword Citrine", "Lightning Alcryst (Yellow)"]
+    },
+  "6110": {
+    "Name":"Let Your Blade Do the Talking",
+    "Materials": ["Warrior's Memory (Yellow)", "Bow Citrine", "Prowling Wyvern Statue (Yellow)", "Ranger's Memory (Yellow)", "Katana Citrine", "Water Alcryst (Yellow)"]
+    }
+  // "FFT-01":{
+  //   "Name":"FINAL FANTASY TACTICS Battle #1",
+  //   "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
+  // },
+  // "FFT-02":{
+  //   "Name":"FINAL FANTASY TACTICS Battle #2",
+  //   "Materials": ["Sword Jadeite", "Dark Alcryst (Green)", "Light Alcryst (Green)", "Lightning Alcryst (Green)", "Praying Angel Statue (Green)", "Prowling Wyvern Statue (Green)"]
+  // },
+  // "FFT-03":{
+  //   "Name":"FINAL FANTASY TACTICS Battle #3",
+  //   "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
+  // },
+  // "FFT-04":{
+  //   "Name":"Lionel Castle — Outer Gates",
+  //   "Materials": ["Sword Azurite", "Dark Alcryst (Blue)", "Light Alcryst (Blue)", "Lightning Alcryst (Blue)", "Praying Angel Statue (Blue)", "Prowling Wyvern Statue (Blue)"]
+  // },
+  // "FFT-05":{
+  //   "Name":"Lionel Castle — Interior",
+  //   "Materials": ["Sword Charoite", "Dark Alcryst (Purple)", "Light Alcryst (Purple)", "Lightning Alcryst (Purple)", "Praying Angel Statue (Purple)", "Prowling Wyvern Statue (Purple)"]
+  // },
 
-  "Event Reward/Shop": {
-  "Name":"Check Missions and Mog Shop",
-  "Materials": ["Sword Saint's Memory (Green)", "Sword Saint's Memory (Blue)", "Sword Saint's Memory (Purple)", "Sword Saint's Memory (Yellow)", "Squire's Memory (Green)", "Squire's Memory (Blue)", "Squire's Memory (Yellow)", "Squire's Memory (Purple)", "Fell Knight's Memory (Green)", "Fell Knight's Memory (Blue)", "Fell Knight's Memory (Purple)", "Fell Knight's Memory (Yellow)"]
-   }
+  // "Event Reward/Shop": {
+  // "Name":"Check Missions and Mog Shop",
+  // "Materials": ["Sword Saint's Memory (Green)", "Sword Saint's Memory (Blue)", "Sword Saint's Memory (Purple)", "Sword Saint's Memory (Yellow)", "Squire's Memory (Green)", "Squire's Memory (Blue)", "Squire's Memory (Yellow)", "Squire's Memory (Purple)", "Fell Knight's Memory (Green)", "Fell Knight's Memory (Blue)", "Fell Knight's Memory (Purple)", "Fell Knight's Memory (Yellow)"]
+  //  }
 }
