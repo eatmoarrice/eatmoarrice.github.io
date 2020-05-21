@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <title>Job Material Planner</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css?family=Cookie"
       rel="stylesheet"
@@ -90,7 +91,8 @@
         Choose starting and goal job levels. Leave goals blank (or 0) to set
         goals as starting levels +1.
       </h6>
-      <div id="alljobtable"></div>
+      <div id="alljobtable" class="d-flex flex-wrap justify-content-around">
+      </div>
       <hr class="solid" width="75%" />
       <div id="lookhere" style="text-align: center;">
         <a class="btn btn-info" href="javascript:void(0)" onclick="calculate()"
@@ -111,13 +113,6 @@
           Export to /u/BrandonIsABadass's tool
         </button>
         <br/>
-        <!-- <textarea
-          class="m-3"
-          id="cb"
-          placeholder="Copy and paste into /https://wotvfarmcalculator.github.io/ by /u/BrandonIsABadass"
-          style="min-width: 80%;"
-          rows="3"
-        ></textarea> -->
       </div>
       <h4 style="text-align: center;" id="bot">Best farming locations:</h4>
       <h6 style="text-align: center;">

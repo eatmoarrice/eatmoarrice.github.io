@@ -1408,7 +1408,7 @@ function showAllUnits() {
 function showJobTable() {
   let temp = ``;
   for (let x = 1; x < 11; x++) {
-    temp = ` <table class="jobtable" id="jobtable${x}" style="width: 335px;">
+    temp = ` <table class="jobtable" id="jobtable${x}">
           <thead>
             <tr>
               <th style="border-radius: 40px 0px 0px 0px;" scope="col"><a href="javascript:void(0)" onclick='removeCard("unit${x}")'>
@@ -1466,6 +1466,7 @@ function showJobTable() {
         </table>`;
     document.getElementById("alljobtable").innerHTML += temp;
   }
+  document.getElementById("alljobtable").innerHTML += `<div class="hidden-card"></div><div class="hidden-card"></div>`;
 }
 
 showAllUnits();
@@ -1861,6 +1862,7 @@ function showPic() {
       break;
     }
   }
+ 
   for (i = 10; i > 0; i--) {
     if (char[i - 1] == undefined) {
       hideUnit(i);
@@ -1868,6 +1870,7 @@ function showPic() {
       showUnit(i);
     }
   }
+
 }
 
 function getJobAndJobMaterialForEachUnit() {
