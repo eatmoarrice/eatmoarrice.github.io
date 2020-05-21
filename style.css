@@ -370,6 +370,10 @@ img {
 }
 
 .hidden-card {
+  margin: 5px;
+  display: inline-block;
+  border-spacing: 0;
+  border: 0;
   width: 324px;
   visibility: hidden;
   height: 0;
