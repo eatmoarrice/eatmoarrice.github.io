@@ -1,6 +1,20 @@
 // Edit objects below to update --------------------------------------------------
 // There are 3 objects to change/update: charlist, joblist & locationlist---------
 const charlist = {
+  Lucia: {
+    Element: "Earth",
+    Job1: "Double Gunner",
+    Job2: "Ranger",
+    Job3: "Monk",
+    Rarity: "Soon",
+  },
+  Adelard: {
+    Element: "Fire",
+    Job1: "Red Mage",
+    Job2: "Green Mage",
+    Job3: "White Mage",
+    Rarity: "Soon",
+  },
   Kitone: {
     Element: "Earth",
     Job1: "Ninja",
