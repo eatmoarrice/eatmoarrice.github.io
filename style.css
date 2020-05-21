@@ -165,7 +165,7 @@ th, td { padding: 8px 16px; }
 th     { background:#eee; } */
 
 .jobtable {
-  margin-bottom: 15px;
+  margin: 5px;
   display: inline-block;
   border-spacing: 0;
   border: 0;
