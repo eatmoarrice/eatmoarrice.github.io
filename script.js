@@ -2,7 +2,7 @@
 // There are 3 objects to change/update: charlist, joblist & locationlist---------
 const charlist = {
   Lucia: {
-    Element: "Earth",
+    Element: "Wind",
     Job1: "Double Gunner",
     Job2: "Ranger",
     Job3: "Monk",
