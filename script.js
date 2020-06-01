@@ -2021,6 +2021,10 @@ function showPic() {
 	getJobAndJobMaterialForEachUnit();
 	for (i = 1; i < 11; i++) {
 		if (char[i - 1] != undefined) {
+			let name = char[i - 1];
+			if (charlist[name].Stylized !== undefined) {
+				name = charlist[name].Stylized;
+			}
 			job1pic = unitx5[i - 1][0].replace(/\W/g, '');
 			job1pic = `images/job/main/${job1pic}.png`;
 			job2pic = unitx5[i - 1][1].replace(/\W/g, '');
@@ -2028,7 +2032,7 @@ function showPic() {
 			job3pic = unitx5[i - 1][2].replace(/\W/g, '');
 			job3pic = `images/job/sub/${job3pic}.png`;
 			document.getElementById(`u${i}`).src = `images/char/${char[i - 1]}.png`;
-			document.getElementById(`unit${i}`).innerHTML = char[i - 1];
+			document.getElementById(`unit${i}`).innerHTML = name;
 			document.getElementById(`u${i}j1`).src = job1pic;
 			document.getElementById(`u${i}j2`).src = job2pic;
 			document.getElementById(`u${i}j3`).src = job3pic;
