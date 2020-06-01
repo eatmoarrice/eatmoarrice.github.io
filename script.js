@@ -15,12 +15,13 @@ const charlist = {
 		Job3: 'Ninja',
 		Rarity: 'Soon',
 	},
-	"Lu'cia": {
+	Lucia: {
 		Element: 'Wind',
 		Job1: 'Dual Gunner',
 		Job2: 'Ranger',
 		Job3: 'Monk',
 		Rarity: 'New',
+		Stylized: "Lu'cia",
 	},
 	Adelard: {
 		Element: 'Fire',
@@ -36,12 +37,13 @@ const charlist = {
 		Job3: 'Time Mage',
 		Rarity: 'UR',
 	},
-	'"Whisper"': {
+	Whisper: {
 		Element: 'Dark',
 		Job1: 'Knight',
 		Job2: 'Samurai',
 		Job3: 'Spellblade',
 		Rarity: 'UR',
+		Stylized: '"Whisper"',
 	},
 	Miranda: {
 		Element: 'Water',
@@ -211,12 +213,13 @@ const charlist = {
 		Job3: 'Thief',
 		Rarity: 'MR',
 	},
-	'"Grace"': {
+	Grace: {
 		Element: 'Light',
 		Job1: 'White Mage',
 		Job2: 'Green Mage',
 		Job3: 'Lancer',
 		Rarity: 'MR',
+		Stylized: '"Grace"',
 	},
 	Khury: {
 		Element: 'Ice',
@@ -351,12 +354,13 @@ const charlist = {
 		Job3: 'White Mage',
 		Rarity: 'SR',
 	},
-	'"Murmur"': {
+	Murmur: {
 		Element: 'Earth',
 		Job1: 'Red Mage',
 		Job2: 'Black Mage',
 		Job3: 'Lancer',
 		Rarity: 'SR',
+		Stylized: '"Murmur"',
 	},
 	Baelo: {
 		Element: 'Earth',
@@ -1522,6 +1526,7 @@ let jobOrbs = [
 
 function showEachItemInTotalTable(unit, number) {
 	let unitTruncated = unit.replace(/\W/g, '');
+
 	let pic = `<img src="images/mat/${unitTruncated}.png" id="${unitTruncated}" onclick='blackOut("${unitTruncated}")' class="material-icon" alt="${unit}" title="${unit}">`;
 	let temp = `<div class="float-left ml-4">
         <a href="javascript:void(0)" onclick='blackOut("${unitTruncated}")'>
@@ -1533,10 +1538,14 @@ function showEachItemInTotalTable(unit, number) {
 
 function showEachUnit(unit) {
 	let unitTruncated = unit.replace(/\W/g, '');
+	let name = unit;
+	if (charlist[unit].Stylized !== undefined) {
+		name = charlist[unit].Stylized;
+	}
 	let temp = `<div class="float-left ml-4 filter">
         <a href="javascript:void(0)" onclick='changeCard("${unitTruncated}")'>
         <img class="profilepic" src="images/char/${unitTruncated}.png"/></a>
-        <div><p style="width:60px;" class="listcharname" style="text-align: center;">${unit}</p></div>
+        <div><p style="width:60px;" class="listcharname" style="text-align: center;">${name}</p></div>
       </div>`;
 	return temp;
 }
