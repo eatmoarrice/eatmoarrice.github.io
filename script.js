@@ -1,26 +1,48 @@
 // Edit objects below to update --------------------------------------------------
 // There are 3 objects to change/update: charlist, joblist & locationlist---------
 const charlist = {
-	Victor: {
+	Vinera: {
+		Element: 'Dark',
+		Job1: 'Assassin',
+		Job2: 'Thief',
+		Job3: 'Dual Gunner',
+		Rarity: 'Soon',
+	},
+	Tyrell: {
+		Element: 'Water',
+		Job1: 'Knight',
+		Job2: 'Viking',
+		Job3: 'Lancer',
+		Rarity: 'Soon',
+	},
+	Dario: {
+		Element: 'Wind',
+		Job1: 'Spellblade',
+		Job2: 'Ninja',
+		Job3: 'Paladin',
+		Rarity: 'Soon',
+	},
+
+	Viktora: {
 		Element: 'Ice',
 		Job1: 'Dragoon',
 		Job2: 'Soldier',
 		Job3: 'Thief',
-		Rarity: 'Soon',
+		Rarity: 'New',
 	},
 	Salire: {
 		Element: 'Lightning',
 		Job1: 'Black Mage',
 		Job2: 'White Mage',
 		Job3: 'Ninja',
-		Rarity: 'Soon',
+		Rarity: 'New',
 	},
 	Lucia: {
 		Element: 'Wind',
 		Job1: 'Dual Gunner',
 		Job2: 'Ranger',
 		Job3: 'Monk',
-		Rarity: 'New',
+		Rarity: 'UR',
 		Stylized: "Lu'cia",
 	},
 	Adelard: {
@@ -28,7 +50,7 @@ const charlist = {
 		Job1: 'Red Mage',
 		Job2: 'Green Mage',
 		Job3: 'White Mage',
-		Rarity: 'New',
+		Rarity: 'MR',
 	},
 	Kitone: {
 		Element: 'Earth',
