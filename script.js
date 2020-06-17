@@ -436,6 +436,11 @@ const charlist = {
 };
 
 const joblist = {
+	Assassin: {
+		Statue: 'Wyvern',
+		Weapon: 'Dagger',
+		Orb: 'Assassin',
+	},
 	'Dual Gunner': {
 		Statue: 'Wyvern',
 		Weapon: 'Gun',
