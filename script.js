@@ -29,6 +29,7 @@ const charlist = {
 		Job2: 'Green Mage',
 		Job3: 'White Mage',
 		Rarity: 'New',
+		Limited: true,
 	},
 	Rain: {
 		Element: 'Fire',
@@ -1585,13 +1586,19 @@ function showEachItemInTotalTable(unit, number) {
 function showEachUnit(unit) {
 	let unitTruncated = unit.replace(/\W/g, '');
 	let name = unit;
+	let border = '';
+	let ltdText = '';
 	if (charlist[unit].Stylized !== undefined) {
 		name = charlist[unit].Stylized;
 	}
+	if (charlist[unit].Limited) {
+		border = 'limited';
+		ltdText = '<p class="red">Limited:</p>';
+	}
 	let temp = `<div class="float-left ml-4 filter">
         <a href="javascript:void(0)" onclick='changeCard("${unitTruncated}")'>
-        <img class="profilepic" src="images/char/${unitTruncated}.png"/></a>
-        <div><p style="width:60px;" class="listcharname" style="text-align: center;">${name}</p></div>
+        <img class="profilepic ${border}" src="images/char/${unitTruncated}.png"/></a>
+        <div><span style="width:60px;" class="listcharname" style="text-align: center;">${ltdText}${name}</span></div>
       </div>`;
 	return temp;
 }
