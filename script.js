@@ -23,19 +23,33 @@ const charlist = {
 		Rarity: 'Soon',
 	},
 
+	Fryevia: {
+		Element: 'Ice',
+		Job1: 'Spellblade',
+		Job2: 'Green Mage',
+		Job3: 'White Mage',
+		Rarity: 'New',
+	},
+	Rain: {
+		Element: 'Fire',
+		Job1: 'Knight of Grandshelt',
+		Job2: 'Red Mage',
+		Job3: 'Knight',
+		Rarity: 'New',
+	},
 	Viktora: {
 		Element: 'Ice',
 		Job1: 'Dragoon',
 		Job2: 'Soldier',
 		Job3: 'Thief',
-		Rarity: 'New',
+		Rarity: 'UR',
 	},
 	Salire: {
 		Element: 'Lightning',
 		Job1: 'Black Mage',
 		Job2: 'White Mage',
 		Job3: 'Ninja',
-		Rarity: 'New',
+		Rarity: 'MR',
 	},
 	Lucia: {
 		Element: 'Wind',
@@ -436,6 +450,11 @@ const charlist = {
 };
 
 const joblist = {
+	'Knight of Grandshelt': {
+		Statue: 'Angel',
+		Weapon: 'Greatsword',
+		Orb: 'Knight of Grandshelt',
+	},
 	Assassin: {
 		Statue: 'Wyvern',
 		Weapon: 'Dagger',
@@ -2299,6 +2318,7 @@ function presentByGrade() {
 				drop = 'Faint Memory (Red)';
 				id = drop.replace(/\W/g, '');
 			}
+			arrayPush(materialNeed, drop);
 			showEachItemInTotalTable(drop, totalMemory[x - 1]);
 			text += `       <tr ${styleHTML}>
                         <td><img class="material-icon-best" src="images/mat/${id}.png"></td>
@@ -2377,24 +2397,26 @@ function presentByGrade() {
 		for (i = 0; i < totalJobMemory.length; i++) {
 			//job memory
 			if (totalJobMemory[i][x] != 0) {
+				let flame = '';
+				if (totalJobMemory[i][0] == 'Knight of Grandshelt') flame = 'Flame: ';
 				if (x == 1) {
-					drop = `${totalJobMemory[i][0]}'s Memory (Green)`;
+					drop = `${totalJobMemory[i][0]}'s Memory (${flame}Green)`;
 					id = drop.replace(/\W/g, '');
 				}
 				if (x == 2) {
-					drop = `${totalJobMemory[i][0]}'s Memory (Blue)`;
+					drop = `${totalJobMemory[i][0]}'s Memory (${flame}Blue)`;
 					id = drop.replace(/\W/g, '');
 				}
 				if (x == 3) {
-					drop = `${totalJobMemory[i][0]}'s Memory (Purple)`;
+					drop = `${totalJobMemory[i][0]}'s Memory (${flame}Purple)`;
 					id = drop.replace(/\W/g, '');
 				}
 				if (x == 4) {
-					drop = `${totalJobMemory[i][0]}'s Memory (Yellow)`;
+					drop = `${totalJobMemory[i][0]}'s Memory (${flame}Yellow)`;
 					id = drop.replace(/\W/g, '');
 				}
 				if (x == 5) {
-					drop = `${totalJobMemory[i][0]}'s Memory (Red)`;
+					drop = `${totalJobMemory[i][0]}'s Memory (${flame}Red)`;
 					id = drop.replace(/\W/g, '');
 				}
 				arrayPush(materialNeed, drop);
